@@ -36,6 +36,11 @@ const teamTitleRef = ref(null)
 const isTeamTitleVisible = ref(false)
 const isTeamDescVisible = ref(false)
 
+// 动态导入图片
+const getImageUrl = (name: string) => {
+  return new URL(`../assets/design/${name}`, import.meta.url).href
+}
+
 onMounted(() => {
   // 先设置为 false，然后延迟显示
   isTitleVisible.value = false
@@ -135,7 +140,7 @@ onMounted(() => {
           >
             <div class="aspect-w-16 aspect-h-9 mb-6">
               <img 
-                :src="`/src/assets/design/${item.image}`" 
+                :src="getImageUrl(item.image)"
                 :alt="item.title"
                 class="w-full h-full object-cover rounded-lg"
               />

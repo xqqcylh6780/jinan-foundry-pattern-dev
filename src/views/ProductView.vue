@@ -28,11 +28,22 @@ function handleImageLoad(productId: number) {
   loadedImages.value.add(productId)
 }
 
+// 动态导入图片
+const getImageUrl = (name: string) => {
+  try {
+    // 使用动态导入确保图片正确打包
+    return new URL(`../assets/products/${name}`, import.meta.url).href
+  } catch (error) {
+    console.error('图片加载失败:', error)
+    return '' // 返回空字符串或默认图片路径
+  }
+}
+
 const products: Product[] = [
   {
     id: 1,
     name: '水泵壳体模具',
-    image: '/src/assets/products/p1.jpg',
+    image: 'p1.jpg',
     category: '泵、阀类模具',
     categoryId: 1,
     description: '高精度水泵壳体铸造模具，适用于各类水泵生产'
@@ -40,7 +51,7 @@ const products: Product[] = [
   {
     id: 2,
     name: '阀门壳体模具',
-    image: '/src/assets/products/p2.jpg',
+    image: 'p2.jpg',
     category: '泵、阀类模具',
     categoryId: 1,
     description: '精密阀门壳体模具，满足各种阀门制造需求'
@@ -48,7 +59,7 @@ const products: Product[] = [
   {
     id: 3,
     name: '液压泵体模具',
-    image: '/src/assets/products/p3.jpg',
+    image: 'p3.jpg',
     category: '泵、阀类模具',
     categoryId: 1,
     description: '专业液压泵体模具制造，确保产品精度'
@@ -56,7 +67,7 @@ const products: Product[] = [
   {
     id: 4,
     name: '金属型模铸造模具-1',
-    image: '/src/assets/products/metal/1.png',
+    image: 'metal/1.png',
     category: '金属型模铸造',
     categoryId: 2,
     description: '高精度金属型模铸造模具，确保产品质量'
@@ -64,7 +75,7 @@ const products: Product[] = [
   {
     id: 5,
     name: '金属型模铸造模具-2',
-    image: '/src/assets/products/metal/2.png',
+    image: 'metal/2.png',
     category: '金属型模铸造',
     categoryId: 2,
     description: '专业金属型模铸造模具制造'
@@ -72,7 +83,7 @@ const products: Product[] = [
   {
     id: 6,
     name: '金属型模铸造模具-3',
-    image: '/src/assets/products/metal/3.png',
+    image: 'metal/3.png',
     category: '金属型模铸造',
     categoryId: 2,
     description: '精密金属型模铸造模具'
@@ -80,7 +91,7 @@ const products: Product[] = [
   {
     id: 7,
     name: '金属型模铸造模具-4',
-    image: '/src/assets/products/metal/4.png',
+    image: 'metal/4.png',
     category: '金属型模铸造',
     categoryId: 2,
     description: '高品质金属型模铸造模具'
@@ -88,7 +99,7 @@ const products: Product[] = [
   {
     id: 8,
     name: '金属型模铸造模具-5',
-    image: '/src/assets/products/metal/5.png',
+    image: 'metal/5.png',
     category: '金属型模铸造',
     categoryId: 2,
     description: '定制金属型模铸造模具'
@@ -96,7 +107,7 @@ const products: Product[] = [
   {
     id: 9,
     name: '金属型模铸造模具-6',
-    image: '/src/assets/products/metal/6.png',
+    image: 'metal/6.png',
     category: '金属型模铸造',
     categoryId: 2,
     description: '专业金属型模铸造解决方案'
@@ -104,7 +115,7 @@ const products: Product[] = [
   {
     id: 10,
     name: '金属型模铸造模具-7',
-    image: '/src/assets/products/metal/7.png',
+    image: 'metal/7.png',
     category: '金属型模铸造',
     categoryId: 2,
     description: '高效金属型模铸造模具'
@@ -112,7 +123,7 @@ const products: Product[] = [
   {
     id: 11,
     name: '铝合金压铸模具',
-    image: '/src/assets/products/p10.jpg',
+    image: 'p10.jpg',
     category: '有色铸造模具',
     categoryId: 4,
     description: '专业铝合金压铸模具设计与制造'
@@ -120,7 +131,7 @@ const products: Product[] = [
   {
     id: 12,
     name: '铜合金铸造模具',
-    image: '/src/assets/products/p11.jpg',
+    image: 'p11.jpg',
     category: '有色铸造模具',
     categoryId: 4,
     description: '高精度铜合金铸造模具生产'
@@ -128,7 +139,7 @@ const products: Product[] = [
   {
     id: 13,
     name: '镁合金模具',
-    image: '/src/assets/products/p12.jpg',
+    image: 'p12.jpg',
     category: '有色铸造模具',
     categoryId: 4,
     description: '轻量化镁合金压铸模具制造'
@@ -136,7 +147,7 @@ const products: Product[] = [
   {
     id: 14,
     name: '机床铸件模具',
-    image: '/src/assets/products/p13.jpg',
+    image: 'p13.jpg',
     category: '其他类模具',
     categoryId: 5,
     description: '各类机床铸件模具的设计与制造'
@@ -144,7 +155,7 @@ const products: Product[] = [
   {
     id: 15,
     name: '工程机械模具',
-    image: '/src/assets/products/p14.jpg',
+    image: 'p14.jpg',
     category: '其他类模具',
     categoryId: 5,
     description: '工程机械零部件模具专业定制'
@@ -152,7 +163,7 @@ const products: Product[] = [
   {
     id: 16,
     name: '农机设备模具',
-    image: '/src/assets/products/p15.jpg',
+    image: 'p15.jpg',
     category: '其他类模具',
     categoryId: 5,
     description: '农业机械设备模具开发制造'
@@ -249,7 +260,7 @@ onMounted(() => {
         >
           <div class="relative aspect-[4/3] overflow-hidden bg-white group border-b border-gray-100">
             <img
-              :src="product.image"
+              :src="getImageUrl(product.image)"
               :alt="product.name"
               class="w-full h-full object-contain"
               loading="lazy"
