@@ -215,20 +215,42 @@ function getUsageColor(usage: string): string {
     <div class="bg-white rounded-lg shadow-xl">
       <div class="xl:overflow-visible overflow-x-auto">
         <div class="min-w-[1280px]">
-          <table class="w-full divide-y divide-gray-200">
-            <thead class="bg-gray-50">
-              <tr class="divide-x divide-gray-200">
-                <th class="px-3 py-3 text-left text-sm font-medium text-gray-500 uppercase">品牌</th>
-                <th class="px-3 py-3 text-left text-sm font-medium text-gray-500 uppercase">型号</th>
-                <th class="px-3 py-3 text-left text-sm font-medium text-gray-500 uppercase">类型</th>
-                <th class="px-3 py-3 text-left text-sm font-medium text-gray-500 uppercase">产地</th>
-                <th class="px-3 py-3 text-left text-sm font-medium text-gray-500 uppercase">转速</th>
-                <th class="px-3 py-3 text-left text-sm font-medium text-gray-500 uppercase">行程</th>
-                <th class="px-3 py-3 text-left text-sm font-medium text-gray-500 uppercase">精度</th>
-                <th class="px-3 py-3 text-left text-sm font-medium text-gray-500 uppercase">轴数</th>
-                <th class="px-3 py-3 text-left text-sm font-medium text-gray-500 uppercase">系统</th>
-                <th class="px-3 py-3 text-left text-sm font-medium text-gray-500 uppercase">数量</th>
-                <th class="px-3 py-3 text-left text-sm font-medium text-gray-500 uppercase">产能</th>
+          <table class="w-full divide-y divide-gray-200 border border-gray-200 rounded-lg overflow-hidden">
+            <thead>
+              <tr class="divide-x divide-gray-200 bg-gradient-to-r from-blue-50 to-gray-50">
+                <th class="px-6 py-5 text-left">
+                  <span class="text-sm font-semibold text-gray-700 uppercase tracking-wider">品牌</span>
+                </th>
+                <th class="px-6 py-5 text-left">
+                  <span class="text-sm font-semibold text-gray-700 uppercase tracking-wider">型号</span>
+                </th>
+                <th class="px-6 py-5 text-left">
+                  <span class="text-sm font-semibold text-gray-700 uppercase tracking-wider">类型</span>
+                </th>
+                <th class="px-6 py-5 text-left">
+                  <span class="text-sm font-semibold text-gray-700 uppercase tracking-wider">产地</span>
+                </th>
+                <th class="px-6 py-5 text-left">
+                  <span class="text-sm font-semibold text-gray-700 uppercase tracking-wider">转速</span>
+                </th>
+                <th class="px-6 py-5 text-left">
+                  <span class="text-sm font-semibold text-gray-700 uppercase tracking-wider">行程</span>
+                </th>
+                <th class="px-6 py-5 text-left">
+                  <span class="text-sm font-semibold text-gray-700 uppercase tracking-wider">精度</span>
+                </th>
+                <th class="px-6 py-5 text-left">
+                  <span class="text-sm font-semibold text-gray-700 uppercase tracking-wider">轴数</span>
+                </th>
+                <th class="px-6 py-5 text-left">
+                  <span class="text-sm font-semibold text-gray-700 uppercase tracking-wider">系统</span>
+                </th>
+                <th class="px-6 py-5 text-left">
+                  <span class="text-sm font-semibold text-gray-700 uppercase tracking-wider">数量</span>
+                </th>
+                <th class="px-6 py-5 text-left">
+                  <span class="text-sm font-semibold text-gray-700 uppercase tracking-wider">产能</span>
+                </th>
               </tr>
             </thead>
             <tbody class="bg-white divide-y divide-gray-200">
@@ -237,29 +259,29 @@ function getUsageColor(usage: string): string {
                 :key="index"
                 class="hover:bg-gray-50 transition-colors duration-200 divide-x divide-gray-200"
               >
-                <td class="px-3 py-3 text-base text-gray-900 font-medium">{{ item.brand }}</td>
-                <td class="px-3 py-3 text-base text-gray-900">{{ item.model }}</td>
-                <td class="px-3 py-3 text-base text-gray-900">{{ item.type }}</td>
-                <td class="px-3 py-3 text-base text-gray-900">{{ item.origin }}</td>
-                <td class="px-3 py-3 text-base text-gray-900">
+                <td class="px-4 py-4 text-sm text-gray-900 font-medium whitespace-nowrap">{{ item.brand }}</td>
+                <td class="px-4 py-4 text-sm text-gray-600 whitespace-nowrap">{{ item.model }}</td>
+                <td class="px-4 py-4 text-sm text-gray-600 whitespace-nowrap">{{ item.type }}</td>
+                <td class="px-4 py-4 text-sm text-gray-600 whitespace-nowrap">{{ item.origin }}</td>
+                <td class="px-4 py-4 text-sm text-gray-600 whitespace-nowrap">
                   {{ item.speed ? item.speed.toLocaleString() : '-' }}
                 </td>
-                <td class="px-3 py-3 text-base text-gray-900">{{ item.size || '-' }}</td>
-                <td class="px-3 py-3 text-base text-gray-900">{{ item.precision || '-' }}</td>
-                <td class="px-3 py-3 text-base text-gray-900">
+                <td class="px-4 py-4 text-sm text-gray-600 whitespace-nowrap">{{ item.size || '-' }}</td>
+                <td class="px-4 py-4 text-sm text-gray-600 whitespace-nowrap">{{ item.precision || '-' }}</td>
+                <td class="px-4 py-4 text-sm text-gray-600 whitespace-nowrap">
                   {{ item.axis ? item.axis : '-' }}
                 </td>
-                <td class="px-3 py-3 text-base text-gray-900">{{ item.system || '-' }}</td>
-                <td class="px-3 py-3 text-base text-gray-900">{{ item.quantity }}</td>
-                <td class="px-3 py-3 text-base">
+                <td class="px-4 py-4 text-sm text-gray-600 whitespace-nowrap">{{ item.system || '-' }}</td>
+                <td class="px-4 py-4 text-sm text-gray-600 whitespace-nowrap">{{ item.quantity }}</td>
+                <td class="px-4 py-4 text-sm whitespace-nowrap">
                   <div class="flex items-center">
-                    <div class="w-12 bg-gray-200 rounded-full h-1.5 mr-2">
+                    <div class="w-16 bg-gray-200 rounded-full h-2 mr-2">
                       <div 
-                        class="h-1.5 rounded-full" 
+                        class="h-2 rounded-full" 
                         :style="{ width: item.usage, backgroundColor: getUsageColor(item.usage) }"
                       ></div>
                     </div>
-                    <span :style="{ color: getUsageColor(item.usage) }">{{ item.usage }}</span>
+                    <span :style="{ color: getUsageColor(item.usage) }" class="font-medium">{{ item.usage }}</span>
                   </div>
                 </td>
               </tr>

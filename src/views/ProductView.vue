@@ -16,7 +16,8 @@ const categories = [
   { id: 1, name: '砂型铸造' },
   { id: 2, name: '金属型模铸造' },
   { id: 3, name: '冷热芯盒' },
-  { id: 4, name: '手工芯盒' }
+  { id: 4, name: '手工芯盒' },
+  { id: 5, name: '工装夹具' }
 ]
 
 const activeCategory = ref(categories[0].id)
@@ -119,7 +120,7 @@ const products: Product[] = [
   {
     id: 8,
     name: '金属型模铸造模具-5',
-    image: 'metal/8.png',
+    image: 'metal/5.png',
     category: '金属型模铸造',
     categoryId: 2,
     description: '定制金属型模铸造模具'
@@ -127,7 +128,7 @@ const products: Product[] = [
   {
     id: 9,
     name: '金属型模铸造模具-6',
-    image: 'metal/9.png',
+    image: 'metal/6.png',
     category: '金属型模铸造',
     categoryId: 2,
     description: '专业金属型模铸造解决方案'
@@ -135,90 +136,58 @@ const products: Product[] = [
   {
     id: 10,
     name: '金属型模铸造模具-7',
-    image: 'metal/10.png',
+    image: 'metal/7.png',
     category: '金属型模铸造',
     categoryId: 2,
     description: '高效金属型模铸造模具'
   },
   {
     id: 11,
-    name: '金属型模铸造模具-8',
-    image: 'metal/11.png',
-    category: '金属型模铸造',
-    categoryId: 2,
-    description: '精密金属型模铸造设备'
+    name: '冷热芯盒模具',
+    image: 'hc-boxes/h2.jpg',
+    category: '冷热芯盒',
+    categoryId: 3,
+    description: '专业冷热芯盒模具设计与制造'
   },
   {
     id: 12,
-    name: '金属型模铸造模具-9',
-    image: 'metal/12.png',
-    category: '金属型模铸造',
-    categoryId: 2,
-    description: '高性能金属型模铸造模具'
+    name: '冷热芯盒工装',
+    image: 'hc-boxes/h3.jpg',
+    category: '冷热芯盒',
+    categoryId: 3,
+    description: '高效冷热芯盒工装设备'
   },
   {
     id: 13,
-    name: '金属型模铸造模具-10',
-    image: 'metal/13.png',
-    category: '金属型模铸造',
-    categoryId: 2,
-    description: '先进金属型模铸造工艺'
+    name: '冷热芯盒模具',
+    image: 'hc-boxes/h1.jpg',
+    category: '冷热芯盒',
+    categoryId: 3,
+    description: '高精度冷热芯盒模具，用于生产高质量铸造砂芯'
   },
   {
     id: 14,
-    name: '金属型模铸造模具-11',
-    image: 'metal/14.png',
-    category: '金属型模铸造',
-    categoryId: 2,
-    description: '创新金属型模铸造技术'
+    name: '手工芯盒模具',
+    image: 'handmade/hd1.jpg',
+    category: '手工芯盒',
+    categoryId: 4,
+    description: '传统手工芯盒模具，适用于小批量、特殊形状砂芯的制造'
   },
   {
     id: 15,
-    name: '铝合金压铸模具',
-    image: 'p10.jpg',
-    category: '有色铸造模具',
-    categoryId: 4,
-    description: '专业铝合金压铸模具设计与制造'
+    name: '精密定位夹具',
+    image: 'fk/k1.jpg',
+    category: '工装夹具',
+    categoryId: 5,
+    description: '高精度定位夹具，确保加工过程中的稳定性和精确性'
   },
   {
     id: 16,
-    name: '铜合金铸造模具',
-    image: 'p11.jpg',
-    category: '有色铸造模具',
-    categoryId: 4,
-    description: '高精度铜合金铸造模具生产'
-  },
-  {
-    id: 17,
-    name: '镁合金模具',
-    image: 'p12.jpg',
-    category: '有色铸造模具',
-    categoryId: 4,
-    description: '轻量化镁合金压铸模具制造'
-  },
-  {
-    id: 18,
-    name: '机床铸件模具',
-    image: 'p13.jpg',
-    category: '其他类模具',
+    name: '多功能工装夹具',
+    image: 'fk/k2.jpg',
+    category: '工装夹具',
     categoryId: 5,
-    description: '各类机床铸件模具的设计与制造'
-  },
-  {
-    id: 19,
-    name: '工程机械模具',
-    image: 'p14.jpg',
-    category: '其他类模具',
-    categoryId: 5,
-    description: '工程机械零部件模具专业定制'
-  },
-  {
-    id: 20,
-    name: '农机设备模具',
-    image: 'p15.jpg',
-    category: '其他类模具',
-    categoryId: 5,
-    description: '农业机械设备模具开发制造'
+    description: '适用于各类复杂工件的加工固定，提高生产效率'
   }
 ]
 

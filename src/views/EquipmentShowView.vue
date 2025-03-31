@@ -15,7 +15,8 @@ const categories = [
   { id: 2, name: '高速加工设备' },
   { id: 3, name: '检测设备' },
   { id: 4, name: '普通加工设备' },
-  { id: 5, name: '装配区域' }
+  { id: 5, name: '装配区域' },
+  { id: 6, name: '龙门加工中心' }
 ]
 
 const activeCategory = ref(categories[0].id)
@@ -88,11 +89,59 @@ const equipments: Equipment[] = [
   },
   {
     id: 9,
-    name: '粗糙度仪',
+    name: '大型龙门加工中心',
+    image: '/src/assets/equipments/gantry/g1.jpg',
+    category: '龙门加工中心',
+    categoryId: 6,
+    description: '大型龙门式加工中心，适用于大型模具的高精度加工'
+  },
+  {
+    id: 10,
+    name: '精密龙门加工中心',
+    image: '/src/assets/equipments/gantry/g2.jpg',
+    category: '龙门加工中心',
+    categoryId: 6,
+    description: '高精度龙门加工中心，确保大型工件的加工精度'
+  },
+  {
+    id: 11,
+    name: '三次元测量仪',
     image: '/src/assets/equipments/detection/e4.jpg',
     category: '检测设备',
     categoryId: 3,
-    description: '表面粗糙度测量仪，确保表面质量'
+    description: '高精度三次元测量仪，用于复杂形状的尺寸检测'
+  },
+  {
+    id: 12,
+    name: '影像测量仪',
+    image: '/src/assets/equipments/detection/e5.jpg',
+    category: '检测设备',
+    categoryId: 3,
+    description: '精密影像测量仪，适用于精密零件的尺寸检测'
+  },
+  {
+    id: 13,
+    name: '三坐标测量机',
+    image: '/src/assets/equipments/detection/e6.jpg',
+    category: '检测设备',
+    categoryId: 3,
+    description: '高精度三坐标测量机，可进行复杂工件的全尺寸精密测量'
+  },
+  {
+    id: 14,
+    name: '模具装配区',
+    image: '/src/assets/equipments/assembly/a1.jpg',
+    category: '装配区域',
+    categoryId: 5,
+    description: '专业模具装配工作区，配备完善的装配工具和设备'
+  },
+  {
+    id: 15,
+    name: '精密装配区',
+    image: '/src/assets/equipments/assembly/a2.jpg',
+    category: '装配区域',
+    categoryId: 5,
+    description: '高标准精密装配区域，确保模具装配精度和质量'
   },
   // ... 其他设备数据
 ]
