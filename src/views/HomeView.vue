@@ -213,10 +213,13 @@ const handleReadMore = () => {
         <div class="relative z-10 h-full flex flex-col justify-center items-center text-center px-6 sm:px-8 md:px-[120px]">
           <h2 
             ref="titleRef"
-            class="text-3xl sm:text-5xl md:text-7xl font-bold mb-8 sm:mb-10 text-white transform transition-all duration-1000 max-w-5xl tracking-wider whitespace-nowrap"
+            class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8 sm:mb-10 text-white transform transition-all duration-1000 max-w-5xl tracking-wide"
             :class="{ 'translate-y-0 opacity-100': isTitleVisible, 'translate-y-8 opacity-0': !isTitleVisible }"
           >
-            致力成为<span class="text-red-500">最专业</span>的铸造模具<span class="text-red-500">匠人</span>
+            {{ t('home.hero.title.prefix') }}
+            <span class="text-red-500">{{ t('home.hero.title.highlight1') }}</span>
+            {{ t('home.hero.title.middle') }}
+            <span class="text-red-500">{{ t('home.hero.title.highlight2') }}</span>
           </h2>
           <div class="w-32 h-1.5 bg-red-500 mx-auto mb-8"></div>
           <p 
@@ -224,7 +227,7 @@ const handleReadMore = () => {
             class="text-lg sm:text-2xl md:text-3xl text-white transform transition-all duration-1000 delay-300 max-w-4xl leading-relaxed tracking-wide"
             :class="{ 'translate-y-0 opacity-100': isSubtitleVisible, 'translate-y-8 opacity-0': !isSubtitleVisible }"
           >
-            复杂及各种尺寸的铸铁造型线模具、冷热芯盒，铸铝低压、重力、倾转永久模，及各类型辅助工装夹具
+            {{ t('home.hero.subtitle') }}
           </p>
         </div>
       </div>
@@ -269,10 +272,10 @@ const handleReadMore = () => {
               class="transform -translate-x-8 transition-all duration-1000"
               :class="{ 'opacity-100 translate-x-0': isVisible, 'opacity-0': !isVisible }"
             >
-              <h2 class="text-3xl lg:text-4xl font-bold text-gray-900">关于我们</h2>
+              <h2 class="text-2xl lg:text-3xl font-bold text-gray-900">{{ t('home.intro.title') }}</h2>
               <div class="w-20 h-1 bg-red-600 mt-4"></div>
-              <p class="mt-4 lg:mt-6 text-base lg:text-lg text-gray-600">
-                专注铸造模具设计制造30年
+              <p class="mt-4 lg:mt-6 text-sm lg:text-base text-gray-600 leading-relaxed">
+                {{ t('home.intro.subtitle') }}
               </p>
             </div>
           </div>
@@ -283,34 +286,34 @@ const handleReadMore = () => {
               ref="introContentRef"
               class="opacity-0 transform translate-x-8 transition-all duration-1000"
             >
-              <div class="mb-8">
-                <h3 class="text-xl lg:text-2xl font-bold text-gray-900 mb-4 flex items-center">
+              <div class="mb-6 lg:mb-8">
+                <h3 class="text-lg lg:text-xl font-bold text-gray-900 mb-3 flex items-center">
                   <div class="w-1 h-6 bg-red-600 mr-3"></div>
-                  公司理念
+                  {{ t('home.intro.sections.philosophy.title') }}
                 </h3>
-                <p class="text-base lg:text-lg leading-relaxed text-gray-600 pl-4 border-l-2 border-gray-100">
-                  济南方德利模具有限公司由赵生彦铸造工程师于1992年成立，并始终致力于为国内外铸造行业提供最专业的模具设计与制造服务。
+                <p class="text-sm lg:text-base leading-relaxed text-gray-600 pl-4 border-l-2 border-gray-100">
+                  {{ t('home.intro.sections.philosophy.content') }}
                 </p>
               </div>
 
-              <div class="mb-8">
-                <h3 class="text-xl lg:text-2xl font-bold text-gray-900 mb-4 flex items-center">
+              <div class="mb-6 lg:mb-8">
+                <h3 class="text-lg lg:text-xl font-bold text-gray-900 mb-3 flex items-center">
                   <div class="w-1 h-6 bg-red-600 mr-3"></div>
-                  公司位置
+                  {{ t('home.intro.sections.location.title') }}
                 </h3>
-                <p class="text-base lg:text-lg leading-relaxed text-gray-600 pl-4 border-l-2 border-gray-100">
-                  公司位于济南市高新区，紧邻京沪高速，占地20000平方米，建筑面积12000平方米。
+                <p class="text-sm lg:text-base leading-relaxed text-gray-600 pl-4 border-l-2 border-gray-100">
+                  {{ t('home.intro.sections.location.content') }}
                 </p>
               </div>
 
               <!-- 阅读更多按钮 -->
-              <div class="mt-6 lg:mt-8">
+              <div class="mt-4 lg:mt-6">
                 <el-button
                   type="danger"
                   class="!px-6 lg:!px-8 !h-10 lg:!h-12 text-sm lg:text-base font-medium hover:!bg-gray-800 hover:!border-transparent"
                   @click="handleReadMore"
                 >
-                  了解更多
+                  {{ t('home.intro.readMore') }}
                 </el-button>
               </div>
             </div>

@@ -19,11 +19,28 @@ export default {
       subtitle: '30 Years of Expertise in Foundry Patterns, Providing Comprehensive Casting Solutions',
       description: 'Covering pumps, valves, engines, automotive machinery, non-ferrous metals and more, serving global clients with excellent craftsmanship'
     },
+    hero: {
+      title: {
+        prefix: 'Committed to becoming the',
+        highlight1: 'most professional',
+        middle: 'foundry pattern',
+        highlight2: 'craftsman'
+      },
+      subtitle: 'Specializing in complex and various sizes of cast iron molding line molds, cold and hot core boxes, aluminum casting low pressure, gravity, tilting permanent molds, and various types of auxiliary fixtures'
+    },
     intro: {
       title: 'About Us',
-      subtitle: 'Focused on Foundry Patterns Since 1992',
-      content1: 'Jinan Foundry Pattern Co., Ltd., established in 1992, specializes in the design and manufacturing of foundry patterns. We are a high-tech enterprise in Shandong Province.',
-      content2: 'Located in Jinan High-tech Zone, our company covers an area of 20,000 square meters with a building area of 12,000 square meters. We have over 50 processing equipment including 40+ CNC machines, and 70 employees with 28 engineers. We are ISO9001 certified and utilize PDM platform for design, SView software for paperless production, and custom business management systems for digital operations.',
+      subtitle: '30 Years of Expertise in Foundry Pattern Design & Manufacturing',
+      sections: {
+        philosophy: {
+          title: 'Company Philosophy',
+          content: 'Jinan Foundry Pattern Co., Ltd. was established in 1992 by foundry engineer Zhao Shengyan, and has been committed to providing the most professional mold design and manufacturing services for the domestic and international foundry industry.'
+        },
+        location: {
+          title: 'Company Location',
+          content: 'Located in Jinan High-tech Zone, adjacent to Beijing-Shanghai Expressway, covering an area of 20,000 square meters with a building area of 12,000 square meters.'
+        }
+      },
       readMore: 'Read More'
     },
     features: {
