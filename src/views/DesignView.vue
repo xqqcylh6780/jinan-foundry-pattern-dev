@@ -36,9 +36,30 @@ const teamTitleRef = ref(null)
 const isTeamTitleVisible = ref(false)
 const isTeamDescVisible = ref(false)
 
+// 设计项目数据
+const designItems = [
+  {
+    title: '模具设计',
+    image: 'modeling.jpg',  // 简化路径
+    description: '专业的模具设计服务...'
+  },
+  {
+    title: '3D建模',
+    image: '3d-modeling.jpg',  // 简化路径
+    description: '精确的三维建模...'
+  },
+  // ... 其他项目
+]
+
 // 动态导入图片
 const getImageUrl = (name: string) => {
-  return new URL(`../assets/design/${name}`, import.meta.url).href
+  try {
+    // 使用动态导入确保图片正确打包
+    return new URL(`../assets/design/${name}`, import.meta.url).href
+  } catch (error) {
+    console.error('图片加载失败:', error)
+    return '' // 返回空字符串或默认图片路径
+  }
 }
 
 onMounted(() => {
