@@ -279,11 +279,11 @@ onMounted(() => {
           :key="product.id"
           class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300"
         >
-          <div class="relative aspect-[4/3] overflow-hidden bg-white group border-b border-gray-100">
+          <div class="relative aspect-[4/3] bg-gray-100 group">
             <img
               :src="getImageUrl(product.image)"
               :alt="product.name"
-              class="w-full h-full object-contain"
+              class="w-full h-full object-cover"
               loading="lazy"
               width="1920"
               height="1080"
@@ -294,13 +294,13 @@ onMounted(() => {
             <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000 ease-in-out"></div>
             <!-- 加载占位 -->
             <div 
-              class="absolute inset-0 flex items-center justify-center bg-white"
+              class="absolute inset-0 flex items-center justify-center bg-gray-100"
               :class="{ 'hidden': loadedImages.has(product.id) }"
             >
               <div class="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
             </div>
           </div>
-          <div class="p-6 bg-gray-50">
+          <div class="p-6">
             <h3 class="text-xl font-bold text-gray-900 mb-2">{{ product.name }}</h3>
             <p class="text-gray-600">{{ product.description }}</p>
           </div>
