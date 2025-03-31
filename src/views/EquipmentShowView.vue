@@ -37,8 +37,42 @@ const filteredEquipments = computed(() => {
   return equipments.filter(e => e.categoryId === activeCategory.value)
 })
 
-function handleImageLoad(equipmentId: number) {
-  loadedImages.value.add(equipmentId)
+// 动态导入图片
+const getImageUrl = (path: string) => {
+  if (!path) {
+    console.error('图片路径为空')
+    return ''
+  }
+
+  try {
+    // 移除路径中的 /src/assets/equipments/ 前缀
+    const normalizedPath = path.replace('/src/assets/equipments/', '')
+    
+    // 使用 Vite 的动态导入语法
+    const imageModules = import.meta.glob('../assets/equipments/**/*', { eager: true })
+    const imagePath = `../assets/equipments/${normalizedPath}`
+    
+    // console.log('尝试加载图片:', imagePath) // 调试日志
+    
+    // 检查图片是否存在
+    if (imagePath in imageModules) {
+      const imageUrl = (imageModules[imagePath] as { default: string }).default
+      // 在生产环境中添加基础路径
+      return import.meta.env.PROD 
+        ? `/jinan-foundry-pattern-dev${imageUrl}`
+        : imageUrl
+    } else {
+      console.error('找不到图片:', imagePath)
+      return ''
+    }
+  } catch (error) {
+    console.error('加载图片失败:', error)
+    return ''
+  }
+}
+
+const handleImageLoad = (id: number) => {
+  loadedImages.value.add(id)
 }
 </script>
 
@@ -72,7 +106,7 @@ function handleImageLoad(equipmentId: number) {
       >
         <div class="relative aspect-[4/3] overflow-hidden bg-gray-100 group">
           <img
-            :src="equipment.image"
+            :src="getImageUrl(equipment.image)"
             :alt="equipment.name"
             class="w-full h-full object-cover"
             loading="lazy"
