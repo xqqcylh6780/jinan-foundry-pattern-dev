@@ -1,21 +1,43 @@
-# 济南方德利模具有限公司官网
+<div align="center">
+  <h1>济南方德利模具有限公司官网</h1>
+  
+  <p>
+    <a href="https://xqqcylh6780.github.io/jinan-foundry-pattern-dev/" target="_blank">
+      <img src="https://img.shields.io/badge/在线预览-Live%20Demo-blue?style=for-the-badge&logo=vercel" alt="在线预览" />
+    </a>
+  </p>
 
-## 🔗 在线预览
-[点击访问官网](https://xqqcylh6780.github.io/jinan-foundry-pattern-dev/)
+  <p>
+    <img src="https://img.shields.io/badge/Vue.js-3.x-4FC08D?style=flat-square&logo=vue.js" alt="Vue 3" />
+    <img src="https://img.shields.io/badge/TypeScript-4.x-3178C6?style=flat-square&logo=typescript" alt="TypeScript" />
+    <img src="https://img.shields.io/badge/Vite-2.x-646CFF?style=flat-square&logo=vite" alt="Vite" />
+    <img src="https://img.shields.io/badge/Tailwind%20CSS-3.x-06B6D4?style=flat-square&logo=tailwind-css" alt="Tailwind CSS" />
+  </p>
+</div>
 
-## 📖 项目简介
-济南方德利模具有限公司官方网站，专注于展示公司的产品、服务和技术优势。主要包括：
-- 公司简介与发展历程
-- 产品展示与技术优势
-- 联系方式与地理位置
+## ✨ 项目简介
+
+<p align="center">
+  <img src="public/screenshot.png" alt="项目截图" width="800" />
+</p>
+
+济南方德利模具有限公司官方网站，专注于展示公司的产品、服务和技术优势。
+
+### 🎯 主要功能
+- 📱 响应式设计，完美适配各种设备
+- 🖼️ 产品展示与分类浏览
+- 🏢 公司介绍与发展历程
+- 📍 联系方式与地理位置
+- 🚀 优化的加载性能
 
 ## 🛠️ 技术栈
-- Vue 3 - 渐进式 JavaScript 框架
-- TypeScript - 类型安全的 JavaScript 超集
-- Vite - 下一代前端构建工具
-- Tailwind CSS - 实用优先的 CSS 框架
-- Vue Router - Vue.js 官方路由
-- Element Plus - 基于 Vue 3 的组件库
+
+- **前端框架：** Vue 3 + TypeScript
+- **构建工具：** Vite
+- **CSS 框架：** Tailwind CSS
+- **UI 组件：** Element Plus
+- **状态管理：** Vue Router
+- **开发工具：** VS Code + Volar
 
 ## 💻 本地开发
 
@@ -24,7 +46,6 @@
 - npm 7.0 或更高版本
 
 ### 安装和运行
-
 
 bash
 ## 克隆项目
@@ -38,8 +59,6 @@ npm run dev
 ## 构建生产版本
 npm run build
 
-
-
 ## 📱 功能特点
 - 响应式设计，支持各种设备访问
 - 产品展示与分类浏览
@@ -51,7 +70,6 @@ npm run build
 [![Deploy static content to Pages](https://github.com/xqqcylh6780/jinan-foundry-pattern-dev/actions/workflows/deploy.yml/badge.svg)](https://github.com/xqqcylh6780/jinan-foundry-pattern-dev/actions/workflows/deploy.yml)
 
 ## 📂 项目结构
-
 
 ## 🤝 贡献指南
 1. Fork 本仓库
