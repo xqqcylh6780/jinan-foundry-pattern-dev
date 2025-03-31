@@ -24,27 +24,27 @@ const loadedImages = ref<Set<number>>(new Set())
 const equipments: Equipment[] = [
   {
     id: 1,
-    name: '大型智能去应力设备',
+    name: '日本牧野五轴加工中心',
     image: '/src/assets/equipments/5axis/e1.jpg',
-    category: '去应力设备',
+    category: '五轴加工设备',
     categoryId: 1,
-    description: '采用智能控制系统，可精确控制去应力过程'
+    description: '日本牧野五轴联动加工中心，行程2000*1300*800mm，可实现大型复杂模具的高精度加工'
   },
   {
     id: 2,
-    name: '大型智能去应力设备',
+    name: '日本牧野五轴加工中心',
     image: '/src/assets/equipments/5axis/e2.jpg',
-    category: '去应力设备',
+    category: '五轴加工设备',
     categoryId: 1,
-    description: '采用智能控制系统，可精确控制去应力过程'
+    description: '日本牧野五轴联动加工中心，行程2000*1300*800mm，专注于高精度模具制造'
   },
   {
     id: 3,
-    name: '高速铣削中心',
+    name: '三轴高速加工中心',
     image: '/src/assets/equipments/high-speed/e1.jpg',
     category: '高速加工设备',
     categoryId: 2,
-    description: '高速精密铣削中心，可实现高效率、高精度的加工'
+    description: '三轴高速加工中心，配备进口主轴，实现高效率、高精度的模具加工'
   },
   {
     id: 4,
@@ -64,11 +64,11 @@ const equipments: Equipment[] = [
   },
   {
     id: 6,
-    name: '三坐标测量机',
+    name: '三维扫描仪',
     image: '/src/assets/equipments/detection/e1.jpg',
     category: '检测设备',
     categoryId: 3,
-    description: '高精度三坐标测量机，确保产品尺寸精度'
+    description: '高精度三维扫描仪，用于模具产品的尺寸检测和逆向工程'
   },
   {
     id: 7,
