@@ -64,7 +64,7 @@ const products: Product[] = [
   {
     id: 1,
     name: '水泵壳体模具',
-    image: 'p1.jpg',
+    image: 'sand-casting/p1.jpg',
     category: '泵、阀类模具',
     categoryId: 1,
     description: '高精度水泵壳体铸造模具，适用于各类水泵生产'
@@ -72,7 +72,7 @@ const products: Product[] = [
   {
     id: 2,
     name: '阀门壳体模具',
-    image: 'p2.jpg',
+    image: 'sand-casting/p2.jpg',
     category: '泵、阀类模具',
     categoryId: 1,
     description: '精密阀门壳体模具，满足各种阀门制造需求'
@@ -80,7 +80,7 @@ const products: Product[] = [
   {
     id: 3,
     name: '液压泵体模具',
-    image: 'p3.jpg',
+    image: 'sand-casting/p3.jpg',
     category: '泵、阀类模具',
     categoryId: 1,
     description: '专业液压泵体模具制造，确保产品精度'
