@@ -52,14 +52,14 @@ const getImageUrl = (path: string) => {
     const imageModules = import.meta.glob('../assets/equipments/**/*', { eager: true })
     const imagePath = `../assets/equipments/${normalizedPath}`
     
-    // console.log('尝试加载图片:', imagePath) // 调试日志
-    
     // 检查图片是否存在
     if (imagePath in imageModules) {
       const imageUrl = (imageModules[imagePath] as { default: string }).default
+      // 移除可能存在的重复基础路径
+      const cleanUrl = imageUrl.replace('/jinan-foundry-pattern-dev/', '/')
       // 在生产环境中添加基础路径
       return import.meta.env.PROD 
-        ? `/jinan-foundry-pattern-dev${imageUrl}`
+        ? `/jinan-foundry-pattern-dev${cleanUrl}`
         : imageUrl
     } else {
       console.error('找不到图片:', imagePath)
