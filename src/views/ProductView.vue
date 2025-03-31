@@ -29,13 +29,27 @@ function handleImageLoad(productId: number) {
 }
 
 // 动态导入图片
-const getImageUrl = (name: string) => {
+const getImageUrl = (path: string) => {
+  if (!path) {
+    console.error('图片路径为空')
+    return ''
+  }
+
   try {
-    // 使用动态导入确保图片正确打包
-    return new URL(`../assets/products/${name}`, import.meta.url).href
+    // 使用 Vite 的动态导入语法
+    const imageModules = import.meta.glob('../assets/products/**/*', { eager: true })
+    const imagePath = `../assets/products/${path}`
+    
+    // 检查图片是否存在
+    if (imagePath in imageModules) {
+      return (imageModules[imagePath] as { default: string }).default
+    } else {
+      console.error('找不到图片:', imagePath)
+      return ''
+    }
   } catch (error) {
-    console.error('图片加载失败:', error)
-    return '' // 返回空字符串或默认图片路径
+    console.error('加载图片失败:', error)
+    return ''
   }
 }
 
