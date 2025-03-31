@@ -334,9 +334,6 @@ onMounted(() => {
           <div class="p-6 bg-gray-50">
             <h3 class="text-xl font-bold text-gray-900 mb-2">{{ product.name }}</h3>
             <p class="text-gray-600">{{ product.description }}</p>
-            <button class="mt-4 px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors">
-              查看详情
-            </button>
           </div>
         </div>
       </div>
