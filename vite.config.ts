@@ -12,7 +12,7 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/jinan-foundry-pattern-dev/', // 替换为您的仓库名
+  base: '/jinan-foundry-pattern-dev/', // 更新为您的仓库名
   plugins: [
     vue(),
     // vueDevTools(),
