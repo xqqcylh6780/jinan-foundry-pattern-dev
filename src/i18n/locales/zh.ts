@@ -2,13 +2,16 @@ export default {
   nav: {
     home: '网站首页',
     about: '关于方德利',
+    about_company: '公司简介',
+    about_team: '工程师团队',
+    about_certificates: '资质认证',
     design: '设计能力',
     product: '产品中心',
     equipment: '能力展示',
-    contact: '联系我们',
-    language: '切换语言',
     equipment_show: '设备展示',
-    equipment_list: '设备清单'
+    equipment_list: '设备清单',
+    contact: '联系我们',
+    language: '切换语言'
   },
   home: {
     banner: {

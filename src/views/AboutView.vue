@@ -7,6 +7,7 @@ import at2 from '@/assets/about/authen/at2.png'
 import at3 from '@/assets/about/authen/at3.png'
 import { ElDialog } from 'element-plus'
 import { useThrottleFn } from '@vueuse/core'
+import { RouterLink, RouterView } from 'vue-router'
 
 const highlights = [
   '通过ISO9001质量体系认证',
@@ -195,288 +196,33 @@ onMounted(() => {
     <div class="bg-white border-b">
       <div class="max-w-7xl mx-auto">
         <div class="flex space-x-8">
-          <button 
+          <RouterLink 
+            to="/about/company"
             class="px-6 py-4 text-lg font-medium transition-colors duration-200"
-            :class="activeTab === 'about' ? 'text-red-600 border-b-2 border-red-600' : 'text-gray-600 hover:text-red-600'"
-            @click="activeTab = 'about'"
+            :class="$route.path === '/about/company' ? 'text-red-600 border-b-2 border-red-600' : 'text-gray-600 hover:text-red-600'"
           >
             关于我们
-          </button>
-          <button 
+          </RouterLink>
+          <RouterLink 
+            to="/about/team"
             class="px-6 py-4 text-lg font-medium transition-colors duration-200"
-            :class="activeTab === 'certificates' ? 'text-red-600 border-b-2 border-red-600' : 'text-gray-600 hover:text-red-600'"
-            @click="activeTab = 'certificates'"
+            :class="$route.path === '/about/team' ? 'text-red-600 border-b-2 border-red-600' : 'text-gray-600 hover:text-red-600'"
+          >
+            工程团队
+          </RouterLink>
+          <RouterLink 
+            to="/about/certificates"
+            class="px-6 py-4 text-lg font-medium transition-colors duration-200"
+            :class="$route.path === '/about/certificates' ? 'text-red-600 border-b-2 border-red-600' : 'text-gray-600 hover:text-red-600'"
           >
             资质认证
-          </button>
+          </RouterLink>
         </div>
       </div>
     </div>
 
-    <div class="max-w-7xl mx-auto">
-      <!-- 关于我们内容 -->
-      <div v-show="activeTab === 'about'">
-        <div ref="section1Ref" class="mt-12 mb-16 opacity-0 transform translate-y-10 transition-all duration-1000">
-          <div class="bg-white p-8 shadow-sm">
-            <h2 class="text-2xl font-bold text-gray-900 mb-8 flex items-center">
-              <div class="w-1 h-6 bg-red-600 mr-3"></div>
-              公司简介
-            </h2>
-            <!-- 公司简介内容 -->
-            <div class="space-y-6 text-gray-600">
-              <p class="text-base leading-relaxed">
-                济南方德利模具有限公司由赵生彦铸造工程师于1992年成立，并始终致力于为国内外铸造行业提供最专业的模具设计与制造服务。
-              </p>
-              <p class="text-base leading-relaxed">
-                公司位于济南市高新区，紧邻京沪高速，占地20000平方米，建筑面积12000平方米。
-              </p>
-              <!-- 添加地址图片 -->
-              <div class="mt-8">
-                <img 
-                  src="@/assets/address.jpg" 
-                  alt="公司地址" 
-                  class="w-full rounded-lg shadow-md"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 技术优势 -->
-      <section v-if="activeTab === 'about'" class="relative bg-white py-16">
-        <div class="max-w-7xl mx-auto px-4">
-          <h2 class="text-2xl font-bold text-gray-900 mb-12 flex items-center">
-            <div class="w-1 h-6 bg-red-600 mr-3"></div>
-            技术优势
-          </h2>
-          <div class="grid md:grid-cols-2 gap-12 items-stretch">
-            <div class="bg-gray-50 p-8 rounded-xl shadow-sm h-full">
-              <ul class="space-y-6">
-                <li class="flex items-start group hover:bg-gray-50/70 p-4 rounded-lg transition-all duration-300">
-                  <span class="flex-shrink-0 h-7 w-7 text-red-600 group-hover:scale-110 transition-transform duration-300 mt-1">
-                    <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                  </span>
-                  <span class="ml-4 text-base md:text-lg leading-relaxed text-gray-700 group-hover:text-gray-900 transition-colors duration-300">济南方德利模具有限公司为山东省高新技术企业。</span>
-                </li>
-                <li class="flex items-start group hover:bg-gray-50/70 p-4 rounded-lg transition-all duration-300">
-                  <span class="flex-shrink-0 h-7 w-7 text-red-600 group-hover:scale-110 transition-transform duration-300 mt-1">
-                    <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                  </span>
-                  <span class="ml-4 text-base md:text-lg leading-relaxed text-gray-700 group-hover:text-gray-900 transition-colors duration-300">公司现有ISO9001:2015质量管理体系认证，ISO14001:2005环境管理体系认证，ISO45001职业健康体系认证及GB/T 29490:2013知识产权管理体系认证。</span>
-                </li>
-                <li class="flex items-start group hover:bg-gray-50/70 p-4 rounded-lg transition-all duration-300">
-                  <span class="flex-shrink-0 h-7 w-7 text-red-600 group-hover:scale-110 transition-transform duration-300 mt-1">
-                    <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                  </span>
-                  <span class="ml-4 text-base md:text-lg leading-relaxed text-gray-700 group-hover:text-gray-900 transition-colors duration-300">公司于2022年使用自行研发的BOSS系统通过了AA两化融合管理体系认证。</span>
-                </li>
-                <li class="flex items-start group hover:bg-gray-50/70 p-4 rounded-lg transition-all duration-300">
-                  <span class="flex-shrink-0 h-7 w-7 text-red-600 group-hover:scale-110 transition-transform duration-300 mt-1">
-                    <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                  </span>
-                  <span class="ml-4 text-base md:text-lg leading-relaxed text-gray-700 group-hover:text-gray-900 transition-colors duration-300">我们符合IATF16949:2016的申请标准，但因尚未有客户对此有所要求，我公司未申请此体系认证。</span>
-                </li>
-              </ul>
-            </div>
-            <div class="h-full">
-              <img 
-                src="@/assets/about/about2.jpg" 
-                alt="方德利生产设备" 
-                class="rounded-xl shadow-lg w-full h-full object-cover hover:scale-[1.02] transition-transform duration-500"
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 产品与服务 -->
-      <section v-if="activeTab === 'about'" class="relative bg-gray-50 py-16 mt-16">
-        <div class="max-w-7xl mx-auto px-4">
-          <h2 class="text-2xl font-bold text-gray-900 mb-12 flex items-center">
-            <div class="w-1 h-6 bg-red-600 mr-3"></div>
-            产品与服务
-          </h2>
-          <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="group overflow-hidden rounded-xl shadow-lg">
-              <img 
-                src="@/assets/about/about3.jpg" 
-                alt="方德利产品展示" 
-                class="w-full h-[400px] object-cover transform transition-transform duration-700 group-hover:scale-105"
-              >
-            </div>
-            <div class="bg-white p-8 rounded-xl shadow-sm space-y-6">
-              <p class="text-lg leading-relaxed text-gray-700 hover:text-gray-900 transition-colors duration-300">
-                我们致力于满足客户铸造生产的全过程的需求，设计阶段为客户提供凝固模拟，试制阶段我们的工程师和技师到现场配合。我们擅长生产树脂自硬砂生产线和各种湿型砂生产线用的模具；各种制芯机所需的热芯盒、冷芯盒，有色金属铸造用的砂铸、低压、重力铸造模具等。
-              </p>
-              <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
-              <p class="text-lg leading-relaxed text-gray-700 hover:text-gray-900 transition-colors duration-300">
-                已有的客户主要集中在新能源汽车、发动机、汽车、摩托车、拖拉机、阀门、液压件、水泵、风机、机床、农机、电机、压缩机、轮船、矿山和工程机械、高铁、电力、环保、军工等行业。
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 发展历程 -->
-      <section v-if="activeTab === 'about'" class="relative bg-white py-16">
-        <h2 class="text-3xl md:text-2xl sm:text-xl font-bold text-gray-900 mb-12 sm:mb-8 text-center">
-          <span class="inline-block border-b-4 border-blue-600 pb-2">发展历程</span>
-        </h2>
-
-        <!-- 时间线容器 -->
-        <div class="relative max-w-5xl mx-auto">
-          <!-- 中间线 -->
-          <div class="absolute left-[50%] top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-400 via-blue-500 to-blue-600"></div>
-
-          <!-- 时间线内容 -->
-          <div class="space-y-24 lg:space-y-16 md:space-y-12">
-            <!-- 1992年 - 左侧 -->
-            <div class="relative flex items-center justify-center lg:justify-between group">
-              <div class="w-[80%] px-0 lg:w-[45%] lg:pr-8">
-                <div class="bg-white p-6 sm:p-4 rounded-xl shadow-md group-hover:shadow-xl transition-all duration-300">
-                  <div class="flex items-center space-x-4 mb-4">
-                    <span class="text-3xl md:text-2xl sm:text-xl font-bold text-blue-600">1992</span>
-                    <div class="h-0.5 flex-grow bg-blue-100"></div>
-                  </div>
-                  <h3 class="text-xl md:text-lg sm:text-base font-bold text-gray-900 mb-2">创立之初</h3>
-                  <p class="text-gray-600 md:text-sm">公司成立，开始专注于铸造模具的设计与制造，为未来的发展奠定基础。</p>
-                </div>
-              </div>
-              <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4">
-                <div class="w-4 h-4 bg-blue-600 rounded-full ring-4 ring-blue-100 group-hover:ring-8 transition-all duration-300"></div>
-              </div>
-              <div class="hidden lg:block lg:w-[45%]"></div>
-            </div>
-
-            <!-- 2000年 - 右侧 -->
-            <div class="relative flex items-center justify-center lg:justify-between group">
-              <div class="hidden lg:block lg:w-[45%]"></div>
-              <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4">
-                <div class="w-4 h-4 bg-blue-600 rounded-full ring-4 ring-blue-100 group-hover:ring-8 transition-all duration-300"></div>
-              </div>
-              <div class="w-[80%] px-0 lg:w-[45%] lg:pl-8">
-                <div class="bg-white p-6 sm:p-4 rounded-xl shadow-md group-hover:shadow-xl transition-all duration-300">
-                  <div class="flex items-center space-x-4 mb-4">
-                    <span class="text-3xl font-bold text-blue-600">2000</span>
-                    <div class="h-0.5 flex-grow bg-blue-100"></div>
-                  </div>
-                  <h3 class="text-xl font-bold text-gray-900 mb-2">技术升级</h3>
-                  <p class="text-gray-600">引进先进数控设备，实现生产工艺升级，大幅提升生产效率和产品质量。</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- 2010年 - 左侧 -->
-            <div class="relative flex items-center justify-center lg:justify-between group">
-              <div class="w-[80%] px-0 lg:w-[45%] lg:pr-8">
-                <div class="bg-white p-6 sm:p-4 rounded-xl shadow-md group-hover:shadow-xl transition-all duration-300">
-                  <div class="flex items-center space-x-4 mb-4">
-                    <span class="text-3xl font-bold text-blue-600">2010</span>
-                    <div class="h-0.5 flex-grow bg-blue-100"></div>
-                  </div>
-                  <h3 class="text-xl font-bold text-gray-900 mb-2">质量认证</h3>
-                  <p class="text-gray-600">通过ISO9001质量体系认证，建立完善的质量管理体系，确保产品品质。</p>
-                </div>
-              </div>
-              <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4">
-                <div class="w-4 h-4 bg-blue-600 rounded-full ring-4 ring-blue-100 group-hover:ring-8 transition-all duration-300"></div>
-              </div>
-              <div class="hidden lg:block lg:w-[45%]"></div>
-            </div>
-
-            <!-- 2015年 - 右侧 -->
-            <div class="relative flex items-center justify-center lg:justify-between group">
-              <div class="hidden lg:block lg:w-[45%]"></div>
-              <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4">
-                <div class="w-4 h-4 bg-blue-600 rounded-full ring-4 ring-blue-100 group-hover:ring-8 transition-all duration-300"></div>
-              </div>
-              <div class="w-[80%] px-0 lg:w-[45%] lg:pl-8">
-                <div class="bg-white p-6 sm:p-4 rounded-xl shadow-md group-hover:shadow-xl transition-all duration-300">
-                  <div class="flex items-center space-x-4 mb-4">
-                    <span class="text-3xl font-bold text-blue-600">2015</span>
-                    <div class="h-0.5 flex-grow bg-blue-100"></div>
-                  </div>
-                  <h3 class="text-xl font-bold text-gray-900 mb-2">技术认可</h3>
-                  <p class="text-gray-600">获得高新技术企业认定，研发能力获得认可，成为行业领先企业。</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- 2020年 - 左侧 -->
-            <div class="relative flex items-center justify-center lg:justify-between group">
-              <div class="w-[80%] px-0 lg:w-[45%] lg:pr-8">
-                <div class="bg-white p-6 sm:p-4 rounded-xl shadow-md group-hover:shadow-xl transition-all duration-300">
-                  <div class="flex items-center space-x-4 mb-4">
-                    <span class="text-3xl font-bold text-blue-600">2020</span>
-                    <div class="h-0.5 flex-grow bg-blue-100"></div>
-                  </div>
-                  <h3 class="text-xl font-bold text-gray-900 mb-2">数字转型</h3>
-                  <p class="text-gray-600">实现数字化转型，引入PDM系统和智能制造设备，提升管理效率。</p>
-                </div>
-              </div>
-              <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4">
-                <div class="w-4 h-4 bg-blue-600 rounded-full ring-4 ring-blue-100 group-hover:ring-8 transition-all duration-300"></div>
-              </div>
-              <div class="hidden lg:block lg:w-[45%]"></div>
-            </div>
-
-            <!-- 2023年 - 右侧 -->
-            <div class="relative flex items-center justify-center lg:justify-between group">
-              <div class="hidden lg:block lg:w-[45%]"></div>
-              <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4">
-                <div class="w-4 h-4 bg-blue-600 rounded-full ring-4 ring-blue-100 group-hover:ring-8 transition-all duration-300"></div>
-              </div>
-              <div class="w-[80%] px-0 lg:w-[45%] lg:pl-8">
-                <div class="bg-white p-6 sm:p-4 rounded-xl shadow-md group-hover:shadow-xl transition-all duration-300">
-                  <div class="flex items-center space-x-4 mb-4">
-                    <span class="text-3xl font-bold text-blue-600">2023</span>
-                    <div class="h-0.5 flex-grow bg-blue-100"></div>
-                  </div>
-                  <h3 class="text-xl font-bold text-gray-900 mb-2">基地建成</h3>
-                  <p class="text-gray-600">建成现代化铸造模具研发制造基地，开启新的发展篇章。</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 资质认证内容 -->
-      <div v-show="activeTab === 'certificates'" class="mt-12 mb-16">
-        <div class="bg-white p-8 shadow-sm">
-          <h2 class="text-2xl font-bold text-gray-900 mb-8 flex items-center">
-            <div class="w-1 h-6 bg-red-600 mr-3"></div>
-            资质认证
-          </h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div 
-              v-for="(cert, index) in certificates" 
-              :key="index"
-              class="bg-gray-50 p-6"
-            >
-              <div class="mb-4">
-                <img 
-                  :src="cert.image" 
-                  :alt="cert.name"
-                  class="w-[376px] h-[519px] object-contain"
-                />
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-2">{{ cert.name }}</h3>
-              <p class="text-gray-600">{{ cert.description }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- 子路由出口 -->
+    <RouterView />
 
     <!-- 图片预览模态框 -->
     <el-dialog

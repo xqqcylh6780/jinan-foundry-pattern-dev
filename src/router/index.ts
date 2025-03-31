@@ -14,6 +14,24 @@ const router = createRouter({
       path: "/about",
       name: "about",
       component: () => import("@/views/AboutView.vue"),
+      redirect: "/about/company",
+      children: [
+        {
+          path: "company",
+          name: "about-company",
+          component: () => import("@/views/about/CompanyView.vue")
+        },
+        {
+          path: "team",
+          name: "about-team",
+          component: () => import("@/views/about/TeamView.vue")
+        },
+        {
+          path: "certificates",
+          name: "about-certificates",
+          component: () => import("@/views/about/CertificatesView.vue")
+        }
+      ]
     },
     {
       path: "/design",

@@ -2,13 +2,16 @@ export default {
   nav: {
     home: 'Home',
     about: 'About Us',
+    about_company: 'Company Profile',
+    about_team: 'Engineering Team',
+    about_certificates: 'Certificates',
     design: 'Design',
     product: 'Products',
     equipment: 'Equipment',
-    contact: 'Contact',
-    language: 'Language',
     equipment_show: 'Equipment Gallery',
-    equipment_list: 'Equipment List'
+    equipment_list: 'Equipment List',
+    contact: 'Contact',
+    language: 'Language'
   },
   home: {
     banner: {

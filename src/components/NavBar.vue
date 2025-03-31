@@ -6,7 +6,15 @@ import { onClickOutside } from '@vueuse/core'
 // 导航菜单配置
 const navItems = [
   { name: 'nav.home', path: '/' },
-  { name: 'nav.about', path: '/about' },
+  { 
+    name: 'nav.about', 
+    path: '/about',
+    children: [
+      { name: 'nav.about_company', path: '/about/company' },
+      { name: 'nav.about_team', path: '/about/team' },
+      { name: 'nav.about_certificates', path: '/about/certificates' }
+    ]
+  },
   { name: 'nav.design', path: '/design' },
   { name: 'nav.product', path: '/product' },
   { 
@@ -255,23 +263,22 @@ function toggleSubmenu(event: Event, name: string) {
   @apply text-gray-700;
 }
 
-/* 汉堡菜单按钮悬停效果 */
+/* 移除子菜单的激活样式 */
+.router-link-active:not(.nav-link) {
+  @apply bg-gray-100;
+  @apply text-gray-900 !important;
+}
+
+/* 其他样式保持不变 */
 .mobile-menu-button:hover span {
   @apply bg-gray-800;
 }
 
-/* 激活状态下的悬停效果 */
 .mobile-menu-button:hover span.rotate-45,
 .mobile-menu-button:hover span.-rotate-45 {
   @apply bg-red-700;
 }
 
-/* 下拉菜单项动画 */
-.router-link-active {
-  @apply text-red-600 bg-gray-50;
-}
-
-/* 确保子菜单在鼠标移动到子菜单时保持显示 */
 .group:hover .absolute,
 .absolute:hover {
   display: block;
@@ -288,7 +295,6 @@ function toggleSubmenu(event: Event, name: string) {
   }
 }
 
-/* 添加子菜单过渡动画样式 */
 .max-h-0 {
   max-height: 0;
 }

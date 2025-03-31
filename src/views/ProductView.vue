@@ -119,7 +119,7 @@ const products: Product[] = [
   {
     id: 8,
     name: '金属型模铸造模具-5',
-    image: 'metal/5.png',
+    image: 'metal/8.png',
     category: '金属型模铸造',
     categoryId: 2,
     description: '定制金属型模铸造模具'
@@ -127,7 +127,7 @@ const products: Product[] = [
   {
     id: 9,
     name: '金属型模铸造模具-6',
-    image: 'metal/6.png',
+    image: 'metal/9.png',
     category: '金属型模铸造',
     categoryId: 2,
     description: '专业金属型模铸造解决方案'
@@ -135,13 +135,45 @@ const products: Product[] = [
   {
     id: 10,
     name: '金属型模铸造模具-7',
-    image: 'metal/7.png',
+    image: 'metal/10.png',
     category: '金属型模铸造',
     categoryId: 2,
     description: '高效金属型模铸造模具'
   },
   {
     id: 11,
+    name: '金属型模铸造模具-8',
+    image: 'metal/11.png',
+    category: '金属型模铸造',
+    categoryId: 2,
+    description: '精密金属型模铸造设备'
+  },
+  {
+    id: 12,
+    name: '金属型模铸造模具-9',
+    image: 'metal/12.png',
+    category: '金属型模铸造',
+    categoryId: 2,
+    description: '高性能金属型模铸造模具'
+  },
+  {
+    id: 13,
+    name: '金属型模铸造模具-10',
+    image: 'metal/13.png',
+    category: '金属型模铸造',
+    categoryId: 2,
+    description: '先进金属型模铸造工艺'
+  },
+  {
+    id: 14,
+    name: '金属型模铸造模具-11',
+    image: 'metal/14.png',
+    category: '金属型模铸造',
+    categoryId: 2,
+    description: '创新金属型模铸造技术'
+  },
+  {
+    id: 15,
     name: '铝合金压铸模具',
     image: 'p10.jpg',
     category: '有色铸造模具',
@@ -149,7 +181,7 @@ const products: Product[] = [
     description: '专业铝合金压铸模具设计与制造'
   },
   {
-    id: 12,
+    id: 16,
     name: '铜合金铸造模具',
     image: 'p11.jpg',
     category: '有色铸造模具',
@@ -157,7 +189,7 @@ const products: Product[] = [
     description: '高精度铜合金铸造模具生产'
   },
   {
-    id: 13,
+    id: 17,
     name: '镁合金模具',
     image: 'p12.jpg',
     category: '有色铸造模具',
@@ -165,7 +197,7 @@ const products: Product[] = [
     description: '轻量化镁合金压铸模具制造'
   },
   {
-    id: 14,
+    id: 18,
     name: '机床铸件模具',
     image: 'p13.jpg',
     category: '其他类模具',
@@ -173,7 +205,7 @@ const products: Product[] = [
     description: '各类机床铸件模具的设计与制造'
   },
   {
-    id: 15,
+    id: 19,
     name: '工程机械模具',
     image: 'p14.jpg',
     category: '其他类模具',
@@ -181,7 +213,7 @@ const products: Product[] = [
     description: '工程机械零部件模具专业定制'
   },
   {
-    id: 16,
+    id: 20,
     name: '农机设备模具',
     image: 'p15.jpg',
     category: '其他类模具',
