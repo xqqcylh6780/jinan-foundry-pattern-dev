@@ -25,10 +25,74 @@ const equipments: Equipment[] = [
   {
     id: 1,
     name: '大型智能去应力设备',
-    image: '/src/assets/equipments/e1.jpg',
+    image: '/src/assets/equipments/5axis/e1.jpg',
     category: '去应力设备',
     categoryId: 1,
     description: '采用智能控制系统，可精确控制去应力过程'
+  },
+  {
+    id: 2,
+    name: '大型智能去应力设备',
+    image: '/src/assets/equipments/5axis/e2.jpg',
+    category: '去应力设备',
+    categoryId: 1,
+    description: '采用智能控制系统，可精确控制去应力过程'
+  },
+  {
+    id: 3,
+    name: '高速铣削中心',
+    image: '/src/assets/equipments/high-speed/e1.jpg',
+    category: '高速加工设备',
+    categoryId: 2,
+    description: '高速精密铣削中心，可实现高效率、高精度的加工'
+  },
+  {
+    id: 4,
+    name: '高速铣削加工中心',
+    image: '/src/assets/equipments/high-speed/e2.jpg',
+    category: '高速加工设备',
+    categoryId: 2,
+    description: '高速铣削加工中心，实现复杂曲面精密加工'
+  },
+  {
+    id: 5,
+    name: '高速数控铣床',
+    image: '/src/assets/equipments/high-speed/e3.jpg',
+    category: '高速加工设备',
+    categoryId: 2,
+    description: '高精度高速数控铣床，适用于各类模具加工'
+  },
+  {
+    id: 6,
+    name: '三坐标测量机',
+    image: '/src/assets/equipments/detection/e1.jpg',
+    category: '检测设备',
+    categoryId: 3,
+    description: '高精度三坐标测量机，确保产品尺寸精度'
+  },
+  {
+    id: 7,
+    name: '光学投影仪',
+    image: '/src/assets/equipments/detection/e2.jpg',
+    category: '检测设备',
+    categoryId: 3,
+    description: '精密光学投影仪，用于轮廓尺寸检测'
+  },
+  {
+    id: 8,
+    name: '数显高度仪',
+    image: '/src/assets/equipments/detection/e3.jpg',
+    category: '检测设备',
+    categoryId: 3,
+    description: '高精度数显高度仪，用于垂直尺寸测量'
+  },
+  {
+    id: 9,
+    name: '粗糙度仪',
+    image: '/src/assets/equipments/detection/e4.jpg',
+    category: '检测设备',
+    categoryId: 3,
+    description: '表面粗糙度测量仪，确保表面质量'
   },
   // ... 其他设备数据
 ]
@@ -104,7 +168,7 @@ const handleImageLoad = (id: number) => {
         :key="equipment.id"
         class="bg-white rounded-lg shadow-lg overflow-hidden"
       >
-        <div class="relative aspect-[4/3] overflow-hidden bg-gray-100 group">
+        <div class="relative aspect-[16/9] overflow-hidden bg-gray-100 group">
           <img
             :src="getImageUrl(equipment.image)"
             :alt="equipment.name"
