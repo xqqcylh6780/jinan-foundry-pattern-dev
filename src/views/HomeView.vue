@@ -241,20 +241,18 @@ const handleReadMore = () => {
       <!-- 图片背景区域 -->
       <div class="absolute inset-0 z-[1]">
         <div class="relative w-full h-full">
-          <div 
-            v-for="(image, index) in backgroundImages" 
-            :key="index" 
-            class="absolute overflow-hidden"
-            :style="{
-              left: `${(index * 25) + 6}%`,
-              top: index % 2 === 0 ? '0' : '20%'
-            }"
-          >
-            <img 
-              :src="image" 
-              :alt="`公司图片 ${index + 1}`"
-              class="hover:scale-110 transition-transform duration-300"
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            <div 
+              v-for="(image, index) in backgroundImages" 
+              :key="index" 
+              class="relative overflow-hidden aspect-square"
             >
+              <img 
+                :src="image" 
+                :alt="`公司图片 ${index + 1}`"
+                class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+              >
+            </div>
           </div>
         </div>
       </div>
