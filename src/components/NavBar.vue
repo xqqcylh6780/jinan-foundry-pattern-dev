@@ -148,11 +148,11 @@ const mobileMenuItems = computed(() => {
 </script>
 
 <template>
-  <header class="w-full bg-white shadow-sm">
+  <header class="w-full bg-white shadow-sm relative z-40">
     <!-- 响应式导航栏 -->
-    <div class="max-w-[1440px] mx-auto px-4" ref="menuContainerRef">
-      <div class="flex items-center justify-between">
-        <nav class="relative flex-1">
+    <div class="max-w-[1440px] mx-auto px-4 relative z-40" ref="menuContainerRef">
+      <div class="flex items-center justify-between relative z-40">
+        <nav class="relative flex-1 z-40">
           <div class="flex items-center justify-between h-[90px]">
             <!-- 左侧 Logo -->
             <div class="flex-shrink-1">
@@ -166,7 +166,7 @@ const mobileMenuItems = computed(() => {
             </div>
 
             <!-- 桌面端导航菜单 -->
-            <div class="hidden md:flex md:items-center">
+            <div class="hidden md:flex md:items-center relative z-40">
               <div 
                 v-for="(item, index) in navItems" 
                 :key="item.name" 
@@ -184,13 +184,13 @@ const mobileMenuItems = computed(() => {
                   {{ t(item.name) }}
                 </RouterLink>
                 
-                <!-- 添加子菜单 -->
+                <!-- 子菜单 -->
                 <div 
                   v-if="item.children" 
-                  class="absolute left-0 mt-1 w-[160px] hidden group-hover:block z-50"
+                  class="absolute left-0 mt-1 w-[160px] hidden group-hover:block z-[9999]"
                 >
                   <div class="absolute h-2 -top-2 left-0 right-0 bg-transparent"></div>
-                  <div class="bg-white shadow-lg">
+                  <div class="bg-white shadow-lg relative">
                     <RouterLink
                       v-for="child in item.children"
                       :key="child.name"
@@ -261,7 +261,7 @@ const mobileMenuItems = computed(() => {
     <!-- 移动端下拉菜单 -->
     <div
       v-show="isMobileMenuOpen"
-      class="mobile-menu xl:hidden fixed top-[90px] left-0 right-0 bg-white shadow-xl z-50"
+      class="mobile-menu xl:hidden fixed top-[90px] left-0 right-0 bg-white shadow-xl z-30"
     >
       <div class="py-3">
         <template v-for="item in mobileMenuItems" :key="item.name">
@@ -381,9 +381,8 @@ const mobileMenuItems = computed(() => {
   @apply bg-[#1d46a8];
 }
 
-.group:hover .absolute,
-.absolute:hover {
-  display: block;
+.group:hover .absolute {
+  z-index: 9999;
 }
 
 @keyframes fadeIn {
