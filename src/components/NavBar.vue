@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { onClickOutside } from '@vueuse/core'
 
@@ -71,6 +71,55 @@ function toggleSubmenu(event: Event, name: string) {
     expandedMenus.value.add(name)
   }
 }
+
+// 添加屏幕宽度响应式状态
+const screenWidth = ref(window.innerWidth)
+const breakpoints = {
+  sm: 640,
+  md: 768,
+  lg: 1024,
+  xl: 1280
+}
+
+// 计算每个导航项的最小所需宽度（根据实际内容调整）
+const itemMinWidth = 120 // 每个导航项的最小宽度（包括padding）
+
+// 计算当前可显示的导航项数量
+const visibleItemsCount = computed(() => {
+  const availableWidth = screenWidth.value - 400 // 减去logo和其他元素的宽度
+  const count = Math.floor(availableWidth / itemMinWidth)
+  // 确保语言切换按钮也被计入总宽度
+  return count
+})
+
+// 判断是否应该隐藏导航项
+function shouldHideNavItem(index: number): boolean {
+  return index >= visibleItemsCount.value
+}
+
+// 计算是否有隐藏的导航项
+const hasHiddenItems = computed(() => {
+  return visibleItemsCount.value < navItems.length
+})
+
+// 监听窗口大小变化
+onMounted(() => {
+  const handleResize = () => {
+    screenWidth.value = window.innerWidth
+  }
+  
+  window.addEventListener('resize', handleResize)
+  handleResize() // 初始化时执行一次
+  
+  onUnmounted(() => {
+    window.removeEventListener('resize', handleResize)
+  })
+})
+
+// 移动端菜单中显示所有被隐藏的导航项
+const mobileMenuItems = computed(() => {
+  return navItems.filter((_, index) => shouldHideNavItem(index))
+})
 </script>
 
 <template>
@@ -92,8 +141,16 @@ function toggleSubmenu(event: Event, name: string) {
             </div>
 
             <!-- 桌面端导航菜单 -->
-            <div class="hidden xl:flex xl:items-center">
-              <div v-for="item in navItems" :key="item.name" class="relative group">
+            <div class="hidden md:flex md:items-center">
+              <div 
+                v-for="(item, index) in navItems" 
+                :key="item.name" 
+                class="relative group"
+                :class="{
+                  'hidden': shouldHideNavItem(index),
+                  'block': !shouldHideNavItem(index)
+                }"
+              >
                 <RouterLink
                   :to="item.path"
                   class="nav-link text-gray-700 px-5 py-2 text-[15px] uppercase font-medium tracking-wider whitespace-nowrap"
@@ -123,7 +180,13 @@ function toggleSubmenu(event: Event, name: string) {
             </div>
 
             <!-- 移动端菜单按钮 -->
-            <div class="block xl:hidden ml-2">
+            <div 
+              class="block ml-2"
+              :class="{
+                'md:hidden': !hasHiddenItems,
+                'block': hasHiddenItems
+              }"
+            >
               <button
                 class="mobile-menu-button inline-flex flex-col justify-center items-center w-16 h-16 relative rounded-lg hover:bg-gray-50 active:bg-gray-100 transition-all duration-200"
                 @click="isMobileMenuOpen = !isMobileMenuOpen"
@@ -147,8 +210,13 @@ function toggleSubmenu(event: Event, name: string) {
           </div>
         </nav>
 
-        <!-- 语言切换按钮 -->
-        <div class="hidden xl:flex items-center h-[90px] ml-6">
+        <!-- 语言切换按钮 - 桌面端 -->
+        <div 
+          class="hidden items-center h-[90px] ml-6"
+          :class="{
+            'xl:flex': !shouldHideNavItem(navItems.length - 1)
+          }"
+        >
           <button
             @click="toggleLang"
             class="group flex items-center space-x-2 px-4 py-2 text-[15px] text-gray-500 border border-gray-200 rounded-full hover:border-[#1d46a8] hover:text-[#1d46a8] hover:shadow-sm transition-all duration-300"
@@ -157,13 +225,7 @@ function toggleSubmenu(event: Event, name: string) {
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
             </svg>
             <span class="font-medium">{{ currentLang }}</span>
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              class="h-4 w-4" 
-              fill="none" 
-              viewBox="0 0 24 24" 
-              stroke="currentColor"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
           </button>
@@ -177,7 +239,7 @@ function toggleSubmenu(event: Event, name: string) {
       class="mobile-menu xl:hidden fixed top-[90px] left-0 right-0 bg-white shadow-xl z-50"
     >
       <div class="py-3">
-        <template v-for="item in navItems" :key="item.name">
+        <template v-for="item in mobileMenuItems" :key="item.name">
           <div class="relative">
             <div 
               class="flex items-center justify-between px-6 py-4 text-[15px] font-medium text-gray-700 hover:text-[#1d46a8] hover:bg-gray-50/70 transition-all duration-200"
@@ -238,6 +300,22 @@ function toggleSubmenu(event: Event, name: string) {
             </transition>
           </div>
         </template>
+
+        <!-- 添加语言切换按钮到移动端菜单 -->
+        <div 
+          v-if="shouldHideNavItem(navItems.length - 1)"
+          class="px-6 py-4 border-t border-gray-100"
+        >
+          <button
+            @click="toggleLang"
+            class="flex items-center space-x-2 text-[15px] text-gray-700 hover:text-[#1d46a8] transition-all duration-200"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+            </svg>
+            <span class="font-medium">{{ currentLang }}</span>
+          </button>
+        </div>
       </div>
     </div>
   </header>
@@ -245,7 +323,7 @@ function toggleSubmenu(event: Event, name: string) {
 
 <style scoped>
 .nav-link {
-  @apply relative inline-block;
+  @apply relative inline-block transition-all duration-300;
 }
 
 .nav-link::after {
@@ -300,5 +378,10 @@ function toggleSubmenu(event: Event, name: string) {
 
 .max-h-\[500px\] {
   max-height: 500px;
+}
+
+/* 添加移动端语言切换按钮样式 */
+.mobile-menu .language-button {
+  @apply w-full text-left;
 }
 </style> 
