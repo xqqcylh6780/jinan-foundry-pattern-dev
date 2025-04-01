@@ -52,7 +52,37 @@ const isTitleVisible = ref(false)
 const isSubtitleVisible = ref(false)
 
 // 添加背景图片数组
-const backgroundImages = [jj1, jj2, jj3, jj4];
+const backgroundImages = ref([jj1, jj2, jj3, jj4]);
+
+// 添加响应式图片位置计算函数
+function getImagePosition(index: number): string {
+  // 获取当前视窗宽度
+  const width = window.innerWidth
+  
+  if (width <= 768) {
+    // 小屏幕下的位置计算
+    return `${(index * 50) + 3}%` // 两列布局
+  } else if (width <= 1024) {
+    // 中等屏幕下的位置计算
+    return `${(index * 33) + 4}%` // 三列布局
+  } else {
+    // 大屏幕保持原有布局
+    return `${(index * 25) + 6}%` // 四列布局
+  }
+}
+
+// 添加窗口大小变化监听
+window.addEventListener('resize', () => {
+  // 强制重新渲染以更新图片位置
+  backgroundImages.value = [...backgroundImages.value]
+})
+
+// 组件卸载时移除监听器
+onUnmounted(() => {
+  window.removeEventListener('resize', () => {
+    backgroundImages.value = [...backgroundImages.value]
+  })
+})
 
 onMounted(() => {
   const observer = new IntersectionObserver(
@@ -241,18 +271,20 @@ const handleReadMore = () => {
       <!-- 图片背景区域 -->
       <div class="absolute inset-0 z-[1]">
         <div class="relative w-full h-full">
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-            <div 
-              v-for="(image, index) in backgroundImages" 
-              :key="index" 
-              class="relative overflow-hidden aspect-square"
+          <div 
+            v-for="(image, index) in backgroundImages" 
+            :key="index" 
+            class="absolute overflow-hidden"
+            :style="{
+              left: `${getImagePosition(index)}`,
+              top: index % 2 === 0 ? '0' : '20%'
+            }"
+          >
+            <img 
+              :src="image" 
+              :alt="`公司图片 ${index + 1}`"
+              class="hover:scale-110 transition-transform duration-300 w-full h-auto"
             >
-              <img 
-                :src="image" 
-                :alt="`公司图片 ${index + 1}`"
-                class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-              >
-            </div>
           </div>
         </div>
       </div>
