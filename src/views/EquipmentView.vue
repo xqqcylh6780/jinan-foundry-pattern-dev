@@ -40,7 +40,7 @@ onMounted(() => {
             class="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white tracking-widest font-medium max-w-4xl mx-auto px-4 transform transition-all duration-1000 delay-300"
             :class="{ 'translate-y-0 opacity-100': isSubtitleVisible, 'translate-y-8 opacity-0': !isSubtitleVisible }"
           >
-            配备国内外先进加工设备，确保产品精度和品质
+          世界一流的加工设备，专业的设备团队，为您提供高品质的产品与服务，联系我们讨论您的铸造模具需求
           </p>
         </div>
       </div>

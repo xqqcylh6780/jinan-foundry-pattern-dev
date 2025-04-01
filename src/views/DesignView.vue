@@ -30,26 +30,11 @@ const isTitleVisible = ref(true)
 
 const isSubtitleVisible = ref(true)
 
-const description = '方德利拥有专业的设计团队和先进的设计设备，为客户提供从概念设计到生产的一站式解决方案。我们致力于为客户创造最大价值，确保每个项目都能达到最高标准。'
+const description = '二十余名工程师，数十年的铸造厂工作及服务经验，保证了我们可以高效且准确地将您的产品转化为高品质的模具'
 
 const teamTitleRef = ref(null)
 const isTeamTitleVisible = ref(false)
 const isTeamDescVisible = ref(false)
-
-// 设计项目数据
-const designItems = [
-  {
-    title: '模具设计',
-    image: 'modeling.jpg',  // 简化路径
-    description: '专业的模具设计服务...'
-  },
-  {
-    title: '3D建模',
-    image: '3d-modeling.jpg',  // 简化路径
-    description: '精确的三维建模...'
-  },
-  // ... 其他项目
-]
 
 // 动态导入图片
 const getImageUrl = (name: string) => {

@@ -8,6 +8,9 @@ import at3 from '@/assets/about/authen/at3.png'
 import { ElDialog } from 'element-plus'
 import { useThrottleFn } from '@vueuse/core'
 import { RouterLink, RouterView } from 'vue-router'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const highlights = [
   '通过ISO9001质量体系认证',
@@ -201,21 +204,14 @@ onMounted(() => {
             class="px-6 py-4 text-lg font-medium transition-colors duration-200"
             :class="$route.path === '/about/company' ? 'text-red-600 border-b-2 border-red-600' : 'text-gray-600 hover:text-red-600'"
           >
-            关于我们
-          </RouterLink>
-          <RouterLink 
-            to="/about/team"
-            class="px-6 py-4 text-lg font-medium transition-colors duration-200"
-            :class="$route.path === '/about/team' ? 'text-red-600 border-b-2 border-red-600' : 'text-gray-600 hover:text-red-600'"
-          >
-            工程团队
+            {{ t('nav.about_company') }}
           </RouterLink>
           <RouterLink 
             to="/about/certificates"
             class="px-6 py-4 text-lg font-medium transition-colors duration-200"
             :class="$route.path === '/about/certificates' ? 'text-red-600 border-b-2 border-red-600' : 'text-gray-600 hover:text-red-600'"
           >
-            资质认证
+            {{ t('nav.about_certificates') }}
           </RouterLink>
         </div>
       </div>

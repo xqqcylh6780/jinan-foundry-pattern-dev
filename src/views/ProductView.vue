@@ -240,13 +240,7 @@ onMounted(() => {
             class="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white tracking-widest font-medium max-w-4xl mx-auto px-4 transform transition-all duration-1000 delay-300"
             :class="{ 'translate-y-0 opacity-100': isSubtitleVisible, 'translate-y-8 opacity-0': !isSubtitleVisible }"
           >
-            专注铸造模具30年，打造全方位铸造解决方案
-          </p>
-          <p 
-            class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-200 max-w-3xl mx-auto px-4 transform transition-all duration-1000 delay-600"
-            :class="{ 'translate-y-0 opacity-100': isSubtitle2Visible, 'translate-y-8 opacity-0': !isSubtitle2Visible }"
-          >
-            涵盖泵阀、发动机、汽车机械、有色金属等多个领域，以精湛工艺服务全球客户
+            复杂及各种尺寸的铸铁造型线模具、冷热芯盒，铸铝低压、重力、倾转永久模，及各类型辅助工装夹具
           </p>
         </div>
       </div>

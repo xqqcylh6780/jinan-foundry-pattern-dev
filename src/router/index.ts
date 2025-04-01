@@ -22,11 +22,6 @@ const router = createRouter({
           component: () => import("@/views/about/CompanyView.vue")
         },
         {
-          path: "team",
-          name: "about-team",
-          component: () => import("@/views/about/TeamView.vue")
-        },
-        {
           path: "certificates",
           name: "about-certificates",
           component: () => import("@/views/about/CertificatesView.vue")
@@ -68,5 +63,5 @@ const router = createRouter({
     },
   ],
 });
-
 export default router;
+
