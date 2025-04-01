@@ -6,19 +6,19 @@ import at3 from '@/assets/about/authen/at3.png'
 // 证书数据
 const certificates = [
   {
-    name: 'ISO9001认证',
+    name: '环境管理体系认证',
     image: at1,
+    description: '环境管理体系认证证书'
+  },
+  {
+    name: '质量管理体系认证',
+    image: at2,
     description: '质量管理体系认证证书'
   },
   {
-    name: '高新技术企业',
-    image: at2,
-    description: '国家高新技术企业认定证书'
-  },
-  {
-    name: '安全生产标准化',
+    name: '职业健康安全管理体系认证',
     image: at3,
-    description: '安全生产标准化三级企业证书'
+    description: '职业健康安全管理体系认证证书'
   }
 ]
 </script>
