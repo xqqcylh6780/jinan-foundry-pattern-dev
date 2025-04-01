@@ -72,23 +72,36 @@ function toggleSubmenu(event: Event, name: string) {
   }
 }
 
-// 添加屏幕宽度响应式状态
+// 优化屏幕宽度计算逻辑
 const screenWidth = ref(window.innerWidth)
-const breakpoints = {
-  sm: 640,
-  md: 768,
-  lg: 1024,
-  xl: 1280
-}
-
-// 计算每个导航项的最小所需宽度（根据实际内容调整）
-const itemMinWidth = 120 // 每个导航项的最小宽度（包括padding）
+const logoWidth = 462 // Logo 最大宽度
+const menuButtonWidth = 64 // 汉堡菜单按钮宽度
+const langButtonWidth = 120 // 语言切换按钮宽度
+const navItemPadding = 40 // 导航项的左右内边距总和
+const minNavItemWidth = 80 // 导航项的最小宽度（不包括内边距）
 
 // 计算当前可显示的导航项数量
 const visibleItemsCount = computed(() => {
-  const availableWidth = screenWidth.value - 400 // 减去logo和其他元素的宽度
-  const count = Math.floor(availableWidth / itemMinWidth)
-  // 确保语言切换按钮也被计入总宽度
+  const padding = 32 // 页面左右内边距
+  const availableWidth = screenWidth.value - logoWidth - menuButtonWidth - padding * 2
+  
+  // 计算每个导航项实际需要的宽度（包括内边距）
+  const itemWidths = navItems.map(item => {
+    // 根据文本长度计算所需宽度（假设每个字符约 12px）
+    const textWidth = t(item.name).length * 12
+    return Math.max(textWidth + navItemPadding, minNavItemWidth + navItemPadding)
+  })
+  
+  // 从左到右累加宽度，直到超出可用空间
+  let totalWidth = 0
+  let count = 0
+  
+  for (const width of itemWidths) {
+    if (totalWidth + width > availableWidth) break
+    totalWidth += width
+    count++
+  }
+  
   return count
 })
 
@@ -104,14 +117,26 @@ const hasHiddenItems = computed(() => {
 
 // 监听窗口大小变化
 onMounted(() => {
+  let resizeTimeout: number | null = null
+  
   const handleResize = () => {
-    screenWidth.value = window.innerWidth
+    // 使用 requestAnimationFrame 优化性能
+    if (resizeTimeout) {
+      window.cancelAnimationFrame(resizeTimeout)
+    }
+    
+    resizeTimeout = window.requestAnimationFrame(() => {
+      screenWidth.value = window.innerWidth
+    })
   }
   
   window.addEventListener('resize', handleResize)
   handleResize() // 初始化时执行一次
   
   onUnmounted(() => {
+    if (resizeTimeout) {
+      window.cancelAnimationFrame(resizeTimeout)
+    }
     window.removeEventListener('resize', handleResize)
   })
 })
@@ -145,10 +170,10 @@ const mobileMenuItems = computed(() => {
               <div 
                 v-for="(item, index) in navItems" 
                 :key="item.name" 
-                class="relative group"
+                class="relative group transition-all duration-300"
                 :class="{
-                  'hidden': shouldHideNavItem(index),
-                  'block': !shouldHideNavItem(index)
+                  'opacity-0 w-0 overflow-hidden': shouldHideNavItem(index),
+                  'opacity-100': !shouldHideNavItem(index)
                 }"
               >
                 <RouterLink
@@ -383,5 +408,18 @@ const mobileMenuItems = computed(() => {
 /* 添加移动端语言切换按钮样式 */
 .mobile-menu .language-button {
   @apply w-full text-left;
+}
+
+/* 优化过渡效果 */
+.group {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.opacity-0 {
+  @apply transform scale-95;
+}
+
+.opacity-100 {
+  @apply transform scale-100;
 }
 </style> 
