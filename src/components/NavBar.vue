@@ -132,7 +132,7 @@ function toggleSubmenu(event: Event, name: string) {
                 <span class="sr-only">打开主菜单</span>
                 <span 
                   class="w-8 h-[3px] bg-gray-700 rounded-full shadow-sm transition-all duration-300 ease-out absolute"
-                  :class="isMobileMenuOpen ? 'rotate-45 translate-y-0 bg-red-600' : '-translate-y-3'"
+                  :class="isMobileMenuOpen ? 'rotate-45 translate-y-0 bg-[#1d46a8]' : '-translate-y-3'"
                 ></span>
                 <span 
                   class="w-8 h-[3px] bg-gray-700 rounded-full shadow-sm transition-all duration-300 ease-out absolute"
@@ -140,7 +140,7 @@ function toggleSubmenu(event: Event, name: string) {
                 ></span>
                 <span 
                   class="w-8 h-[3px] bg-gray-700 rounded-full shadow-sm transition-all duration-300 ease-out absolute"
-                  :class="isMobileMenuOpen ? '-rotate-45 translate-y-0 bg-red-600' : 'translate-y-3'"
+                  :class="isMobileMenuOpen ? '-rotate-45 translate-y-0 bg-[#1d46a8]' : 'translate-y-3'"
                 ></span>
               </button>
             </div>
@@ -151,7 +151,7 @@ function toggleSubmenu(event: Event, name: string) {
         <div class="hidden xl:flex items-center h-[90px] ml-6">
           <button
             @click="toggleLang"
-            class="group flex items-center space-x-2 px-4 py-2 text-[15px] text-gray-500 border border-gray-200 rounded-full hover:border-red-500 hover:text-red-500 hover:shadow-sm transition-all duration-300"
+            class="group flex items-center space-x-2 px-4 py-2 text-[15px] text-gray-500 border border-gray-200 rounded-full hover:border-[#1d46a8] hover:text-[#1d46a8] hover:shadow-sm transition-all duration-300"
           >
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
@@ -180,8 +180,8 @@ function toggleSubmenu(event: Event, name: string) {
         <template v-for="item in navItems" :key="item.name">
           <div class="relative">
             <div 
-              class="flex items-center justify-between px-6 py-4 text-[15px] font-medium text-gray-700 hover:text-red-600 hover:bg-gray-50/70 transition-all duration-200"
-              :class="{ 'text-red-600 bg-gray-50': $route.path === item.path }"
+              class="flex items-center justify-between px-6 py-4 text-[15px] font-medium text-gray-700 hover:text-[#1d46a8] hover:bg-gray-50/70 transition-all duration-200"
+              :class="{ 'text-[#1d46a8] bg-gray-50': $route.path === item.path }"
             >
               <RouterLink
                 :to="item.path"
@@ -228,8 +228,8 @@ function toggleSubmenu(event: Event, name: string) {
                   v-for="child in item.children"
                   :key="child.name"
                   :to="child.path"
-                  class="block px-10 py-2 text-sm font-medium text-gray-600 hover:text-red-600 hover:bg-gray-100 transition-colors duration-200"
-                  :class="{ 'text-red-600 bg-gray-100': $route.path === child.path }"
+                  class="block px-10 py-2 text-sm font-medium text-gray-600 hover:text-[#1d46a8] hover:bg-gray-100 transition-colors duration-200"
+                  :class="{ 'text-[#1d46a8] bg-gray-100': $route.path === child.path }"
                   @click="isMobileMenuOpen = false"
                 >
                   {{ t(child.name) }}
@@ -250,7 +250,7 @@ function toggleSubmenu(event: Event, name: string) {
 
 .nav-link::after {
   content: '';
-  @apply absolute bottom-0 left-[24px] right-[24px] h-0.5 bg-red-600 transition-all duration-300 ease-in-out scale-x-0 origin-left;
+  @apply absolute bottom-0 left-[24px] right-[24px] h-0.5 bg-[#1d46a8] transition-all duration-300 ease-in-out scale-x-0 origin-left;
 }
 
 .nav-link:hover::after,
@@ -275,7 +275,7 @@ function toggleSubmenu(event: Event, name: string) {
 
 .mobile-menu-button:hover span.rotate-45,
 .mobile-menu-button:hover span.-rotate-45 {
-  @apply bg-red-700;
+  @apply bg-[#1d46a8];
 }
 
 .group:hover .absolute,
