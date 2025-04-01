@@ -86,59 +86,51 @@ const products: Product[] = [
   },
   {
     id: 4,
-    name: '金属型模铸造模具-1',
+    name: '减速器壳体低压模具',
     image: 'metal/1.png',
-    category: '金属型模铸造',
+    category: '铸铝低压、重力、倾转永久模',
     categoryId: 2,
-    description: '高精度金属型模铸造模具，确保产品质量'
+    description: '产品尺寸697*640*540、侧模四开低压模具、3个覆膜砂热芯组合下芯'
   },
   {
     id: 5,
-    name: '金属型模铸造模具-2',
+    name: '变速箱壳体低压模具',
     image: 'metal/2.png',
-    category: '金属型模铸造',
+    category: '铸铝低压、重力、倾转永久模',
     categoryId: 2,
-    description: '专业金属型模铸造模具制造'
+    description: '产品外型635*609*466、侧模四开低压模具、1个覆膜砂热芯'
   },
   {
     id: 6,
-    name: '金属型模铸造模具-3',
+    name: '变速箱壳体低压模具',
     image: 'metal/3.png',
-    category: '金属型模铸造',
+    category: '铸铝低压、重力、倾转永久模',
     categoryId: 2,
-    description: '精密金属型模铸造模具'
+    description: '产品外型593*391*476、侧模四开低压模具'
   },
   {
     id: 7,
-    name: '金属型模铸造模具-4',
+    name: '变速箱壳体低压模具',
     image: 'metal/4.png',
-    category: '金属型模铸造',
+    category: '铸铝低压、重力、倾转永久模',
     categoryId: 2,
-    description: '高品质金属型模铸造模具'
+    description: '产品外型564*436*179侧模四开低压模具'
   },
   {
     id: 8,
-    name: '金属型模铸造模具-5',
+    name: '双电机壳体低压模具',
     image: 'metal/5.png',
-    category: '金属型模铸造',
+    category: '铸铝低压、重力、倾转永久模',
     categoryId: 2,
-    description: '定制金属型模铸造模具'
+    description: '产品外型646*578*387、侧模四开低压模具'
   },
   {
     id: 9,
-    name: '金属型模铸造模具-6',
+    name: '缸体低压模具',
     image: 'metal/6.png',
-    category: '金属型模铸造',
+    category: '铸铝低压、重力、倾转永久模',
     categoryId: 2,
-    description: '专业金属型模铸造解决方案'
-  },
-  {
-    id: 10,
-    name: '金属型模铸造模具-7',
-    image: 'metal/7.png',
-    category: '金属型模铸造',
-    categoryId: 2,
-    description: '高效金属型模铸造模具'
+    description: '产品外型300*227*293、侧模四开低压模具'
   },
   {
     id: 11,
@@ -169,7 +161,7 @@ const products: Product[] = [
     name: '精密定位夹具',
     image: 'fk/k1.jpg',
     category: '工装夹具',
-    categoryId: 5,
+    categoryId: 4,
     description: '高精度定位夹具，确保加工过程中的稳定性和精确性'
   },
   {
@@ -177,7 +169,7 @@ const products: Product[] = [
     name: '多功能工装夹具',
     image: 'fk/k2.jpg',
     category: '工装夹具',
-    categoryId: 5,
+    categoryId: 4,
     description: '适用于各类复杂工件的加工固定，提高生产效率'
   }
 ]
