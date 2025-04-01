@@ -48,7 +48,7 @@ const equipments: Equipment[] = [
   },
   {
     id: 4,
-    name: '匠泽（Takumi）H16五轴联动加工中心',
+    name: '匠泽（Takumi）H16M五轴联动加工中心',
     image: '/src/assets/equipments/high-speed/e2.jpg',
     category: '高速加工设备',
     categoryId: 2,
@@ -80,19 +80,19 @@ const equipments: Equipment[] = [
   },
   {
     id: 9,
-    name: '大型龙门加工中心',
+    name: '永基（YongJi）大型龙门加工中心',
     image: '/src/assets/equipments/gantry/g1.jpg',
     category: '龙门加工中心',
     categoryId: 5,
-    description: '大型龙门式加工中心，适用于大型模具的高精度加工'
+    description: '采用方箱式加强筋底座设计，立柱结合处双倍加强筋密度，配备高密度垂直加强筋，显著提升机床刚性和抗扭曲能力'
   },
   {
     id: 10,
-    name: '精密龙门加工中心',
+    name: '永基（YongJi）精密龙门加工中心',
     image: '/src/assets/equipments/gantry/g2.jpg',
     category: '龙门加工中心',
     categoryId: 5,
-    description: '高精度龙门加工中心，确保大型工件的加工精度'
+    description: '创新支撑垫铁设计，直接承接工件重量，避免机床悬空状态，大幅提升承载能力和抗变形性能'
   },
   {
     id: 11,
@@ -125,6 +125,14 @@ const equipments: Equipment[] = [
     category: '装配区域',
     categoryId: 4,
     description: '高标准精密装配区域，确保模具装配精度和质量'
+  },
+  {
+    id: 17,
+    name: '永基龙门加工中心',
+    image: '/src/assets/equipments/high-speed/yj.jpg',
+    category: '高速加工设备',
+    categoryId: 2,
+    description: '配备全数字驱动系统和高性能伺服电机，具备存储型螺距误差补偿和间隙补偿功能，采用高分辨率位置检测器和高速微处理器，实现高速高精度加工'
   },
   // ... 其他设备数据
 ]
