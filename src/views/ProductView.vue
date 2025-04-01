@@ -13,11 +13,10 @@ interface Product {
 }
 
 const categories = [
-  { id: 1, name: '砂型铸造' },
-  { id: 2, name: '金属型模铸造' },
+  { id: 1, name: '铸铁造型线模具' },
+  { id: 2, name: '铸铝低压、重力、倾转永久模' },
   { id: 3, name: '冷热芯盒' },
-  { id: 4, name: '手工芯盒' },
-  { id: 5, name: '工装夹具' }
+  { id: 4, name: '各类型工装夹具' }
 ]
 
 const activeCategory = ref(categories[0].id)
@@ -164,14 +163,6 @@ const products: Product[] = [
     category: '冷热芯盒',
     categoryId: 3,
     description: '高精度冷热芯盒模具，用于生产高质量铸造砂芯'
-  },
-  {
-    id: 14,
-    name: '手工芯盒模具',
-    image: 'handmade/hd1.jpg',
-    category: '手工芯盒',
-    categoryId: 4,
-    description: '传统手工芯盒模具，适用于小批量、特殊形状砂芯的制造'
   },
   {
     id: 15,
