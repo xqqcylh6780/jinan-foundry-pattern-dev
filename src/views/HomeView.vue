@@ -246,10 +246,10 @@ const handleReadMore = () => {
             class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8 sm:mb-10 text-white transform transition-all duration-1000 max-w-5xl tracking-wide"
             :class="{ 'translate-y-0 opacity-100': isTitleVisible, 'translate-y-8 opacity-0': !isTitleVisible }"
           >
-            {{ t('home.hero.title.prefix') }}
-            <span class="text-[#1d46a8]">{{ t('home.hero.title.highlight1') }}</span>
-            {{ t('home.hero.title.middle') }}
-            <span class="text-[#1d46a8]">{{ t('home.hero.title.highlight2') }}</span>
+            {{ t('home.hero.title.prefix') }}<!--
+            --><span class="text-[#1d46a8]">{{ t('home.hero.title.highlight1') }}</span><!--
+            -->{{ t('home.hero.title.middle') }}<!--
+            --><span class="text-[#1d46a8]">{{ t('home.hero.title.highlight2') }}</span>
           </h2>
           <div class="w-32 h-1.5 bg-[#1d46a8] mx-auto mb-8"></div>
           <p 
