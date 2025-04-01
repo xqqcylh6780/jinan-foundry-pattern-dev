@@ -3,7 +3,6 @@ export default {
     home: '网站首页',
     about: '关于方德利',
     about_company: '公司简介',
-    about_team: '工程师团队',
     about_certificates: '资质认证',
     design: '设计能力',
     product: '产品中心',

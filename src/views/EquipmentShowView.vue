@@ -80,7 +80,7 @@ const equipments: Equipment[] = [
   },
   {
     id: 9,
-    name: '永基（YongJi）大型龙门加工中心',
+    name: '永基大型龙门加工中心',
     image: '/src/assets/equipments/gantry/g1.jpg',
     category: '龙门加工中心',
     categoryId: 5,
@@ -88,7 +88,7 @@ const equipments: Equipment[] = [
   },
   {
     id: 10,
-    name: '永基（YongJi）精密龙门加工中心',
+    name: '永基精密龙门加工中心',
     image: '/src/assets/equipments/gantry/g2.jpg',
     category: '龙门加工中心',
     categoryId: 5,

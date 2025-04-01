@@ -3,7 +3,6 @@ export default {
     home: 'Home',
     about: 'About Us',
     about_company: 'Company Profile',
-    about_team: 'Engineering Team',
     about_certificates: 'Certificates',
     design: 'Design',
     product: 'Products',
