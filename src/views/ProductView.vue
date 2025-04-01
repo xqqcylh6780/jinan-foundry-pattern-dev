@@ -215,10 +215,10 @@ onMounted(() => {
             :class="{ 'translate-y-0 opacity-100': isTitleVisible, 'translate-y-8 opacity-0': !isTitleVisible }"
           >
             <span class="inline-block">专业</span>
-            <span class="inline-block text-red-500">铸造模具</span>
+            <span class="inline-block text-[#1d46a8]">铸造模具</span>
             <span class="inline-block">制造商</span>
           </h1>
-          <div class="w-32 h-1.5 bg-red-500 mx-auto"></div>
+          <div class="w-32 h-1.5 bg-[#1d46a8] mx-auto"></div>
           <p 
             class="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white tracking-widest font-medium max-w-4xl mx-auto px-4 transform transition-all duration-1000 delay-300"
             :class="{ 'translate-y-0 opacity-100': isSubtitleVisible, 'translate-y-8 opacity-0': !isSubtitleVisible }"
@@ -239,7 +239,7 @@ onMounted(() => {
           :class="[
             'py-2.5 rounded-lg text-center text-base font-medium transition-all duration-300',
             activeCategory === category.id
-              ? 'bg-blue-600 text-white shadow-lg ring-2 ring-blue-600 ring-offset-2'
+              ? 'bg-[#1d46a8] text-white shadow-lg ring-2 ring-[#1d46a8] ring-offset-2'
               : 'bg-white text-gray-600 hover:bg-gray-50 hover:shadow'
           ]"
         >
@@ -274,7 +274,7 @@ onMounted(() => {
               class="absolute inset-0 flex items-center justify-center bg-gray-100"
               :class="{ 'hidden': loadedImages.has(product.id) }"
             >
-              <div class="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+              <div class="w-8 h-8 border-4 border-[#1d46a8] border-t-transparent rounded-full animate-spin"></div>
             </div>
           </div>
           <div class="p-6">
@@ -323,6 +323,8 @@ img {
 
 .animate-spin {
   animation: spin 1s linear infinite;
+  border-color: #1d46a8;
+  border-top-color: transparent;
 }
 
 .hide-scrollbar {

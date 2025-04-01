@@ -191,7 +191,7 @@ const handleImageLoad = (id: number) => {
         :class="[
           'py-2.5 rounded-lg text-center text-base font-medium transition-all duration-300',
           activeCategory === category.id
-            ? 'bg-blue-600 text-white shadow-lg ring-2 ring-blue-600 ring-offset-2'
+            ? 'bg-[#1d46a8] text-white shadow-lg ring-2 ring-[#1d46a8] ring-offset-2'
             : 'bg-white text-gray-600 hover:bg-gray-50 hover:shadow'
         ]"
       >
@@ -224,7 +224,7 @@ const handleImageLoad = (id: number) => {
             class="absolute inset-0 flex items-center justify-center bg-gray-100"
             :class="{ 'hidden': loadedImages.has(equipment.id) }"
           >
-            <div class="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+            <div class="w-8 h-8 border-4 border-[#1d46a8] border-t-transparent rounded-full animate-spin"></div>
           </div>
         </div>
         <div class="p-6">
@@ -235,3 +235,11 @@ const handleImageLoad = (id: number) => {
     </div>
   </div>
 </template>
+
+<style scoped>
+/* 更新加载动画边框颜色 */
+.animate-spin {
+  border-color: #1d46a8;
+  border-top-color: transparent;
+}
+</style>

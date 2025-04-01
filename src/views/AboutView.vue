@@ -28,27 +28,6 @@ const section3Ref = ref(null)
 const timelineRef = ref(null)
 const certificatesRef = ref(null)
 
-// 证书数据
-const certificates = [
-  {
-    name: 'ISO9001认证',
-    image: at1,
-    description: '质量管理体系认证证书'
-  },
-  {
-    name: '高新技术企业',
-    image: at2,
-    description: '国家高新技术企业认定证书'
-  },
-  {
-    name: '安全生产标准化',
-    image: at3,
-    description: '安全生产标准化三级企业证书'
-  }
-]
-
-// 添加活动标签状态
-const activeTab = ref('about')
 
 // 预览相关的状态
 const showPreview = ref(false)
@@ -62,15 +41,6 @@ const startPosition = ref({ x: 0, y: 0 }) // 添加开始位置
 // 添加标题和副标题的可见性状态
 const isTitleVisible = ref(false)
 const isSubtitleVisible = ref(false)
-
-// 图片预览函数
-const handlePreview = (image: string, title: string) => {
-  previewImage.value = image
-  previewTitle.value = title
-  showPreview.value = true
-  imageScale.value = 1
-  imagePosition.value = { x: 0, y: 0 } // 重置位置
-}
 
 // 处理滚轮缩放
 const handleWheel = (e: WheelEvent) => {
@@ -180,15 +150,15 @@ onMounted(() => {
             :class="{ 'translate-y-0 opacity-100': isTitleVisible, 'translate-y-8 opacity-0': !isTitleVisible }"
           >
             <span class="inline-block">打造</span>
-            <span class="inline-block text-red-500">最具核心</span>
+            <span class="inline-block text-[#1d46a8]">最具核心</span>
             <span class="inline-block">竞争力的企业团队</span>
           </h1>
-          <div class="w-32 h-1.5 bg-red-500 mx-auto"></div>
+          <div class="w-32 h-1.5 bg-[#1d46a8] mx-auto"></div>
           <p 
             class="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white tracking-widest font-medium transform transition-all duration-1000 delay-300"
             :class="{ 'translate-y-0 opacity-100': isSubtitleVisible, 'translate-y-8 opacity-0': !isSubtitleVisible }"
           >
-            <span class="text-red-500">建立</span>
+            <span class="text-[#1d46a8]">建立</span>
             <span>全球最佳铸模研发制造基地</span>
           </p>
         </div>
@@ -202,14 +172,14 @@ onMounted(() => {
           <RouterLink 
             to="/about/company"
             class="px-6 py-4 text-lg font-medium transition-colors duration-200"
-            :class="$route.path === '/about/company' ? 'text-red-600 border-b-2 border-red-600' : 'text-gray-600 hover:text-red-600'"
+            :class="$route.path === '/about/company' ? 'text-[#1d46a8] border-b-2 border-[#1d46a8]' : 'text-gray-600 hover:text-[#1d46a8]'"
           >
             {{ t('nav.about_company') }}
           </RouterLink>
           <RouterLink 
             to="/about/certificates"
             class="px-6 py-4 text-lg font-medium transition-colors duration-200"
-            :class="$route.path === '/about/certificates' ? 'text-red-600 border-b-2 border-red-600' : 'text-gray-600 hover:text-red-600'"
+            :class="$route.path === '/about/certificates' ? 'text-[#1d46a8] border-b-2 border-[#1d46a8]' : 'text-gray-600 hover:text-[#1d46a8]'"
           >
             {{ t('nav.about_certificates') }}
           </RouterLink>
@@ -305,5 +275,16 @@ onMounted(() => {
 /* 防止拖动时选中文本 */
 .el-dialog {
   user-select: none;
+}
+
+/* 更新任何使用 red 的样式 */
+:deep(.el-button--primary) {
+  --el-button-bg-color: #1d46a8;
+  --el-button-border-color: #1d46a8;
+}
+
+:deep(.el-button--primary:hover) {
+  --el-button-hover-bg-color: #153576;
+  --el-button-hover-border-color: #153576;
 }
 </style>

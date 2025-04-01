@@ -35,7 +35,7 @@ onMounted(() => {
           >
             先进制造设备
           </h1>
-          <div class="w-32 h-1.5 bg-red-600 mx-auto"></div>
+          <div class="w-32 h-1.5 bg-[#1d46a8] mx-auto"></div>
           <p 
             class="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white tracking-widest font-medium max-w-4xl mx-auto px-4 transform transition-all duration-1000 delay-300"
             :class="{ 'translate-y-0 opacity-100': isSubtitleVisible, 'translate-y-8 opacity-0': !isSubtitleVisible }"
@@ -77,6 +77,8 @@ img {
 
 .animate-spin {
   animation: spin 1s linear infinite;
+  border-color: #1d46a8;
+  border-top-color: transparent;
 }
 
 /* 移动端适配 */

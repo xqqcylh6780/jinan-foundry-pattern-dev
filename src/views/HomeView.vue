@@ -196,7 +196,7 @@ const handleReadMore = () => {
 
     <!-- 视频背景部分 -->
     <section class="banner-section w-full">
-      <div class="banner-container h-[911px] relative overflow-hidden w-full">
+      <div class="banner-container h-[1080px] relative overflow-hidden w-full">
         <video
           class="absolute inset-0 w-full h-full object-cover"
           autoplay
@@ -217,11 +217,11 @@ const handleReadMore = () => {
             :class="{ 'translate-y-0 opacity-100': isTitleVisible, 'translate-y-8 opacity-0': !isTitleVisible }"
           >
             {{ t('home.hero.title.prefix') }}
-            <span class="text-red-500">{{ t('home.hero.title.highlight1') }}</span>
+            <span class="text-[#1d46a8]">{{ t('home.hero.title.highlight1') }}</span>
             {{ t('home.hero.title.middle') }}
-            <span class="text-red-500">{{ t('home.hero.title.highlight2') }}</span>
+            <span class="text-[#1d46a8]">{{ t('home.hero.title.highlight2') }}</span>
           </h2>
-          <div class="w-32 h-1.5 bg-red-500 mx-auto mb-8"></div>
+          <div class="w-32 h-1.5 bg-[#1d46a8] mx-auto mb-8"></div>
           <p 
             ref="subtitleRef"
             class="text-lg sm:text-2xl md:text-3xl text-white transform transition-all duration-1000 delay-300 max-w-4xl leading-relaxed tracking-wide"
@@ -273,7 +273,7 @@ const handleReadMore = () => {
               :class="{ 'opacity-100 translate-x-0': isVisible, 'opacity-0': !isVisible }"
             >
               <h2 class="text-2xl lg:text-3xl font-bold text-gray-900">{{ t('home.intro.title') }}</h2>
-              <div class="w-20 h-1 bg-red-600 mt-4"></div>
+              <div class="w-20 h-1 bg-[#1d46a8] mt-4"></div>
               <p class="mt-4 lg:mt-6 text-sm lg:text-base text-gray-600 leading-relaxed">
                 {{ t('home.intro.subtitle') }}
               </p>
@@ -288,7 +288,7 @@ const handleReadMore = () => {
             >
               <div class="mb-6 lg:mb-8">
                 <h3 class="text-lg lg:text-xl font-bold text-gray-900 mb-3 flex items-center">
-                  <div class="w-1 h-6 bg-red-600 mr-3"></div>
+                  <div class="w-1 h-6 bg-[#1d46a8] mr-3"></div>
                   {{ t('home.intro.sections.philosophy.title') }}
                 </h3>
                 <p class="text-sm lg:text-base leading-relaxed text-gray-600 pl-4 border-l-2 border-gray-100">
@@ -298,7 +298,7 @@ const handleReadMore = () => {
 
               <div class="mb-6 lg:mb-8">
                 <h3 class="text-lg lg:text-xl font-bold text-gray-900 mb-3 flex items-center">
-                  <div class="w-1 h-6 bg-red-600 mr-3"></div>
+                  <div class="w-1 h-6 bg-[#1d46a8] mr-3"></div>
                   {{ t('home.intro.sections.location.title') }}
                 </h3>
                 <p class="text-sm lg:text-base leading-relaxed text-gray-600 pl-4 border-l-2 border-gray-100">
@@ -309,8 +309,8 @@ const handleReadMore = () => {
               <!-- 阅读更多按钮 -->
               <div class="mt-4 lg:mt-6">
                 <el-button
-                  type="danger"
-                  class="!px-6 lg:!px-8 !h-10 lg:!h-12 text-sm lg:text-base font-medium hover:!bg-gray-800 hover:!border-transparent"
+                  type="primary"
+                  class="!bg-[#1d46a8] !border-[#1d46a8] !px-6 lg:!px-8 !h-10 lg:!h-12 text-sm lg:text-base font-medium hover:!bg-gray-800 hover:!border-transparent"
                   @click="handleReadMore"
                 >
                   {{ t('home.intro.readMore') }}
@@ -342,13 +342,13 @@ const handleReadMore = () => {
             :class="{ 'translate-y-8 opacity-0': !isDesignVisible, 'translate-y-0 opacity-100': isDesignVisible }"
           >
             <h3 class="text-xl md:text-2xl font-bold mb-2 md:mb-4 min-h-[2rem] md:min-h-[2.5rem]">{{ t('home.features.design.title') }}</h3>
-            <div class="w-12 h-1 bg-red-600 mb-2 md:mb-4"></div>
+            <div class="w-12 h-1 bg-[#1d46a8] mb-2 md:mb-4"></div>
             <p class="text-xs md:text-sm leading-relaxed mb-3 md:mb-4 min-h-[2.5rem] md:min-h-[3rem]">
               {{ t('home.features.design.desc') }}
             </p>
             <el-button
-              type="danger"
-              class="!w-[120px] !h-10 hover:!bg-gray-800 hover:!border-transparent transition-all duration-300"
+              type="primary"
+              class="!bg-[#1d46a8] !border-[#1d46a8] !w-[120px] !h-10 hover:!bg-gray-800 hover:!border-transparent transition-all duration-300"
               @click="router.push('/design')"
             >
               {{ t('home.features.readMore') }}
@@ -373,13 +373,13 @@ const handleReadMore = () => {
             :class="{ 'translate-y-8 opacity-0': !isProductVisible, 'translate-y-0 opacity-100': isProductVisible }"
           >
             <h3 class="text-xl md:text-2xl font-bold mb-2 md:mb-4 min-h-[2rem] md:min-h-[2.5rem]">{{ t('home.features.products.title') }}</h3>
-            <div class="w-12 h-1 bg-red-600 mb-2 md:mb-4"></div>
+            <div class="w-12 h-1 bg-[#1d46a8] mb-2 md:mb-4"></div>
             <p class="text-xs md:text-sm leading-relaxed mb-3 md:mb-4 min-h-[2.5rem] md:min-h-[3rem]">
               {{ t('home.features.products.desc') }}
             </p>
             <el-button
-              type="danger"
-              class="!w-[120px] !h-10 hover:!bg-gray-800 hover:!border-transparent transition-all duration-300"
+              type="primary"
+              class="!bg-[#1d46a8] !border-[#1d46a8] !w-[120px] !h-10 hover:!bg-gray-800 hover:!border-transparent transition-all duration-300"
               @click="router.push('/product')"
             >
               {{ t('home.features.readMore') }}
@@ -404,13 +404,13 @@ const handleReadMore = () => {
             :class="{ 'translate-y-8 opacity-0': !isCapabilityVisible, 'translate-y-0 opacity-100': isCapabilityVisible }"
           >
             <h3 class="text-xl md:text-2xl font-bold mb-2 md:mb-4 min-h-[2rem] md:min-h-[2.5rem]">{{ t('home.features.capability.title') }}</h3>
-            <div class="w-12 h-1 bg-red-600 mb-2 md:mb-4"></div>
+            <div class="w-12 h-1 bg-[#1d46a8] mb-2 md:mb-4"></div>
             <p class="text-xs md:text-sm leading-relaxed mb-3 md:mb-4 min-h-[2.5rem] md:min-h-[3rem]">
               {{ t('home.features.capability.desc') }}
             </p>
             <el-button
-              type="danger"
-              class="!w-[120px] !h-10 hover:!bg-gray-800 hover:!border-transparent transition-all duration-300"
+              type="primary"
+              class="!bg-[#1d46a8] !border-[#1d46a8] !w-[120px] !h-10 hover:!bg-gray-800 hover:!border-transparent transition-all duration-300"
               @click="router.push('/equipment')"
             >
               {{ t('home.features.readMore') }}
@@ -421,7 +421,7 @@ const handleReadMore = () => {
     </section>
 
     <!-- 联系我们区域 -->
-    <div class="relative bg-red-600 py-16">
+    <div class="relative bg-[#1d46a8] py-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between">
         <!-- 左侧文字 -->
         <div class="text-white text-center md:text-left mb-8 md:mb-0 md:w-1/2">
@@ -433,7 +433,7 @@ const handleReadMore = () => {
         <div class="md:w-auto">
           <router-link 
             to="/contact" 
-            class="inline-block px-8 py-3 text-lg border-2 border-white text-white hover:bg-white hover:text-red-600 transition-colors duration-300 rounded-lg"
+            class="inline-block px-8 py-3 text-lg border-2 border-white text-white hover:bg-white hover:text-[#1d46a8] transition-colors duration-300 rounded-lg"
           >
             {{ t('home.contact.button') }}
           </router-link>

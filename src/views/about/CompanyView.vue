@@ -13,7 +13,7 @@
       <div class="space-y-6 order-2 md:order-2">
         <div class="inline-block">
           <h2 class="text-3xl font-bold text-gray-900">1992</h2>
-          <div class="h-1 bg-red-600 mt-2"></div>
+          <div class="h-1 bg-[#1d46a8] mt-2"></div>
         </div>
         <div class="mt-8">
           <p class="text-gray-700 text-lg leading-relaxed">
@@ -28,7 +28,7 @@
       <div class="space-y-6 order-2 md:order-1">
         <div class="inline-block">
           <h2 class="text-3xl font-bold text-gray-900">专业</h2>
-          <div class="h-1 bg-red-600 mt-2"></div>
+          <div class="h-1 bg-[#1d46a8] mt-2"></div>
         </div>
         <div class="mt-8">
           <p class="text-gray-700 text-lg leading-relaxed">
@@ -59,7 +59,7 @@
       <div class="space-y-6 order-2 md:order-2">
         <div class="inline-block">
           <h2 class="text-3xl font-bold text-gray-900">模具材质</h2>
-          <div class="h-1 bg-red-600 mt-2"></div>
+          <div class="h-1 bg-[#1d46a8] mt-2"></div>
         </div>
         <div class="mt-8">
           <p class="text-gray-700 text-lg leading-relaxed">
@@ -74,7 +74,7 @@
       <div class="space-y-6 order-2 md:order-1">
         <div class="inline-block">
           <h2 class="text-3xl font-bold text-gray-900">济南</h2>
-          <div class="h-1 bg-red-600 mt-2"></div>
+          <div class="h-1 bg-[#1d46a8] mt-2"></div>
         </div>
         <div class="mt-8">
           <p class="text-gray-700 text-lg leading-relaxed">
@@ -105,7 +105,7 @@
       <div class="space-y-6 order-2 md:order-2">
         <div class="inline-block">
           <h2 class="text-3xl font-bold text-gray-900">黑色铸造工艺</h2>
-          <div class="h-1 bg-red-600 mt-2"></div>
+          <div class="h-1 bg-[#1d46a8] mt-2"></div>
         </div>
         <div class="mt-8">
           <p class="text-gray-700 text-lg leading-relaxed">
@@ -120,7 +120,7 @@
       <div class="space-y-6 order-2 md:order-1">
         <div class="inline-block">
           <h2 class="text-3xl font-bold text-gray-900">有色铸造工艺</h2>
-          <div class="h-1 bg-red-600 mt-2"></div>
+          <div class="h-1 bg-[#1d46a8] mt-2"></div>
         </div>
         <div class="mt-8">
           <p class="text-gray-700 text-lg leading-relaxed">

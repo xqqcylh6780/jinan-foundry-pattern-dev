@@ -122,7 +122,7 @@ onMounted(() => {
           >
             联系我们
           </h1>
-          <div class="w-32 h-1.5 bg-red-600 mx-auto"></div>
+          <div class="w-32 h-1.5 bg-[#1d46a8] mx-auto"></div>
           <p 
             class="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white tracking-widest font-medium max-w-4xl mx-auto px-4 transform transition-all duration-1000 delay-300"
             :class="{ 'translate-y-0 opacity-100': isSubtitleVisible, 'translate-y-8 opacity-0': !isSubtitleVisible }"
@@ -141,7 +141,7 @@ onMounted(() => {
           :key="item.title"
           class="bg-white p-6 sm:p-8 rounded-lg shadow-lg text-center transform transition-all duration-300 hover:-translate-y-1 h-full"
         >
-          <el-icon class="text-3xl sm:text-4xl text-blue-600 mb-4">
+          <el-icon class="text-3xl sm:text-4xl text-[#1d46a8] mb-4">
             <component :is="item.icon" />
           </el-icon>
           <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">{{ item.title }}</h3>
@@ -190,7 +190,7 @@ onMounted(() => {
 
           <el-form-item class="flex justify-center">
             <el-button
-              type="danger"
+              type="primary"
               class="w-[200px]"
               size="large"
               @click="submitForm(formRef)"
@@ -221,8 +221,14 @@ onMounted(() => {
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 }
 
-:deep(.el-button--danger) {
-  @apply transition-all duration-300 hover:opacity-90 hover:shadow-md;
+:deep(.el-button--primary) {
+  --el-button-bg-color: #1d46a8;
+  --el-button-border-color: #1d46a8;
+}
+
+:deep(.el-button--primary:hover) {
+  --el-button-hover-bg-color: #153576;
+  --el-button-hover-border-color: #153576;
 }
 
 /* 移动端适配 */
