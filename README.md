@@ -47,7 +47,7 @@
 
 ### 安装和运行
 
-bash
+```bash
 ## 克隆项目
 git clone https://github.com/xqqcylh6780/jinan-foundry-pattern-dev.git
 ## 进入项目目录
@@ -58,6 +58,7 @@ npm install
 npm run dev
 ## 构建生产版本
 npm run build
+```
 
 ## 📱 功能特点
 - 响应式设计，支持各种设备访问
