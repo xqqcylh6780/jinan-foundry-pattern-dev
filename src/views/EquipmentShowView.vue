@@ -14,9 +14,8 @@ const categories = [
   { id: 1, name: '五轴加工设备' },
   { id: 2, name: '高速加工设备' },
   { id: 3, name: '检测设备' },
-  { id: 4, name: '普通加工设备' },
-  { id: 5, name: '装配区域' },
-  { id: 6, name: '龙门加工中心' }
+  { id: 4, name: '装配区域' },
+  { id: 5, name: '大型龙门加工中心' }
 ]
 
 const activeCategory = ref(categories[0].id)
@@ -25,74 +24,66 @@ const loadedImages = ref<Set<number>>(new Set())
 const equipments: Equipment[] = [
   {
     id: 1,
-    name: '日本牧野五轴加工中心',
+    name: '日本牧野（Makino）V90S五轴加工中心',
     image: '/src/assets/equipments/5axis/e1.jpg',
     category: '五轴加工设备',
     categoryId: 1,
-    description: '日本牧野五轴联动加工中心，行程2000*1300*800mm，可实现大型复杂模具的高精度加工'
+    description: '高性能五轴立式加工中心，采用双摆台结构，主轴最高转速40,000RPM，定位精度±2μm，配备SGI.4几何智能控制系统，专为复杂曲面、高精度模具加工设计'
   },
   {
     id: 2,
-    name: '日本牧野五轴加工中心',
+    name: '日本牧野（Makino）V90S五轴加工中心',
     image: '/src/assets/equipments/5axis/e2.jpg',
     category: '五轴加工设备',
     categoryId: 1,
-    description: '日本牧野五轴联动加工中心，行程2000*1300*800mm，专注于高精度模具制造'
+    description: '高刚性床身结构，配备3D激光校准系统，HSK刀柄，可实现一次装夹多面加工，确保高速切削时的稳定性和加工精度'
   },
   {
     id: 3,
-    name: '三轴高速加工中心',
+    name: '牧野（Makino）PS105新一代立式加工中心',
     image: '/src/assets/equipments/high-speed/e1.jpg',
     category: '高速加工设备',
     categoryId: 2,
-    description: '三轴高速加工中心，配备进口主轴，实现高效率、高精度的模具加工'
+    description: '新一代PS系列立式加工中心，集功率、精度、速度和可靠性于一体，重新定义了航空航天、医疗、汽车等行业的加工标准，全面提升车间生产力水平'
   },
   {
     id: 4,
-    name: '高速铣削加工中心',
+    name: '匠泽（Takumi）H16五轴联动加工中心',
     image: '/src/assets/equipments/high-speed/e2.jpg',
     category: '高速加工设备',
     categoryId: 2,
-    description: '高速铣削加工中心，实现复杂曲面精密加工'
+    description: '日本精密制造技术，专为精密模具、航空航天零部件设计，结合高性能和性价比优势，适用于复杂曲面和难切削材料的高精度加工'
   },
   {
     id: 5,
-    name: '高速数控铣床',
+    name: '大君宏（Hartford）B17高速龙门加工中心',
     image: '/src/assets/equipments/high-speed/e3.jpg',
     category: '高速加工设备',
     categoryId: 2,
-    description: '高精度高速数控铣床，适用于各类模具加工'
+    description: '新一代模具制造专用龙门加工中心，高刚性机台结构设计，配备高速直结式主轴，提升重切削能力，显著缩短模具加工周期'
   },
   {
-    id: 6,
-    name: '三维扫描仪',
-    image: '/src/assets/equipments/detection/e1.jpg',
-    category: '检测设备',
-    categoryId: 3,
-    description: '高精度三维扫描仪，用于模具产品的尺寸检测和逆向工程'
+    id: 16,
+    name: 'F8大型立式加工中心',
+    image: '/src/assets/equipments/high-speed/F8.jpg',
+    category: '高速加工设备',
+    categoryId: 2,
+    description: '集功率、速度、精度和稳定性于一体的大型立式加工中心，具备优异的热稳定性，可实现长时间连续高速、小公差加工，适用于传统模具和医疗产品的复杂三维曲面加工'
   },
   {
     id: 7,
-    name: '光学投影仪',
+    name: 'HandySCAN 3D|BLACK 高精度三维扫描仪',
     image: '/src/assets/equipments/detection/e2.jpg',
     category: '检测设备',
     categoryId: 3,
-    description: '精密光学投影仪，用于轮廓尺寸检测'
-  },
-  {
-    id: 8,
-    name: '数显高度仪',
-    image: '/src/assets/equipments/detection/e3.jpg',
-    category: '检测设备',
-    categoryId: 3,
-    description: '高精度数显高度仪，用于垂直尺寸测量'
+    description: '高端便携式三维测量设备，具备高精度、高速测量和高分辨率特性，可在各种环境下采集高质量测量数据，是质量保证和产品开发的理想工具'
   },
   {
     id: 9,
     name: '大型龙门加工中心',
     image: '/src/assets/equipments/gantry/g1.jpg',
     category: '龙门加工中心',
-    categoryId: 6,
+    categoryId: 5,
     description: '大型龙门式加工中心，适用于大型模具的高精度加工'
   },
   {
@@ -100,39 +91,31 @@ const equipments: Equipment[] = [
     name: '精密龙门加工中心',
     image: '/src/assets/equipments/gantry/g2.jpg',
     category: '龙门加工中心',
-    categoryId: 6,
+    categoryId: 5,
     description: '高精度龙门加工中心，确保大型工件的加工精度'
   },
   {
     id: 11,
-    name: '三次元测量仪',
+    name: '精密硬度检测仪',
     image: '/src/assets/equipments/detection/e4.jpg',
     category: '检测设备',
     categoryId: 3,
-    description: '高精度三次元测量仪，用于复杂形状的尺寸检测'
-  },
-  {
-    id: 12,
-    name: '影像测量仪',
-    image: '/src/assets/equipments/detection/e5.jpg',
-    category: '检测设备',
-    categoryId: 3,
-    description: '精密影像测量仪，适用于精密零件的尺寸检测'
+    description: '专业模具硬度检测设备，通过精确测试提升模具质量和制造水平，有效延长模具使用寿命，是模具制造质量控制的关键设备'
   },
   {
     id: 13,
-    name: '三坐标测量机',
+    name: 'Leader高精度三坐标测量机',
     image: '/src/assets/equipments/detection/e6.jpg',
     category: '检测设备',
     categoryId: 3,
-    description: '高精度三坐标测量机，可进行复杂工件的全尺寸精密测量'
+    description: '具备卓越精度和稳定性的高端测量设备，可满足精密零部件测量、高精度曲面扫描及计量仲裁需求，是高精度测量机的典范'
   },
   {
     id: 14,
     name: '模具装配区',
     image: '/src/assets/equipments/assembly/a1.jpg',
     category: '装配区域',
-    categoryId: 5,
+    categoryId: 4,
     description: '专业模具装配工作区，配备完善的装配工具和设备'
   },
   {
@@ -140,7 +123,7 @@ const equipments: Equipment[] = [
     name: '精密装配区',
     image: '/src/assets/equipments/assembly/a2.jpg',
     category: '装配区域',
-    categoryId: 5,
+    categoryId: 4,
     description: '高标准精密装配区域，确保模具装配精度和质量'
   },
   // ... 其他设备数据
