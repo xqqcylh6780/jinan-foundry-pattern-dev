@@ -367,8 +367,7 @@ const mobileMenuItems = computed(() => {
 
 /* 移除子菜单的激活样式 */
 .router-link-active:not(.nav-link) {
-  @apply bg-gray-100;
-  @apply text-gray-900 !important;
+  @apply text-[#1d46a8];  /* 只保留文字颜色变化 */
 }
 
 /* 其他样式保持不变 */
