@@ -83,4 +83,4 @@ npm run build
 [MIT License](LICENSE)
 
 ### 扫码添加微信
-<img src="./src/assets/wechat-qr.png" alt="微信二维码" width="200" height="200">
+<img src="./src/assets/wechat-qr.png" alt="微信二维码">
