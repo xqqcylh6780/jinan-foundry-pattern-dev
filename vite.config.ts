@@ -27,7 +27,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
     },
   },
-  base: '/',
+  base: process.env.NODE_ENV === 'production' ? '/jinan-foundry-pattern-dev/' : '/',
   server: {
     host: '0.0.0.0',  // 允许局域网访问
     port: 5173,       // 指定端口号
