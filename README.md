@@ -68,7 +68,7 @@ npm run build
 - 平滑的页面过渡效果
 
 ## 🚀 部署状态
-[![Deploy static content to Pages](https://github.com/xqqcylh6780/jinan-foundry-pattern-dev/actions/workflows/deploy.yml/badge.svg)](https://github.com/xqqcylh6780/jinan-foundry-pattern-dev/actions/workflows/deploy.yml)
+[![Deploy static content to Pages](https://github.com/xqqcylh6780/jinan-foundry-pattern-dev/actions/workflows/static.yml/badge.svg)](https://github.com/xqqcylh6780/jinan-foundry-pattern-dev/actions/workflows/static.yml)
 
 ## 📂 项目结构
 
