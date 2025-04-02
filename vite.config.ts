@@ -12,7 +12,6 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/jinan-foundry-pattern-dev/', // 更新为您的仓库名
   plugins: [
     vue(),
     // vueDevTools(),
@@ -28,6 +27,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
     },
   },
+  base: '/',
   server: {
     host: '0.0.0.0',  // 允许局域网访问
     port: 5173,       // 指定端口号
