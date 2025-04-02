@@ -3,7 +3,7 @@ import HomeView from "@/views/HomeView.vue";
 import ProductView from "@/views/ProductView.vue";
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(import.meta.env.VITE_BASE_URL),
   routes: [
     {
       path: "/",
