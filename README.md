@@ -82,8 +82,5 @@ npm run build
 ## 📄 许可证
 [MIT License](LICENSE)
 
-## 👥 联系我们
-济南方德利模具有限公司
-- 地址：山东省济南市天桥区
-- 电话：0531-88888888
-- 邮箱：1794218628@qq.com
+### 扫码添加微信
+<img src="./src/assets/wechat-qr.png" alt="微信二维码" width="200" height="200">
