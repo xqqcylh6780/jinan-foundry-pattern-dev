@@ -39,7 +39,7 @@
 
       <div class="order-1 md:order-2">
         <img 
-          src="@/assets/about/address.jpg" 
+          src="@/assets/about/team.jpg" 
           alt="方德利模具专业团队" 
           class="w-full rounded-lg shadow-md"
         />

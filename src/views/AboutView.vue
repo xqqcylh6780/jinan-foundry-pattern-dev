@@ -2,9 +2,6 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import NavBar from '@/components/NavBar.vue'
 import AppFooter from '@/components/AppFooter.vue'
-import at1 from '@/assets/about/authen/at1.png'
-import at2 from '@/assets/about/authen/at2.png'
-import at3 from '@/assets/about/authen/at3.png'
 import { ElDialog } from 'element-plus'
 import { useThrottleFn } from '@vueuse/core'
 import { RouterLink, RouterView } from 'vue-router'
@@ -12,15 +9,6 @@ import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 
-const highlights = [
-  '通过ISO9001质量体系认证',
-  '采用PDM数据管理平台进行设计',
-  '使用SView看图软件实现无纸化生产',
-  '实现客户、合同、生产的数字化管理',
-  '配备3000mm×2000mm×1500mm龙门三坐标测量机',
-  '配备大型智能去应力机',
-  '配备日本牧野10000转、台湾24000转高速加工中心'
-]
 
 const section1Ref = ref(null)
 const section2Ref = ref(null)

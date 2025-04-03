@@ -64,7 +64,7 @@ const products: Product[] = [
     id: 1,
     name: '水泵壳体模具',
     image: 'sand-casting/p1.jpg',
-    category: '泵、阀类模具',
+    category: '铸铁造型线模具',
     categoryId: 1,
     description: '高精度水泵壳体铸造模具，适用于各类水泵生产'
   },
@@ -72,7 +72,7 @@ const products: Product[] = [
     id: 2,
     name: '阀门壳体模具',
     image: 'sand-casting/p2.jpg',
-    category: '泵、阀类模具',
+    category: '铸铁造型线模具',
     categoryId: 1,
     description: '精密阀门壳体模具，满足各种阀门制造需求'
   },
@@ -80,7 +80,7 @@ const products: Product[] = [
     id: 3,
     name: '液压泵体模具',
     image: 'sand-casting/p3.jpg',
-    category: '泵、阀类模具',
+    category: '铸铁造型线模具',
     categoryId: 1,
     description: '专业液压泵体模具制造，确保产品精度'
   },
@@ -135,15 +135,15 @@ const products: Product[] = [
   {
     id: 11,
     name: '冷热芯盒模具',
-    image: 'hc-boxes/h2.jpg',
+    image: 'hc-boxes/h1.jpg',
     category: '冷热芯盒',
     categoryId: 3,
-    description: '专业冷热芯盒模具设计与制造'
+    description: '高精度冷热芯盒模具，用于生产高质量铸造砂芯'
   },
   {
     id: 12,
     name: '冷热芯盒工装',
-    image: 'hc-boxes/h3.jpg',
+    image: 'hc-boxes/h2.jpg',
     category: '冷热芯盒',
     categoryId: 3,
     description: '高效冷热芯盒工装设备'
@@ -151,10 +151,82 @@ const products: Product[] = [
   {
     id: 13,
     name: '冷热芯盒模具',
-    image: 'hc-boxes/h1.jpg',
+    image: 'hc-boxes/h3.jpg',
     category: '冷热芯盒',
     categoryId: 3,
-    description: '高精度冷热芯盒模具，用于生产高质量铸造砂芯'
+    description: '专业冷热芯盒模具设计与制造'
+  },
+  {
+    id: 25,
+    name: '大型芯盒模具',
+    image: 'hc-boxes/h4.jpg',
+    category: '冷热芯盒',
+    categoryId: 3,
+    description: '适用于大型铸件的芯盒模具，精度高'
+  },
+  {
+    id: 26,
+    name: '复杂芯盒模具',
+    image: 'hc-boxes/h5.jpg',
+    category: '冷热芯盒',
+    categoryId: 3,
+    description: '用于制作复杂形状砂芯的专业模具'
+  },
+  {
+    id: 27,
+    name: '组合式芯盒',
+    image: 'hc-boxes/h6.jpg',
+    category: '冷热芯盒',
+    categoryId: 3,
+    description: '灵活组合的芯盒系统，提高生产效率'
+  },
+  {
+    id: 28,
+    name: '精密芯盒模具',
+    image: 'hc-boxes/h7.jpg',
+    category: '冷热芯盒',
+    categoryId: 3,
+    description: '高精度要求的芯盒模具，表面光洁度好'
+  },
+  {
+    id: 29,
+    name: '自动化芯盒',
+    image: 'hc-boxes/h8.jpg',
+    category: '冷热芯盒',
+    categoryId: 3,
+    description: '配备自动化功能的现代化芯盒设备'
+  },
+  {
+    id: 30,
+    name: '多腔芯盒模具',
+    image: 'hc-boxes/h9.jpg',
+    category: '冷热芯盒',
+    categoryId: 3,
+    description: '多腔设计的高效芯盒模具，批量生产'
+  },
+  {
+    id: 31,
+    name: '专用芯盒设备',
+    image: 'hc-boxes/h10.jpg',
+    category: '冷热芯盒',
+    categoryId: 3,
+    description: '特殊用途的专业芯盒设备，定制化设计'
+  },
+  {
+    id: 32,
+    name: '高性能芯盒',
+    image: 'hc-boxes/h11.jpg',
+    category: '冷热芯盒',
+    categoryId: 3,
+    description: '高性能芯盒模具，耐用性强'
+  },
+  {
+    id: 33,
+    name: '智能芯盒系统',
+    image: 'hc-boxes/h12.jpg',
+    category: '冷热芯盒',
+    categoryId: 3,
+    description: '智能控制的现代化芯盒系统，操作便捷'
   },
   {
     id: 15,
@@ -171,6 +243,86 @@ const products: Product[] = [
     category: '工装夹具',
     categoryId: 4,
     description: '适用于各类复杂工件的加工固定，提高生产效率'
+  },
+  {
+    id: 34,
+    name: '专用加工夹具',
+    image: 'fk/k3.jpg',
+    category: '工装夹具',
+    categoryId: 4,
+    description: '专门设计的加工夹具，满足特殊工件需求'
+  },
+  {
+    id: 35,
+    name: '组合式工装夹具',
+    image: 'fk/k4.jpg',
+    category: '工装夹具',
+    categoryId: 4,
+    description: '模块化设计的组合夹具，灵活适应不同工件'
+  },
+  {
+    id: 17,
+    name: '发动机缸体模具',
+    image: 'sand-casting/p4.jpg',
+    category: '铸铁造型线模具',
+    categoryId: 1,
+    description: '大型发动机缸体铸造模具，高精度设计'
+  },
+  {
+    id: 18,
+    name: '变速箱壳体模具',
+    image: 'sand-casting/p5.jpg',
+    category: '铸铁造型线模具',
+    categoryId: 1,
+    description: '重型变速箱壳体模具，结构复杂，精度高'
+  },
+  {
+    id: 19,
+    name: '齿轮箱模具',
+    image: 'sand-casting/p6.jpg',
+    category: '铸铁造型线模具',
+    categoryId: 1,
+    description: '工业齿轮箱铸造模具，耐用性强'
+  },
+  {
+    id: 20,
+    name: '机床底座模具',
+    image: 'sand-casting/p7.jpg',
+    category: '铸铁造型线模具',
+    categoryId: 1,
+    description: '大型机床底座模具，稳定性好'
+  },
+  {
+    id: 21,
+    name: '泵体模具组件',
+    image: 'sand-casting/p8.jpg',
+    category: '铸铁造型线模具',
+    categoryId: 1,
+    description: '复杂泵体模具组件，多腔设计'
+  },
+  {
+    id: 22,
+    name: '阀门系列模具',
+    image: 'sand-casting/p9.jpg',
+    category: '铸铁造型线模具',
+    categoryId: 1,
+    description: '系列阀门模具，规格齐全'
+  },
+  {
+    id: 23,
+    name: '工程机械模具',
+    image: 'sand-casting/p10.jpg',
+    category: '铸铁造型线模具',
+    categoryId: 1,
+    description: '工程机械零部件模具，承重能力强'
+  },
+  {
+    id: 24,
+    name: '重型设备模具',
+    image: 'sand-casting/p11.jpg',
+    category: '铸铁造型线模具',
+    categoryId: 1,
+    description: '重型设备铸件模具，尺寸精准'
   }
 ]
 
