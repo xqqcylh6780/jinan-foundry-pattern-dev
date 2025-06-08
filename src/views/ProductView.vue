@@ -16,7 +16,8 @@ const categories = [
   { id: 1, name: '铸铁造型线模具' },
   { id: 2, name: '铸铝低压、重力、倾转永久模' },
   { id: 3, name: '冷热芯盒' },
-  { id: 4, name: '各类型工装夹具' }
+  { id: 4, name: '各类型工装夹具' },
+  { id: 5, name: '自硬砂模具' }
 ]
 
 const activeCategory = ref(categories[0].id)
@@ -62,30 +63,54 @@ const getImageUrl = (path: string) => {
 const products: Product[] = [
   {
     id: 1,
-    name: '水泵壳体模具',
-    image: 'sand-casting/p1.jpg',
+    name: '发动机缸体造型线模具',
+    image: 'sand-casting/发动机缸体造型线模具.jpeg',
     category: '铸铁造型线模具',
     categoryId: 1,
-    description: '高精度水泵壳体铸造模具，适用于各类水泵生产'
+    description: '高精度发动机缸体铸造模具，适用于汽车发动机生产'
   },
   {
     id: 2,
-    name: '阀门壳体模具',
-    image: 'sand-casting/p2.jpg',
+    name: '发动机缸体造型线模具（二型）',
+    image: 'sand-casting/发动机缸体造型线模具2.JPG',
     category: '铸铁造型线模具',
     categoryId: 1,
-    description: '精密阀门壳体模具，满足各种阀门制造需求'
+    description: '改进型发动机缸体模具，提升生产效率和精度'
   },
   {
     id: 3,
-    name: '液压泵体模具',
-    image: 'sand-casting/p3.jpg',
+    name: '差壳造型线模具',
+    image: 'sand-casting/差壳造型线模具.jpeg',
     category: '铸铁造型线模具',
     categoryId: 1,
-    description: '专业液压泵体模具制造，确保产品精度'
+    description: '专业差壳铸造模具，确保产品结构稳定性'
   },
   {
     id: 4,
+    name: '桥壳造型线模具',
+    image: 'sand-casting/桥壳造型线模具1.jpeg',
+    category: '铸铁造型线模具',
+    categoryId: 1,
+    description: '重型桥壳铸造模具，承载能力强，耐用性好'
+  },
+  {
+    id: 5,
+    name: '桥壳造型线模具（加强型）',
+    image: 'sand-casting/桥壳造型线模具2.jpeg',
+    category: '铸铁造型线模具',
+    categoryId: 1,
+    description: '加强型桥壳模具，适用于重载车辆桥壳生产'
+  },
+  {
+    id: 6,
+    name: '转向节造型线模具',
+    image: 'sand-casting/转向节造型线模具.JPG',
+    category: '铸铁造型线模具',
+    categoryId: 1,
+    description: '精密转向节铸造模具，保证转向系统安全性'
+  },
+  {
+    id: 7,
     name: '减速器壳体低压模具',
     image: 'metal/1.png',
     category: '铸铝低压、重力、倾转永久模',
@@ -93,7 +118,7 @@ const products: Product[] = [
     description: '产品尺寸697*640*540、侧模四开低压模具、3个覆膜砂热芯组合下芯'
   },
   {
-    id: 5,
+    id: 8,
     name: '变速箱壳体低压模具',
     image: 'metal/2.png',
     category: '铸铝低压、重力、倾转永久模',
@@ -101,7 +126,7 @@ const products: Product[] = [
     description: '产品外型635*609*466、侧模四开低压模具、1个覆膜砂热芯'
   },
   {
-    id: 6,
+    id: 9,
     name: '变速箱壳体低压模具',
     image: 'metal/3.png',
     category: '铸铝低压、重力、倾转永久模',
@@ -109,7 +134,7 @@ const products: Product[] = [
     description: '产品外型593*391*476、侧模四开低压模具'
   },
   {
-    id: 7,
+    id: 10,
     name: '变速箱壳体低压模具',
     image: 'metal/4.png',
     category: '铸铝低压、重力、倾转永久模',
@@ -117,7 +142,7 @@ const products: Product[] = [
     description: '产品外型564*436*179侧模四开低压模具'
   },
   {
-    id: 8,
+    id: 11,
     name: '双电机壳体低压模具',
     image: 'metal/5.png',
     category: '铸铝低压、重力、倾转永久模',
@@ -125,7 +150,7 @@ const products: Product[] = [
     description: '产品外型646*578*387、侧模四开低压模具'
   },
   {
-    id: 9,
+    id: 12,
     name: '缸体低压模具',
     image: 'metal/6.png',
     category: '铸铝低压、重力、倾转永久模',
@@ -133,196 +158,140 @@ const products: Product[] = [
     description: '产品外型300*227*293、侧模四开低压模具'
   },
   {
-    id: 11,
-    name: '冷热芯盒模具',
-    image: 'hc-boxes/h1.jpg',
-    category: '冷热芯盒',
-    categoryId: 3,
-    description: '高精度冷热芯盒模具，用于生产高质量铸造砂芯'
-  },
-  {
-    id: 12,
-    name: '冷热芯盒工装',
-    image: 'hc-boxes/h2.jpg',
-    category: '冷热芯盒',
-    categoryId: 3,
-    description: '高效冷热芯盒工装设备'
-  },
-  {
     id: 13,
-    name: '冷热芯盒模具',
-    image: 'hc-boxes/h3.jpg',
+    name: '发动机缸体冷芯盒',
+    image: 'hc-boxes/发动机缸体冷芯盒.jpeg',
     category: '冷热芯盒',
     categoryId: 3,
-    description: '专业冷热芯盒模具设计与制造'
+    description: '高精度发动机缸体冷芯盒模具，用于生产高质量铸造砂芯'
   },
   {
-    id: 25,
-    name: '大型芯盒模具',
-    image: 'hc-boxes/h4.jpg',
+    id: 14,
+    name: '发动机缸体冷芯盒（二型）',
+    image: 'hc-boxes/发动机缸体冷芯盒2.jpeg',
     category: '冷热芯盒',
     categoryId: 3,
-    description: '适用于大型铸件的芯盒模具，精度高'
-  },
-  {
-    id: 26,
-    name: '复杂芯盒模具',
-    image: 'hc-boxes/h5.jpg',
-    category: '冷热芯盒',
-    categoryId: 3,
-    description: '用于制作复杂形状砂芯的专业模具'
-  },
-  {
-    id: 27,
-    name: '组合式芯盒',
-    image: 'hc-boxes/h6.jpg',
-    category: '冷热芯盒',
-    categoryId: 3,
-    description: '灵活组合的芯盒系统，提高生产效率'
-  },
-  {
-    id: 28,
-    name: '精密芯盒模具',
-    image: 'hc-boxes/h7.jpg',
-    category: '冷热芯盒',
-    categoryId: 3,
-    description: '高精度要求的芯盒模具，表面光洁度好'
-  },
-  {
-    id: 29,
-    name: '自动化芯盒',
-    image: 'hc-boxes/h8.jpg',
-    category: '冷热芯盒',
-    categoryId: 3,
-    description: '配备自动化功能的现代化芯盒设备'
-  },
-  {
-    id: 30,
-    name: '多腔芯盒模具',
-    image: 'hc-boxes/h9.jpg',
-    category: '冷热芯盒',
-    categoryId: 3,
-    description: '多腔设计的高效芯盒模具，批量生产'
-  },
-  {
-    id: 31,
-    name: '专用芯盒设备',
-    image: 'hc-boxes/h10.jpg',
-    category: '冷热芯盒',
-    categoryId: 3,
-    description: '特殊用途的专业芯盒设备，定制化设计'
-  },
-  {
-    id: 32,
-    name: '高性能芯盒',
-    image: 'hc-boxes/h11.jpg',
-    category: '冷热芯盒',
-    categoryId: 3,
-    description: '高性能芯盒模具，耐用性强'
-  },
-  {
-    id: 33,
-    name: '智能芯盒系统',
-    image: 'hc-boxes/h12.jpg',
-    category: '冷热芯盒',
-    categoryId: 3,
-    description: '智能控制的现代化芯盒系统，操作便捷'
+    description: '改进型发动机缸体冷芯盒，提升砂芯成型精度'
   },
   {
     id: 15,
-    name: '精密定位夹具',
-    image: 'fk/k1.jpg',
-    category: '工装夹具',
-    categoryId: 4,
-    description: '高精度定位夹具，确保加工过程中的稳定性和精确性'
+    name: '发动机缸体冷芯盒（三型）',
+    image: 'hc-boxes/发动机缸体冷芯盒3.JPG',
+    category: '冷热芯盒',
+    categoryId: 3,
+    description: '第三代发动机缸体冷芯盒，优化生产工艺'
   },
   {
     id: 16,
-    name: '多功能工装夹具',
-    image: 'fk/k2.jpg',
-    category: '工装夹具',
-    categoryId: 4,
-    description: '适用于各类复杂工件的加工固定，提高生产效率'
-  },
-  {
-    id: 34,
-    name: '专用加工夹具',
-    image: 'fk/k3.jpg',
-    category: '工装夹具',
-    categoryId: 4,
-    description: '专门设计的加工夹具，满足特殊工件需求'
-  },
-  {
-    id: 35,
-    name: '组合式工装夹具',
-    image: 'fk/k4.jpg',
-    category: '工装夹具',
-    categoryId: 4,
-    description: '模块化设计的组合夹具，灵活适应不同工件'
+    name: '发动机缸体冷芯盒（四型）',
+    image: 'hc-boxes/发动机缸体冷芯盒4.JPG',
+    category: '冷热芯盒',
+    categoryId: 3,
+    description: '最新型发动机缸体冷芯盒，自动化程度高'
   },
   {
     id: 17,
-    name: '发动机缸体模具',
-    image: 'sand-casting/p4.jpg',
-    category: '铸铁造型线模具',
-    categoryId: 1,
-    description: '大型发动机缸体铸造模具，高精度设计'
+    name: '增压器冷芯盒',
+    image: 'hc-boxes/增压器冷芯盒.jpeg',
+    category: '冷热芯盒',
+    categoryId: 3,
+    description: '专业增压器冷芯盒模具，适用于涡轮增压器生产'
   },
   {
     id: 18,
-    name: '变速箱壳体模具',
-    image: 'sand-casting/p5.jpg',
-    category: '铸铁造型线模具',
-    categoryId: 1,
-    description: '重型变速箱壳体模具，结构复杂，精度高'
+    name: '机体垂直冷芯盒',
+    image: 'hc-boxes/机体垂直冷芯盒.jpeg',
+    category: '冷热芯盒',
+    categoryId: 3,
+    description: '垂直式机体冷芯盒，节省生产空间，提高效率'
   },
   {
     id: 19,
-    name: '齿轮箱模具',
-    image: 'sand-casting/p6.jpg',
-    category: '铸铁造型线模具',
-    categoryId: 1,
-    description: '工业齿轮箱铸造模具，耐用性强'
+    name: '桥壳冷芯盒',
+    image: 'hc-boxes/桥壳冷芯盒1.jpeg',
+    category: '冷热芯盒',
+    categoryId: 3,
+    description: '重型桥壳冷芯盒模具，承载能力强'
   },
   {
     id: 20,
-    name: '机床底座模具',
-    image: 'sand-casting/p7.jpg',
-    category: '铸铁造型线模具',
-    categoryId: 1,
-    description: '大型机床底座模具，稳定性好'
+    name: '桥壳冷芯盒（二型）',
+    image: 'hc-boxes/桥壳冷芯盒2.jpeg',
+    category: '冷热芯盒',
+    categoryId: 3,
+    description: '改进型桥壳冷芯盒，优化冷却系统'
   },
   {
     id: 21,
-    name: '泵体模具组件',
-    image: 'sand-casting/p8.jpg',
-    category: '铸铁造型线模具',
-    categoryId: 1,
-    description: '复杂泵体模具组件，多腔设计'
+    name: '桥壳冷芯盒（三型）',
+    image: 'hc-boxes/桥壳冷芯盒3.jpeg',
+    category: '冷热芯盒',
+    categoryId: 3,
+    description: '第三代桥壳冷芯盒，提升产品质量'
   },
   {
     id: 22,
-    name: '阀门系列模具',
-    image: 'sand-casting/p9.jpg',
-    category: '铸铁造型线模具',
-    categoryId: 1,
-    description: '系列阀门模具，规格齐全'
+    name: '桥壳冷芯盒（四型）',
+    image: 'hc-boxes/桥壳冷芯盒4.jpeg',
+    category: '冷热芯盒',
+    categoryId: 3,
+    description: '最新型桥壳冷芯盒，智能化控制'
   },
   {
     id: 23,
-    name: '工程机械模具',
-    image: 'sand-casting/p10.jpg',
-    category: '铸铁造型线模具',
-    categoryId: 1,
-    description: '工程机械零部件模具，承重能力强'
+    name: '飞轮壳冷芯盒',
+    image: 'hc-boxes/飞轮壳冷芯盒（帮我把红色的数字抹掉）.jpeg',
+    category: '冷热芯盒',
+    categoryId: 3,
+    description: '精密飞轮壳冷芯盒模具，确保传动系统精度'
   },
   {
-    id: 24,
-    name: '重型设备模具',
-    image: 'sand-casting/p11.jpg',
-    category: '铸铁造型线模具',
-    categoryId: 1,
-    description: '重型设备铸件模具，尺寸精准'
+  id: 24,
+  name: '下芯夹具',
+  image: 'fk/下芯夹具.jpeg',
+  category: '工装夹具',
+  categoryId: 4,
+  description: '专业下芯夹具，确保砂芯精确定位，提高铸造质量'
+  },
+  {
+    id: 25,
+    name: '组芯夹具',
+    image: 'fk/组芯夹具.jpeg',
+    category: '工装夹具',
+    categoryId: 4,
+    description: '高精度组芯夹具，用于复杂砂芯组装，保证装配精度'
+  },
+  {
+  id: 26,
+  name: '16缸发动机机体自硬砂手工型板',
+  image: 'self-hardening/16缸发动机机体自硬砂手工型板.jpeg',
+  category: '自硬砂模具',
+  categoryId: 5,
+  description: '大型16缸发动机机体自硬砂手工型板，适用于重型发动机铸造'
+  },
+  {
+    id: 27,
+    name: '16缸发动机缸体手工芯盒',
+    image: 'self-hardening/16缸发动机缸体手工芯盒.jpeg',
+    category: '自硬砂模具',
+    categoryId: 5,
+    description: '16缸发动机缸体专用手工芯盒，精度高，成型效果好'
+  },
+  {
+    id: 28,
+    name: '飞轮壳自硬砂型板',
+    image: 'self-hardening/飞轮壳自硬砂型板.jpeg',
+    category: '自硬砂模具',
+    categoryId: 5,
+    description: '飞轮壳自硬砂型板，确保传动系统零件精度'
+  },
+  {
+    id: 29,
+    name: '飞轮壳自硬砂型板（二型）',
+    image: 'self-hardening/飞轮壳自硬砂型板2.jpeg',
+    category: '自硬砂模具',
+    categoryId: 5,
+    description: '改进型飞轮壳自硬砂型板，优化生产工艺'
   }
 ]
 
@@ -363,7 +332,7 @@ onMounted(() => {
       <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center">
         <div class="text-center space-y-8">
           <h1 
-            class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white font-bold tracking-wider transform transition-all duration-1000"
+            class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-white font-bold tracking-wider transform transition-all duration-1000"
             :class="{ 'translate-y-0 opacity-100': isTitleVisible, 'translate-y-8 opacity-0': !isTitleVisible }"
           >
             <span class="inline-block">专业</span>
@@ -372,10 +341,10 @@ onMounted(() => {
           </h1>
           <div class="w-32 h-1.5 bg-[#1d46a8] mx-auto"></div>
           <p 
-            class="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white tracking-widest font-medium max-w-4xl mx-auto px-4 transform transition-all duration-1000 delay-300"
+            class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white tracking-widest font-medium max-w-4xl mx-auto px-4 transform transition-all duration-1000 delay-300"
             :class="{ 'translate-y-0 opacity-100': isSubtitleVisible, 'translate-y-8 opacity-0': !isSubtitleVisible }"
           >
-            复杂及各种尺寸的铸铁造型线模具、冷热芯盒，铸铝低压、重力、倾转永久模，及各类型辅助工装夹具
+          各类型铸铁及铸铝复杂产品模具
           </p>
         </div>
       </div>
@@ -487,4 +456,4 @@ img {
 .hide-scrollbar::-webkit-scrollbar {
   display: none;            /* Chrome, Safari and Opera */
 }
-</style> 
+</style>

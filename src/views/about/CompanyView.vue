@@ -4,7 +4,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
       <div class="order-1 md:order-1">
         <img 
-          src="@/assets/about/address.jpg" 
+          src="@/assets/about/1992.jpg" 
           alt="方德利模具" 
           class="w-full rounded-lg shadow-md"
         />

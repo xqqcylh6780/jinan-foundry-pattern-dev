@@ -243,7 +243,7 @@ const handleReadMore = () => {
         <div class="relative z-10 h-full flex flex-col justify-center items-center text-center px-6 sm:px-8 md:px-[120px]">
           <h2 
             ref="titleRef"
-            class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8 sm:mb-10 text-white transform transition-all duration-1000 max-w-5xl tracking-wide"
+            class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-8 sm:mb-10 text-white transform transition-all duration-1000 max-w-5xl tracking-wide"
             :class="{ 'translate-y-0 opacity-100': isTitleVisible, 'translate-y-8 opacity-0': !isTitleVisible }"
           >
             {{ t('home.hero.title.prefix') }}<!--
@@ -254,7 +254,7 @@ const handleReadMore = () => {
           <div class="w-32 h-1.5 bg-[#1d46a8] mx-auto mb-8"></div>
           <p 
             ref="subtitleRef"
-            class="text-lg sm:text-2xl md:text-3xl text-white transform transition-all duration-1000 delay-300 max-w-4xl leading-relaxed tracking-wide"
+            class="text-xl sm:text-3xl md:text-4xl lg:text-5xl text-white transform transition-all duration-1000 delay-300 max-w-4xl leading-relaxed tracking-wide"
             :class="{ 'translate-y-0 opacity-100': isSubtitleVisible, 'translate-y-8 opacity-0': !isSubtitleVisible }"
           >
             {{ t('home.hero.subtitle') }}
@@ -302,9 +302,9 @@ const handleReadMore = () => {
               class="transform -translate-x-8 transition-all duration-1000"
               :class="{ 'opacity-100 translate-x-0': isVisible, 'opacity-0': !isVisible }"
             >
-              <h2 class="text-2xl lg:text-3xl font-bold text-gray-900">{{ t('home.intro.title') }}</h2>
+              <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900">{{ t('home.intro.title') }}</h2>
               <div class="w-20 h-1 bg-[#1d46a8] mt-4"></div>
-              <p class="mt-4 lg:mt-6 text-sm lg:text-base text-gray-600 leading-relaxed">
+              <p class="mt-4 lg:mt-6 text-base lg:text-lg xl:text-xl text-gray-600 leading-relaxed">
                 {{ t('home.intro.subtitle') }}
               </p>
             </div>
@@ -317,21 +317,21 @@ const handleReadMore = () => {
               class="opacity-0 transform translate-x-8 transition-all duration-1000"
             >
               <div class="mb-6 lg:mb-8">
-                <h3 class="text-lg lg:text-xl font-bold text-gray-900 mb-3 flex items-center">
+                <h3 class="text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 mb-3 flex items-center">
                   <div class="w-1 h-6 bg-[#1d46a8] mr-3"></div>
                   {{ t('home.intro.sections.philosophy.title') }}
                 </h3>
-                <p class="text-sm lg:text-base leading-relaxed text-gray-600 pl-4 border-l-2 border-gray-100">
+                <p class="text-base lg:text-lg xl:text-xl leading-relaxed text-gray-600 pl-4 border-l-2 border-gray-100">
                   {{ t('home.intro.sections.philosophy.content') }}
                 </p>
               </div>
 
               <div class="mb-6 lg:mb-8">
-                <h3 class="text-lg lg:text-xl font-bold text-gray-900 mb-3 flex items-center">
+                <h3 class="text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 mb-3 flex items-center">
                   <div class="w-1 h-6 bg-[#1d46a8] mr-3"></div>
                   {{ t('home.intro.sections.location.title') }}
                 </h3>
-                <p class="text-sm lg:text-base leading-relaxed text-gray-600 pl-4 border-l-2 border-gray-100">
+                <p class="text-base lg:text-lg xl:text-xl leading-relaxed text-gray-600 pl-4 border-l-2 border-gray-100">
                   {{ t('home.intro.sections.location.content') }}
                 </p>
               </div>
@@ -340,7 +340,7 @@ const handleReadMore = () => {
               <div class="mt-4 lg:mt-6">
                 <el-button
                   type="primary"
-                  class="!bg-[#1d46a8] !border-[#1d46a8] !px-6 lg:!px-8 !h-10 lg:!h-12 text-sm lg:text-base font-medium hover:!bg-gray-800 hover:!border-transparent"
+                  class="!bg-[#1d46a8] !border-[#1d46a8] !px-6 lg:!px-8 !h-12 lg:!h-14 text-base lg:text-lg font-medium hover:!bg-gray-800 hover:!border-transparent"
                   @click="handleReadMore"
                 >
                   {{ t('home.intro.readMore') }}
@@ -371,14 +371,14 @@ const handleReadMore = () => {
             class="absolute inset-0 flex flex-col justify-end pb-16 md:pb-24 p-4 md:p-8 text-white transform transition-all duration-1000"
             :class="{ 'translate-y-8 opacity-0': !isDesignVisible, 'translate-y-0 opacity-100': isDesignVisible }"
           >
-            <h3 class="text-xl md:text-2xl font-bold mb-2 md:mb-4 min-h-[2rem] md:min-h-[2.5rem]">{{ t('home.features.design.title') }}</h3>
+            <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4 min-h-[2rem] md:min-h-[2.5rem]">{{ t('home.features.design.title') }}</h3>
             <div class="w-12 h-1 bg-[#1d46a8] mb-2 md:mb-4"></div>
-            <p class="text-xs md:text-sm leading-relaxed mb-3 md:mb-4 min-h-[2.5rem] md:min-h-[3rem]">
+            <p class="text-sm md:text-base lg:text-lg leading-relaxed mb-3 md:mb-4 min-h-[2.5rem] md:min-h-[3rem]">
               {{ t('home.features.design.desc') }}
             </p>
             <el-button
               type="primary"
-              class="!bg-[#1d46a8] !border-[#1d46a8] !w-[120px] !h-10 hover:!bg-gray-800 hover:!border-transparent transition-all duration-300"
+              class="!bg-[#1d46a8] !border-[#1d46a8] !w-[140px] !h-12 text-base hover:!bg-gray-800 hover:!border-transparent transition-all duration-300"
               @click="router.push('/design')"
             >
               {{ t('home.features.readMore') }}
@@ -402,14 +402,14 @@ const handleReadMore = () => {
             class="absolute inset-0 flex flex-col justify-end pb-16 md:pb-24 p-4 md:p-8 text-white transform transition-all duration-1000"
             :class="{ 'translate-y-8 opacity-0': !isProductVisible, 'translate-y-0 opacity-100': isProductVisible }"
           >
-            <h3 class="text-xl md:text-2xl font-bold mb-2 md:mb-4 min-h-[2rem] md:min-h-[2.5rem]">{{ t('home.features.products.title') }}</h3>
+            <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4 min-h-[2rem] md:min-h-[2.5rem]">{{ t('home.features.products.title') }}</h3>
             <div class="w-12 h-1 bg-[#1d46a8] mb-2 md:mb-4"></div>
-            <p class="text-xs md:text-sm leading-relaxed mb-3 md:mb-4 min-h-[2.5rem] md:min-h-[3rem]">
+            <p class="text-sm md:text-base lg:text-lg leading-relaxed mb-3 md:mb-4 min-h-[2.5rem] md:min-h-[3rem]">
               {{ t('home.features.products.desc') }}
             </p>
             <el-button
               type="primary"
-              class="!bg-[#1d46a8] !border-[#1d46a8] !w-[120px] !h-10 hover:!bg-gray-800 hover:!border-transparent transition-all duration-300"
+              class="!bg-[#1d46a8] !border-[#1d46a8] !w-[140px] !h-12 text-base hover:!bg-gray-800 hover:!border-transparent transition-all duration-300"
               @click="router.push('/product')"
             >
               {{ t('home.features.readMore') }}
@@ -433,14 +433,14 @@ const handleReadMore = () => {
             class="absolute inset-0 flex flex-col justify-end pb-16 md:pb-24 p-4 md:p-8 text-white transform transition-all duration-1000"
             :class="{ 'translate-y-8 opacity-0': !isCapabilityVisible, 'translate-y-0 opacity-100': isCapabilityVisible }"
           >
-            <h3 class="text-xl md:text-2xl font-bold mb-2 md:mb-4 min-h-[2rem] md:min-h-[2.5rem]">{{ t('home.features.capability.title') }}</h3>
+            <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4 min-h-[2rem] md:min-h-[2.5rem]">{{ t('home.features.capability.title') }}</h3>
             <div class="w-12 h-1 bg-[#1d46a8] mb-2 md:mb-4"></div>
-            <p class="text-xs md:text-sm leading-relaxed mb-3 md:mb-4 min-h-[2.5rem] md:min-h-[3rem]">
+            <p class="text-sm md:text-base lg:text-lg leading-relaxed mb-3 md:mb-4 min-h-[2.5rem] md:min-h-[3rem]">
               {{ t('home.features.capability.desc') }}
             </p>
             <el-button
               type="primary"
-              class="!bg-[#1d46a8] !border-[#1d46a8] !w-[120px] !h-10 hover:!bg-gray-800 hover:!border-transparent transition-all duration-300"
+              class="!bg-[#1d46a8] !border-[#1d46a8] !w-[140px] !h-12 text-base hover:!bg-gray-800 hover:!border-transparent transition-all duration-300"
               @click="router.push('/equipment')"
             >
               {{ t('home.features.readMore') }}

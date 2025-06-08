@@ -30,17 +30,17 @@ onMounted(() => {
       <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center">
         <div class="text-center space-y-8">
           <h1 
-            class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white font-bold tracking-wider transform transition-all duration-1000"
+            class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-white font-bold tracking-wider transform transition-all duration-1000"
             :class="{ 'translate-y-0 opacity-100': isTitleVisible, 'translate-y-8 opacity-0': !isTitleVisible }"
           >
             先进制造设备
           </h1>
           <div class="w-32 h-1.5 bg-[#1d46a8] mx-auto"></div>
           <p 
-            class="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white tracking-widest font-medium max-w-4xl mx-auto px-4 transform transition-all duration-1000 delay-300"
+            class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white tracking-widest font-medium max-w-4xl mx-auto px-4 transform transition-all duration-1000 delay-300"
             :class="{ 'translate-y-0 opacity-100': isSubtitleVisible, 'translate-y-8 opacity-0': !isSubtitleVisible }"
           >
-          世界一流的加工设备，专业的设备团队，为您提供高品质的产品与服务，联系我们讨论您的铸造模具需求
+          世界一流的加工设备与专业的技术团队，为您提供高品质的产品和服务。
           </p>
         </div>
       </div>
@@ -87,4 +87,4 @@ img {
     @apply text-sm py-2;
   }
 }
-</style> 
+</style>

@@ -109,14 +109,14 @@ onMounted(() => {
         <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
           <div class="text-center text-white px-4 sm:px-6 md:px-8 space-y-8">
             <h1 
-              class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-wider transform transition-all duration-1000"
+              class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-wider transform transition-all duration-1000"
               :class="{ 'translate-y-0 opacity-100': isTitleVisible, 'translate-y-8 opacity-0': !isTitleVisible }"
             >
               设计能力
             </h1>
             <div class="w-32 h-1.5 bg-[#1d46a8] mx-auto"></div>
             <p 
-              class="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white max-w-4xl mx-auto tracking-widest font-medium transform transition-all duration-1000 delay-300"
+              class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white max-w-4xl mx-auto tracking-widest font-medium transform transition-all duration-1000 delay-300"
               :class="{ 'translate-y-0 opacity-100': isSubtitleVisible, 'translate-y-8 opacity-0': !isSubtitleVisible }"
             >
               {{ description }}
@@ -211,4 +211,4 @@ onMounted(() => {
   --el-button-hover-bg-color: #153576;
   --el-button-hover-border-color: #153576;
 }
-</style> 
+</style>

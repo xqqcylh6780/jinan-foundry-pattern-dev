@@ -22,119 +22,78 @@ const activeCategory = ref(categories[0].id)
 const loadedImages = ref<Set<number>>(new Set())
 
 const equipments: Equipment[] = [
-  {
+{
     id: 1,
-    name: '日本牧野（Makino）V90S五轴加工中心',
-    image: '/src/assets/equipments/5axis/e1.jpg',
+    name: '日本牧野（MAKINO）五轴加工中心',
+    image: '/src/assets/equipments/5axis/日本牧野（MAKINO）五轴加工中心.jpg',
     category: '五轴加工设备',
     categoryId: 1,
     description: '高性能五轴立式加工中心，采用双摆台结构，主轴最高转速40,000RPM，定位精度±2μm，配备SGI.4几何智能控制系统，专为复杂曲面、高精度模具加工设计'
   },
   {
     id: 2,
-    name: '日本牧野（Makino）V90S五轴加工中心',
-    image: '/src/assets/equipments/5axis/e2.jpg',
-    category: '五轴加工设备',
-    categoryId: 1,
-    description: '高刚性床身结构，配备3D激光校准系统，HSK刀柄，可实现一次装夹多面加工，确保高速切削时的稳定性和加工精度'
+    name: '大型龙门加工中心生产车间',
+    image: '/src/assets/equipments/gantry/workshop.jpg',
+    category: '大型龙门加工中心',
+    categoryId: 5,
+    description: '现代化大型龙门加工中心生产车间，配备先进的加工设备和完善的生产流水线，具备高精度、高效率的大型零部件加工能力'
   },
   {
     id: 3,
-    name: '牧野（Makino）PS105新一代立式加工中心',
-    image: '/src/assets/equipments/high-speed/e1.jpg',
-    category: '高速加工设备',
-    categoryId: 2,
-    description: '新一代PS系列立式加工中心，集功率、精度、速度和可靠性于一体，重新定义了航空航天、医疗、汽车等行业的加工标准，全面提升车间生产力水平'
+    name: 'Leader高精度三坐标测量机',
+    image: '/src/assets/equipments/detection/coordinate-measuring-machine.jpg',
+    category: '检测设备',
+    categoryId: 3,
+    description: '具备卓越精度和稳定性的高端三坐标测量设备，可满足精密零部件测量、高精度曲面扫描及计量仲裁需求，配备先进的测量软件和探头系统，是高精度测量的典范'
   },
   {
     id: 4,
-    name: '匠泽（Takumi）H16M五轴联动加工中心',
-    image: '/src/assets/equipments/high-speed/e2.jpg',
-    category: '高速加工设备',
-    categoryId: 2,
-    description: '日本精密制造技术，专为精密模具、航空航天零部件设计，结合高性能和性价比优势，适用于复杂曲面和难切削材料的高精度加工'
+    name: '现代化装配车间',
+    image: '/src/assets/equipments/assembly/modern-workshop.jpg',
+    category: '装配区域',
+    categoryId: 4,
+    description: '配备红色桥式起重机的现代化装配车间，拥有宽敞的作业空间和完善的起重设备，可满足大型模具和设备的装配需求，确保装配作业的高效性和安全性'
   },
   {
     id: 5,
-    name: '大君宏（Hartford）B17高速龙门加工中心',
-    image: '/src/assets/equipments/high-speed/e3.jpg',
-    category: '高速加工设备',
-    categoryId: 2,
-    description: '新一代模具制造专用龙门加工中心，高刚性机台结构设计，配备高速直结式主轴，提升重切削能力，显著缩短模具加工周期'
-  },
-  {
-    id: 16,
-    name: 'F8大型立式加工中心',
+    name: 'F8高速加工中心',
     image: '/src/assets/equipments/high-speed/F8.jpg',
     category: '高速加工设备',
     categoryId: 2,
-    description: '集功率、速度、精度和稳定性于一体的大型立式加工中心，具备优异的热稳定性，可实现长时间连续高速、小公差加工，适用于传统模具和医疗产品的复杂三维曲面加工'
+    description: 'F8系列高速立式加工中心，具备高速主轴和快速进给系统，适用于精密模具和复杂零件的高效加工'
+  },
+  {
+    id: 6,
+    name: 'E1高速精密加工设备',
+    image: '/src/assets/equipments/high-speed/e1.jpg',
+    category: '高速加工设备',
+    categoryId: 2,
+    description: 'E1系列高速精密加工设备，配备先进的控制系统和高精度主轴，专为高速切削和精密加工设计'
   },
   {
     id: 7,
-    name: 'HandySCAN 3D|BLACK 高精度三维扫描仪',
-    image: '/src/assets/equipments/detection/e2.jpg',
-    category: '检测设备',
-    categoryId: 3,
-    description: '高端便携式三维测量设备，具备高精度、高速测量和高分辨率特性，可在各种环境下采集高质量测量数据，是质量保证和产品开发的理想工具'
+    name: 'E2高速数控加工中心',
+    image: '/src/assets/equipments/high-speed/e2.jpg',
+    category: '高速加工设备',
+    categoryId: 2,
+    description: 'E2高速数控加工中心，具备优异的动态性能和加工精度，适用于航空航天和汽车零部件的高速加工'
+  },
+  {
+    id: 8,
+    name: 'E3高效能加工设备',
+    image: '/src/assets/equipments/high-speed/e3.jpg',
+    category: '高速加工设备',
+    categoryId: 2,
+    description: 'E3高效能加工设备，采用高刚性机床结构和智能化控制系统，实现高速高精度加工'
   },
   {
     id: 9,
-    name: '永基大型龙门加工中心',
-    image: '/src/assets/equipments/gantry/g1.jpg',
-    category: '龙门加工中心',
-    categoryId: 5,
-    description: '采用方箱式加强筋底座设计，立柱结合处双倍加强筋密度，配备高密度垂直加强筋，显著提升机床刚性和抗扭曲能力'
-  },
-  {
-    id: 10,
-    name: '永基精密龙门加工中心',
-    image: '/src/assets/equipments/gantry/g2.jpg',
-    category: '龙门加工中心',
-    categoryId: 5,
-    description: '创新支撑垫铁设计，直接承接工件重量，避免机床悬空状态，大幅提升承载能力和抗变形性能'
-  },
-  {
-    id: 11,
-    name: '精密硬度检测仪',
-    image: '/src/assets/equipments/detection/e4.jpg',
-    category: '检测设备',
-    categoryId: 3,
-    description: '专业模具硬度检测设备，通过精确测试提升模具质量和制造水平，有效延长模具使用寿命，是模具制造质量控制的关键设备'
-  },
-  {
-    id: 13,
-    name: 'Leader高精度三坐标测量机',
-    image: '/src/assets/equipments/detection/e6.jpg',
-    category: '检测设备',
-    categoryId: 3,
-    description: '具备卓越精度和稳定性的高端测量设备，可满足精密零部件测量、高精度曲面扫描及计量仲裁需求，是高精度测量机的典范'
-  },
-  {
-    id: 14,
-    name: '模具装配区',
-    image: '/src/assets/equipments/assembly/a1.jpg',
-    category: '装配区域',
-    categoryId: 4,
-    description: '专业模具装配工作区，配备完善的装配工具和设备'
-  },
-  {
-    id: 15,
-    name: '精密装配区',
-    image: '/src/assets/equipments/assembly/a2.jpg',
-    category: '装配区域',
-    categoryId: 4,
-    description: '高标准精密装配区域，确保模具装配精度和质量'
-  },
-  {
-    id: 17,
-    name: '永基龙门加工中心',
+    name: 'YJ系列高速加工中心',
     image: '/src/assets/equipments/high-speed/yj.jpg',
     category: '高速加工设备',
     categoryId: 2,
-    description: '配备全数字驱动系统和高性能伺服电机，具备存储型螺距误差补偿和间隙补偿功能，采用高分辨率位置检测器和高速微处理器，实现高速高精度加工'
-  },
-  // ... 其他设备数据
+    description: 'YJ系列高速加工中心，集成先进的高速切削技术和智能监控系统，提供卓越的加工效率和表面质量'
+  }
 ]
 
 const filteredEquipments = computed(() => {
