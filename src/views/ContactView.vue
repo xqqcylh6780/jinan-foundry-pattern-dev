@@ -117,14 +117,14 @@ onMounted(() => {
       <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center">
         <div class="text-center space-y-8">
           <h1 
-            class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-white font-bold tracking-wider transform transition-all duration-1000"
+            class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white font-bold tracking-wider transform transition-all duration-1000"
             :class="{ 'translate-y-0 opacity-100': isTitleVisible, 'translate-y-8 opacity-0': !isTitleVisible }"
           >
             联系我们
           </h1>
           <div class="w-32 h-1.5 bg-[#1d46a8] mx-auto"></div>
           <p 
-            class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white tracking-widest font-medium max-w-4xl mx-auto px-4 transform transition-all duration-1000 delay-300"
+            class="text-xl sm:text-3xl md:text-4xl lg:text-5xl text-white tracking-widest font-medium max-w-4xl mx-auto px-4 transform transition-all duration-1000 delay-300"
             :class="{ 'translate-y-0 opacity-100': isSubtitleVisible, 'translate-y-8 opacity-0': !isSubtitleVisible }"
           >
             期待与您的沟通，为您提供专业的模具解决方案

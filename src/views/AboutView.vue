@@ -134,7 +134,7 @@ onMounted(() => {
       <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center">
         <div class="text-center space-y-8">
           <h1 
-            class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white font-bold tracking-wider transform transition-all duration-1000"
+            class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white font-bold tracking-wider transform transition-all duration-1000"
             :class="{ 'translate-y-0 opacity-100': isTitleVisible, 'translate-y-8 opacity-0': !isTitleVisible }"
           >
             <span class="inline-block">打造</span>
@@ -143,7 +143,7 @@ onMounted(() => {
           </h1>
           <div class="w-32 h-1.5 bg-[#1d46a8] mx-auto"></div>
           <p 
-            class="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white tracking-widest font-medium transform transition-all duration-1000 delay-300"
+            class="text-xl sm:text-3xl md:text-4xl lg:text-5xl text-white tracking-widest font-medium transform transition-all duration-1000 delay-300"
             :class="{ 'translate-y-0 opacity-100': isSubtitleVisible, 'translate-y-8 opacity-0': !isSubtitleVisible }"
           >
             <span class="text-[#1d46a8]">建立</span>

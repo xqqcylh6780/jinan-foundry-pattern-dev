@@ -243,13 +243,10 @@ const handleReadMore = () => {
         <div class="relative z-10 h-full flex flex-col justify-center items-center text-center px-6 sm:px-8 md:px-[120px]">
           <h2 
             ref="titleRef"
-            class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-8 sm:mb-10 text-white transform transition-all duration-1000 max-w-5xl tracking-wide"
+            class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-8 sm:mb-10 text-white transform transition-all duration-1000 tracking-wider whitespace-nowrap text-center"
             :class="{ 'translate-y-0 opacity-100': isTitleVisible, 'translate-y-8 opacity-0': !isTitleVisible }"
           >
-            {{ t('home.hero.title.prefix') }}<!--
-            --><span class="text-[#1d46a8]">{{ t('home.hero.title.highlight1') }}</span><!--
-            -->{{ t('home.hero.title.middle') }}<!--
-            --><span class="text-[#1d46a8]">{{ t('home.hero.title.highlight2') }}</span>
+            <span style="color: #ffffff;">{{ t('home.hero.title.prefix') }}</span><span style="color: #1d46a8;">{{ t('home.hero.title.highlight') }}</span><span style="color: #ffffff;">{{ t('home.hero.title.suffix') }}</span>
           </h2>
           <div class="w-32 h-1.5 bg-[#1d46a8] mx-auto mb-8"></div>
           <p 
@@ -264,7 +261,7 @@ const handleReadMore = () => {
     </section>
 
     <!-- 公司简介部分 -->
-    <section class="min-h-[453px] overflow-hidden relative py-12 md:py-16 lg:py-0 lg:h-[453px] w-full">
+    <section class="min-h-[453px] overflow-hidden relative py-8 md:py-10 lg:py-12 w-full">
       <!-- 修改遮罩为纯白色，并降低 z-index -->
       <div class="absolute inset-0 bg-white"></div>
 
@@ -293,8 +290,8 @@ const handleReadMore = () => {
       <div class="absolute inset-0 bg-white/80 z-[1]"></div>
 
       <!-- 内容区域 -->
-      <div class="relative z-[2] h-full px-6 sm:px-8 md:px-[120px]">
-        <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start h-full lg:pt-32">
+      <div class="relative z-[2] px-6 sm:px-8 md:px-[120px]">
+        <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start py-4 lg:py-6">
           <!-- 左侧标题 -->
           <div class="w-full lg:w-1/3">
             <div
@@ -361,9 +358,9 @@ const handleReadMore = () => {
             <img
               src="@/assets/engineering.jpg"
               alt="设计能力"
-              class="absolute inset-0 w-full h-full object-cover"
+              class="absolute inset-0 w-full h-full object-contain"
             />
-            <div class="absolute inset-0 bg-black/50"></div>
+            <div class="absolute inset-0 bg-black/30"></div>
           </div>
 
           <div 
@@ -392,9 +389,9 @@ const handleReadMore = () => {
             <img
               src="@/assets/products.jpg"
               alt="产品中心"
-              class="absolute inset-0 w-full h-full object-cover"
+              class="absolute inset-0 w-full h-full object-contain"
             />
-            <div class="absolute inset-0 bg-black/50"></div>
+            <div class="absolute inset-0 bg-black/30"></div>
           </div>
 
           <div 
@@ -423,9 +420,9 @@ const handleReadMore = () => {
             <img
               src="@/assets/tools.jpg"
               alt="能力展示"
-              class="absolute inset-0 w-full h-full object-cover"
+              class="absolute inset-0 w-full h-full object-contain"
             />
-            <div class="absolute inset-0 bg-black/50"></div>
+            <div class="absolute inset-0 bg-black/30"></div>
           </div>
 
           <div 

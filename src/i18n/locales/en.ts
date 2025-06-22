@@ -21,9 +21,8 @@ export default {
     hero: {
       title: {
         prefix: 'Committed to becoming the',
-        highlight1: 'most professional',
-        middle: 'foundry pattern',
-        highlight2: 'craftsman'
+        highlight: 'most professional',
+        suffix: 'foundry pattern craftsman'
       },
       subtitle: 'Specializing in complex and various sizes of cast iron molding line molds, cold and hot core boxes, aluminum casting low pressure, gravity, tilting permanent molds, and various types of auxiliary fixtures'
     },
@@ -91,4 +90,4 @@ export default {
       police: 'Police Record No.37010102000682'
     }
   }
-} 
+}
