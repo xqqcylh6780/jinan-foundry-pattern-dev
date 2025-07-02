@@ -354,13 +354,15 @@ const handleReadMore = () => {
       <div class="grid grid-cols-1 md:grid-cols-3">
         <!-- 设计能力 -->
         <div class="relative overflow-hidden">
-          <div class="relative h-[300px] sm:h-[400px] md:h-[500px]">
-            <img
-              src="@/assets/engineering.jpg"
-              alt="设计能力"
-              class="absolute inset-0 w-full h-full object-contain"
-            />
-            <div class="absolute inset-0 bg-black/30"></div>
+          <div class="relative w-full" style="padding-top: 56.25%;">
+            <div class="absolute inset-0">
+              <img
+                src="@/assets/engineering.jpg"
+                alt="设计能力"
+                class="absolute inset-0 w-full h-full object-contain"
+              />
+              <div class="absolute inset-0 w-full h-full bg-black/30"></div>
+            </div>
           </div>
 
           <div 
@@ -385,13 +387,15 @@ const handleReadMore = () => {
 
         <!-- 产品中心 -->
         <div class="relative overflow-hidden">
-          <div class="relative h-[300px] sm:h-[400px] md:h-[500px]">
-            <img
-              src="@/assets/products.jpg"
-              alt="产品中心"
-              class="absolute inset-0 w-full h-full object-contain"
-            />
-            <div class="absolute inset-0 bg-black/30"></div>
+          <div class="relative w-full" style="padding-top: 56.25%;">
+            <div class="absolute inset-0">
+              <img
+                src="@/assets/products.jpg"
+                alt="产品中心"
+                class="absolute inset-0 w-full h-full object-contain"
+              />
+              <div class="absolute inset-0 w-full h-full bg-black/30"></div>
+            </div>
           </div>
 
           <div 
@@ -416,13 +420,15 @@ const handleReadMore = () => {
 
         <!-- 能力展示 -->
         <div class="relative overflow-hidden">
-          <div class="relative h-[300px] sm:h-[400px] md:h-[500px]">
-            <img
-              src="@/assets/tools.jpg"
-              alt="能力展示"
-              class="absolute inset-0 w-full h-full object-contain"
-            />
-            <div class="absolute inset-0 bg-black/30"></div>
+          <div class="relative w-full" style="padding-top: 56.25%;">
+            <div class="absolute inset-0">
+              <img
+                src="@/assets/tools.jpg"
+                alt="能力展示"
+                class="absolute inset-0 w-full h-full object-contain"
+              />
+              <div class="absolute inset-0 w-full h-full bg-black/30"></div>
+            </div>
           </div>
 
           <div 
