@@ -10,7 +10,6 @@ interface Equipment {
   axis: number
   system: string
   quantity: number
-  usage: string
 }
 
 const equipmentList: Equipment[] = [
@@ -24,8 +23,7 @@ const equipmentList: Equipment[] = [
     precision: '0.002',
     axis: 5,
     system: 'Professional 6',
-    quantity: 2,
-    usage: '60%'
+    quantity: 2
   },
   {
     brand: '牧野',
@@ -37,8 +35,7 @@ const equipmentList: Equipment[] = [
     precision: '0.003',
     axis: 3,
     system: 'Professional 5',
-    quantity: 1,
-    usage: '90%'
+    quantity: 1
   },
   {
     brand: '牧野',
@@ -50,8 +47,7 @@ const equipmentList: Equipment[] = [
     precision: '0.0025',
     axis: 3,
     system: 'Professional P',
-    quantity: 2,
-    usage: '60%'
+    quantity: 2
   },
   {
     brand: '匠泽',
@@ -63,8 +59,7 @@ const equipmentList: Equipment[] = [
     precision: '0.003',
     axis: 3,
     system: 'Heidenhain/Mitsubishi M70/M80',
-    quantity: 7,
-    usage: '80%'
+    quantity: 7
   },
   {
     brand: '大君宏',
@@ -76,8 +71,7 @@ const equipmentList: Equipment[] = [
     precision: '0.003',
     axis: 3,
     system: 'Heidenhain',
-    quantity: 1,
-    usage: '90%'
+    quantity: 1
   },
   {
     brand: '永基',
@@ -89,8 +83,7 @@ const equipmentList: Equipment[] = [
     precision: '0.005',
     axis: 3,
     system: 'Mitsubishi M70/M80',
-    quantity: 2,
-    usage: '60%'
+    quantity: 2
   },
   {
     brand: '台正',
@@ -102,8 +95,7 @@ const equipmentList: Equipment[] = [
     precision: '0.01',
     axis: 3,
     system: 'Mitsubishi M70',
-    quantity: 2,
-    usage: '90%'
+    quantity: 2
   },
   {
     brand: '台正',
@@ -115,8 +107,7 @@ const equipmentList: Equipment[] = [
     precision: '0.01',
     axis: 3,
     system: 'Mitsubishi M70',
-    quantity: 2,
-    usage: '50%'
+    quantity: 2
   },
   {
     brand: '丽驰',
@@ -128,8 +119,7 @@ const equipmentList: Equipment[] = [
     precision: '0.005',
     axis: 3,
     system: 'Mitsubishi M70',
-    quantity: 4,
-    usage: '70%'
+    quantity: 4
   },
   {
     brand: '台宇',
@@ -141,8 +131,7 @@ const equipmentList: Equipment[] = [
     precision: '0.005',
     axis: 3,
     system: 'Mitsubishi M70',
-    quantity: 1,
-    usage: '80%'
+    quantity: 1
   },
   {
     brand: '台宇',
@@ -154,8 +143,7 @@ const equipmentList: Equipment[] = [
     precision: '0.005',
     axis: 3,
     system: 'Mitsubishi M70',
-    quantity: 1,
-    usage: '80%'
+    quantity: 1
   },
   {
     brand: '台立',
@@ -167,8 +155,7 @@ const equipmentList: Equipment[] = [
     precision: '0.01',
     axis: 3,
     system: '新代',
-    quantity: 1,
-    usage: '20%'
+    quantity: 1
   },
   {
     brand: '其余数控',
@@ -180,8 +167,7 @@ const equipmentList: Equipment[] = [
     precision: '',
     axis: 0,
     system: '',
-    quantity: 10,
-    usage: '30%'
+    quantity: 10
   },
   {
     brand: '电火花',
@@ -193,19 +179,11 @@ const equipmentList: Equipment[] = [
     precision: '',
     axis: 0,
     system: '',
-    quantity: 2,
-    usage: '50%'
+    quantity: 2
   }
 ]
 
-// 根据使用率返回不同的颜色
-function getUsageColor(usage: string): string {
-  const value = parseInt(usage)
-  if (value >= 90) return '#ef4444' // 红色
-  if (value >= 70) return '#f97316' // 橙色
-  if (value >= 50) return '#eab308' // 黄色
-  return '#22c55e' // 绿色
-}
+
 </script>
 
 <template>
@@ -248,9 +226,7 @@ function getUsageColor(usage: string): string {
                 <th class="px-6 py-5 text-left">
                   <span class="text-sm font-semibold text-gray-700 uppercase tracking-wider">数量</span>
                 </th>
-                <th class="px-6 py-5 text-left">
-                  <span class="text-sm font-semibold text-gray-700 uppercase tracking-wider">产能</span>
-                </th>
+
               </tr>
             </thead>
             <tbody class="bg-white divide-y divide-gray-200">
@@ -273,17 +249,7 @@ function getUsageColor(usage: string): string {
                 </td>
                 <td class="px-4 py-4 text-sm text-gray-600 whitespace-nowrap">{{ item.system || '-' }}</td>
                 <td class="px-4 py-4 text-sm text-gray-600 whitespace-nowrap">{{ item.quantity }}</td>
-                <td class="px-4 py-4 text-sm whitespace-nowrap">
-                  <div class="flex items-center">
-                    <div class="w-16 bg-gray-200 rounded-full h-2 mr-2">
-                      <div 
-                        class="h-2 rounded-full" 
-                        :style="{ width: item.usage, backgroundColor: getUsageColor(item.usage) }"
-                      ></div>
-                    </div>
-                    <span :style="{ color: getUsageColor(item.usage) }" class="font-medium">{{ item.usage }}</span>
-                  </div>
-                </td>
+
               </tr>
             </tbody>
           </table>
