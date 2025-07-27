@@ -22,9 +22,9 @@ const activeCategory = ref(categories[0].id)
 const loadedImages = ref<Set<number>>(new Set())
 
 const equipments: Equipment[] = [
-{
+  {
     id: 1,
-    name: '日本牧野（MAKINO）五轴加工中心',
+    name: '日本牧野（MAKINO）V90S五轴加工中心',
     image: '/src/assets/equipments/5axis/日本牧野（MAKINO）五轴加工中心.jpg',
     category: '五轴加工设备',
     categoryId: 1,
@@ -32,66 +32,66 @@ const equipments: Equipment[] = [
   },
   {
     id: 2,
-    name: '大型龙门加工中心生产车间',
-    image: '/src/assets/equipments/gantry/workshop.jpg',
-    category: '大型龙门加工中心',
-    categoryId: 5,
-    description: ''
-  },
-  {
-    id: 3,
-    name: 'Leader高精度三坐标测量机',
-    image: '/src/assets/equipments/detection/coordinate-measuring-machine.jpg',
-    category: '检测设备',
-    categoryId: 3,
-    description: ''
-  },
-  {
-    id: 4,
-    name: '现代化装配车间',
-    image: '/src/assets/equipments/assembly/modern-workshop.jpg',
-    category: '装配区域',
-    categoryId: 4,
-    description: ''
-  },
-  {
-    id: 5,
-    name: 'F8高速加工中心',
+    name: '日本牧野（MAKINO）F8高速加工中心',
     image: '/src/assets/equipments/high-speed/F8.jpg',
     category: '高速加工设备',
     categoryId: 2,
     description: ''
   },
   {
-    id: 6,
-    name: 'E1高速精密加工设备',
+    id: 3,
+    name: '日本牧野（MAKINO）PS105高速加工中心',
     image: '/src/assets/equipments/high-speed/e1.jpg',
     category: '高速加工设备',
     categoryId: 2,
     description: ''
   },
   {
-    id: 7,
-    name: 'E2高速数控加工中心',
+    id: 4,
+    name: '台湾匠泽（TAKUMI）H16高速加工中心',
     image: '/src/assets/equipments/high-speed/e2.jpg',
     category: '高速加工设备',
     categoryId: 2,
     description: ''
   },
   {
-    id: 8,
-    name: 'E3高效能加工设备',
+    id: 5,
+    name: '台湾大君宏（MAXXTRON）B17高速加工中心',
     image: '/src/assets/equipments/high-speed/e3.jpg',
     category: '高速加工设备',
     categoryId: 2,
     description: ''
   },
   {
+    id: 6,
+    name: '青岛永基YJ4032高速龙门加工中心',
+    image: '/src/assets/equipments/gantry/workshop.jpg',
+    category: '大型龙门加工中心',
+    categoryId: 5,
+    description: ''
+  },
+  {
+    id: 7,
+    name: '加拿大型创（Creaform）Handyscan Black高精度手持扫描仪',
+    image: '/src/assets/equipments/detection/coordinate-measuring-machine.jpg',
+    category: '检测设备',
+    categoryId: 3,
+    description: ''
+  },
+  {
+    id: 8,
+    name: '雷顿（Leader）Navigator高精度三坐标测量仪',
+    image: '/src/assets/equipments/detection/coordinate-measuring-machine.jpg',
+    category: '检测设备',
+    categoryId: 3,
+    description: ''
+  },
+  {
     id: 9,
-    name: 'YJ系列高速加工中心',
-    image: '/src/assets/equipments/high-speed/yj.jpg',
-    category: '高速加工设备',
-    categoryId: 2,
+    name: '装配区域',
+    image: '/src/assets/equipments/assembly/modern-workshop.jpg',
+    category: '装配区域',
+    categoryId: 4,
     description: ''
   }
 ]
