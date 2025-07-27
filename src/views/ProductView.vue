@@ -13,8 +13,8 @@ interface Product {
 }
 
 const categories = [
-  { id: 1, name: '铸铁造型线模具' },
-  { id: 2, name: '铸铝低压、重力、倾转永久模' },
+  { id: 1, name: '铸铝低压、重力、倾转永久模' },
+  { id: 2, name: '铸铁造型线模具' },
   { id: 3, name: '冷热芯盒' },
   { id: 4, name: '各类型工装夹具' },
   { id: 5, name: '自硬砂模具' }
@@ -66,55 +66,55 @@ const products: Product[] = [
     name: '发动机缸体造型线模具',
     image: 'sand-casting/发动机缸体造型线模具.jpeg',
     category: '铸铁造型线模具',
-    categoryId: 1,
-    description: '高精度发动机缸体铸造模具，适用于汽车发动机生产'
+    categoryId: 2,
+    description: ''
   },
   {
     id: 2,
-    name: '发动机缸体造型线模具（二型）',
+    name: '发动机缸体造型线模具',
     image: 'sand-casting/发动机缸体造型线模具2.JPG',
     category: '铸铁造型线模具',
-    categoryId: 1,
-    description: '改进型发动机缸体模具，提升生产效率和精度'
+    categoryId: 2,
+    description: ''
   },
   {
     id: 3,
     name: '差壳造型线模具',
     image: 'sand-casting/差壳造型线模具.jpeg',
     category: '铸铁造型线模具',
-    categoryId: 1,
-    description: '专业差壳铸造模具，确保产品结构稳定性'
+    categoryId: 2,
+    description: ''
   },
   {
     id: 4,
     name: '桥壳造型线模具',
     image: 'sand-casting/桥壳造型线模具1.jpeg',
     category: '铸铁造型线模具',
-    categoryId: 1,
-    description: '重型桥壳铸造模具，承载能力强，耐用性好'
+    categoryId: 2,
+    description: ''
   },
   {
     id: 5,
     name: '桥壳造型线模具（加强型）',
     image: 'sand-casting/桥壳造型线模具2.jpeg',
     category: '铸铁造型线模具',
-    categoryId: 1,
-    description: '加强型桥壳模具，适用于重载车辆桥壳生产'
+    categoryId: 2,
+    description: ''
   },
   {
     id: 6,
     name: '转向节造型线模具',
     image: 'sand-casting/转向节造型线模具.JPG',
     category: '铸铁造型线模具',
-    categoryId: 1,
-    description: '精密转向节铸造模具，保证转向系统安全性'
+    categoryId: 2,
+    description: ''
   },
   {
     id: 7,
     name: '减速器壳体低压模具',
     image: 'metal/1.png',
     category: '铸铝低压、重力、倾转永久模',
-    categoryId: 2,
+    categoryId: 1,
     description: '产品尺寸697*640*540、侧模四开低压模具、3个覆膜砂热芯组合下芯'
   },
   {
@@ -122,7 +122,7 @@ const products: Product[] = [
     name: '变速箱壳体低压模具',
     image: 'metal/2.png',
     category: '铸铝低压、重力、倾转永久模',
-    categoryId: 2,
+    categoryId: 1,
     description: '产品外型635*609*466、侧模四开低压模具、1个覆膜砂热芯'
   },
   {
@@ -130,7 +130,7 @@ const products: Product[] = [
     name: '变速箱壳体低压模具',
     image: 'metal/3.png',
     category: '铸铝低压、重力、倾转永久模',
-    categoryId: 2,
+    categoryId: 1,
     description: '产品外型593*391*476、侧模四开低压模具'
   },
   {
@@ -138,7 +138,7 @@ const products: Product[] = [
     name: '变速箱壳体低压模具',
     image: 'metal/4.png',
     category: '铸铝低压、重力、倾转永久模',
-    categoryId: 2,
+    categoryId: 1,
     description: '产品外型564*436*179侧模四开低压模具'
   },
   {
@@ -146,7 +146,7 @@ const products: Product[] = [
     name: '双电机壳体低压模具',
     image: 'metal/5.png',
     category: '铸铝低压、重力、倾转永久模',
-    categoryId: 2,
+    categoryId: 1,
     description: '产品外型646*578*387、侧模四开低压模具'
   },
   {
@@ -154,7 +154,7 @@ const products: Product[] = [
     name: '缸体低压模具',
     image: 'metal/6.png',
     category: '铸铝低压、重力、倾转永久模',
-    categoryId: 2,
+    categoryId: 1,
     description: '产品外型300*227*293、侧模四开低压模具'
   },
   {
@@ -163,7 +163,7 @@ const products: Product[] = [
     image: 'hc-boxes/发动机缸体冷芯盒.jpeg',
     category: '冷热芯盒',
     categoryId: 3,
-    description: '高精度发动机缸体冷芯盒模具，用于生产高质量铸造砂芯'
+    description: ''
   },
   {
     id: 14,
@@ -171,7 +171,7 @@ const products: Product[] = [
     image: 'hc-boxes/发动机缸体冷芯盒2.jpeg',
     category: '冷热芯盒',
     categoryId: 3,
-    description: '改进型发动机缸体冷芯盒，提升砂芯成型精度'
+    description: ''
   },
   {
     id: 15,
@@ -179,7 +179,7 @@ const products: Product[] = [
     image: 'hc-boxes/发动机缸体冷芯盒3.JPG',
     category: '冷热芯盒',
     categoryId: 3,
-    description: '第三代发动机缸体冷芯盒，优化生产工艺'
+    description: ''
   },
   {
     id: 16,
@@ -187,7 +187,7 @@ const products: Product[] = [
     image: 'hc-boxes/发动机缸体冷芯盒4.JPG',
     category: '冷热芯盒',
     categoryId: 3,
-    description: '最新型发动机缸体冷芯盒，自动化程度高'
+    description: ''
   },
   {
     id: 17,
@@ -195,7 +195,7 @@ const products: Product[] = [
     image: 'hc-boxes/增压器冷芯盒.jpeg',
     category: '冷热芯盒',
     categoryId: 3,
-    description: '专业增压器冷芯盒模具，适用于涡轮增压器生产'
+    description: ''
   },
   {
     id: 18,
@@ -203,7 +203,7 @@ const products: Product[] = [
     image: 'hc-boxes/机体垂直冷芯盒.jpeg',
     category: '冷热芯盒',
     categoryId: 3,
-    description: '垂直式机体冷芯盒，节省生产空间，提高效率'
+    description: ''
   },
   {
     id: 19,
@@ -211,7 +211,7 @@ const products: Product[] = [
     image: 'hc-boxes/桥壳冷芯盒1.jpeg',
     category: '冷热芯盒',
     categoryId: 3,
-    description: '重型桥壳冷芯盒模具，承载能力强'
+    description: ''
   },
   {
     id: 20,
@@ -219,7 +219,7 @@ const products: Product[] = [
     image: 'hc-boxes/桥壳冷芯盒2.jpeg',
     category: '冷热芯盒',
     categoryId: 3,
-    description: '改进型桥壳冷芯盒，优化冷却系统'
+    description: ''
   },
   {
     id: 21,
@@ -227,7 +227,7 @@ const products: Product[] = [
     image: 'hc-boxes/桥壳冷芯盒3.jpeg',
     category: '冷热芯盒',
     categoryId: 3,
-    description: '第三代桥壳冷芯盒，提升产品质量'
+    description: ''
   },
   {
     id: 22,
@@ -235,7 +235,7 @@ const products: Product[] = [
     image: 'hc-boxes/桥壳冷芯盒4.jpeg',
     category: '冷热芯盒',
     categoryId: 3,
-    description: '最新型桥壳冷芯盒，智能化控制'
+    description: ''
   },
   {
     id: 23,
@@ -243,23 +243,23 @@ const products: Product[] = [
     image: 'hc-boxes/飞轮壳冷芯盒（帮我把红色的数字抹掉）.jpeg',
     category: '冷热芯盒',
     categoryId: 3,
-    description: '精密飞轮壳冷芯盒模具，确保传动系统精度'
+    description: ''
   },
   {
   id: 24,
   name: '下芯夹具',
   image: 'fk/下芯夹具.jpeg',
-  category: '工装夹具',
+  category: '各类型工装夹具',
   categoryId: 4,
-  description: '专业下芯夹具，确保砂芯精确定位，提高铸造质量'
+  description: ''
   },
   {
     id: 25,
     name: '组芯夹具',
     image: 'fk/组芯夹具.jpeg',
-    category: '工装夹具',
+    category: '各类型工装夹具',
     categoryId: 4,
-    description: '高精度组芯夹具，用于复杂砂芯组装，保证装配精度'
+    description: ''
   },
   {
   id: 26,
@@ -267,7 +267,7 @@ const products: Product[] = [
   image: 'self-hardening/16缸发动机机体自硬砂手工型板.jpeg',
   category: '自硬砂模具',
   categoryId: 5,
-  description: '大型16缸发动机机体自硬砂手工型板，适用于重型发动机铸造'
+  description: ''
   },
   {
     id: 27,
@@ -275,7 +275,7 @@ const products: Product[] = [
     image: 'self-hardening/16缸发动机缸体手工芯盒.jpeg',
     category: '自硬砂模具',
     categoryId: 5,
-    description: '16缸发动机缸体专用手工芯盒，精度高，成型效果好'
+    description: ''
   },
   {
     id: 28,
@@ -283,7 +283,7 @@ const products: Product[] = [
     image: 'self-hardening/飞轮壳自硬砂型板.jpeg',
     category: '自硬砂模具',
     categoryId: 5,
-    description: '飞轮壳自硬砂型板，确保传动系统零件精度'
+    description: ''
   },
   {
     id: 29,
@@ -291,7 +291,7 @@ const products: Product[] = [
     image: 'self-hardening/飞轮壳自硬砂型板2.jpeg',
     category: '自硬砂模具',
     categoryId: 5,
-    description: '改进型飞轮壳自硬砂型板，优化生产工艺'
+    description: ''
   }
 ]
 
@@ -324,27 +324,20 @@ onMounted(() => {
 
     <!-- Banner -->
     <div class="relative h-[750px] w-full overflow-hidden">
-      <img 
-        src="@/assets/products/banner.jpg" 
-        alt="产品展示" 
-        class="w-full h-full object-cover"
-      />
+      <img src="@/assets/products/banner.jpg" alt="产品展示" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center">
         <div class="text-center space-y-8">
-          <h1 
+          <h1
             class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white font-bold tracking-wider transform transition-all duration-1000"
-            :class="{ 'translate-y-0 opacity-100': isTitleVisible, 'translate-y-8 opacity-0': !isTitleVisible }"
-          >
-            <span class="inline-block">专业</span>
-            <span class="inline-block text-[#1d46a8]">铸造模具</span>
-            <span class="inline-block">制造商</span>
+            :class="{ 'translate-y-0 opacity-100': isTitleVisible, 'translate-y-8 opacity-0': !isTitleVisible }">
+            <span class="inline-block">专注</span>
+            <span class="inline-block text-[#1d46a8]">高性能</span>
+            <span class="inline-block">铸造模具</span>
           </h1>
           <div class="w-32 h-1.5 bg-[#1d46a8] mx-auto"></div>
-          <p 
-            class="text-xl sm:text-3xl md:text-4xl lg:text-5xl text-white tracking-widest font-medium max-w-4xl mx-auto px-4 transform transition-all duration-1000 delay-300"
-            :class="{ 'translate-y-0 opacity-100': isSubtitleVisible, 'translate-y-8 opacity-0': !isSubtitleVisible }"
-          >
-          各类型铸铁及铸铝复杂产品模具
+          <p class="text-xl sm:text-3xl md:text-4xl lg:text-5xl text-white tracking-widest font-medium max-w-4xl mx-auto px-4 transform transition-all duration-1000 delay-300"
+            :class="{ 'translate-y-0 opacity-100': isSubtitleVisible, 'translate-y-8 opacity-0': !isSubtitleVisible }">
+            覆盖黑色及有色的复杂结构模具，满足不同行业多样化需求
           </p>
         </div>
       </div>
@@ -353,17 +346,12 @@ onMounted(() => {
     <!-- 分类导航 -->
     <div class="max-w-7xl mx-auto py-8">
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 px-4">
-        <button
-          v-for="category in categories"
-          :key="category.id"
-          @click="activeCategory = category.id"
-          :class="[
+        <button v-for="category in categories" :key="category.id" @click="activeCategory = category.id" :class="[
             'py-2.5 rounded-lg text-center text-base font-medium transition-all duration-300',
             activeCategory === category.id
               ? 'bg-[#1d46a8] text-white shadow-lg ring-2 ring-[#1d46a8] ring-offset-2'
               : 'bg-white text-gray-600 hover:bg-gray-50 hover:shadow'
-          ]"
-        >
+          ]">
           {{ category.name }}
         </button>
       </div>
@@ -372,29 +360,19 @@ onMounted(() => {
     <!-- 产品列表 -->
     <div class="max-w-7xl mx-auto py-12">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div
-          v-for="product in filteredProducts"
-          :key="product.id"
-          class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300"
-        >
+        <div v-for="product in filteredProducts" :key="product.id"
+          class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300">
           <div class="relative aspect-[4/3] bg-gray-100 group">
-            <img
-              :src="getImageUrl(product.image)"
-              :alt="product.name"
-              class="w-full h-full object-cover"
-              loading="lazy"
-              width="1920"
-              height="1080"
-              @load="handleImageLoad(product.id)"
-              :class="{ 'opacity-0': !loadedImages.has(product.id), 'opacity-100': loadedImages.has(product.id) }"
-            />
+            <img :src="getImageUrl(product.image)" :alt="product.name" class="w-full h-full object-cover" loading="lazy"
+              width="1920" height="1080" @load="handleImageLoad(product.id)"
+              :class="{ 'opacity-0': !loadedImages.has(product.id), 'opacity-100': loadedImages.has(product.id) }" />
             <!-- 扫光效果 -->
-            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000 ease-in-out"></div>
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000 ease-in-out">
+            </div>
             <!-- 加载占位 -->
-            <div 
-              class="absolute inset-0 flex items-center justify-center bg-gray-100"
-              :class="{ 'hidden': loadedImages.has(product.id) }"
-            >
+            <div class="absolute inset-0 flex items-center justify-center bg-gray-100"
+              :class="{ 'hidden': loadedImages.has(product.id) }">
               <div class="w-8 h-8 border-4 border-[#1d46a8] border-t-transparent rounded-full animate-spin"></div>
             </div>
           </div>
