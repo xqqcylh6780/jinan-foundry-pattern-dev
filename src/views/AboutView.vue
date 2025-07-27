@@ -123,29 +123,22 @@ onMounted(() => {
 <template>
   <div class="min-h-screen bg-gray-100">
     <NavBar />
-    
+
     <!-- Banner -->
     <div class="relative h-[750px] w-full overflow-hidden">
-      <img 
-        src="@/assets/about/banner.jpg" 
-        alt="关于我们 Banner" 
-        class="w-full h-full object-cover"
-      />
+      <img src="@/assets/about/banner.jpg" alt="关于我们 Banner" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center">
         <div class="text-center space-y-8">
-          <h1 
+          <h1
             class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white font-bold tracking-wider transform transition-all duration-1000"
-            :class="{ 'translate-y-0 opacity-100': isTitleVisible, 'translate-y-8 opacity-0': !isTitleVisible }"
-          >
-            <span class="inline-block">打造</span>
-            <span class="inline-block text-[#1d46a8]">最具核心</span>
-            <span class="inline-block">竞争力的企业团队</span>
+            :class="{ 'translate-y-0 opacity-100': isTitleVisible, 'translate-y-8 opacity-0': !isTitleVisible }">
+            <span class="inline-block">打造最具</span>
+            <span class="inline-block text-[#1d46a8]">核心竞争力</span>
+            <span class="inline-block">的企业团队</span>
           </h1>
           <div class="w-32 h-1.5 bg-[#1d46a8] mx-auto"></div>
-          <p 
-            class="text-xl sm:text-3xl md:text-4xl lg:text-5xl text-white tracking-widest font-medium transform transition-all duration-1000 delay-300"
-            :class="{ 'translate-y-0 opacity-100': isSubtitleVisible, 'translate-y-8 opacity-0': !isSubtitleVisible }"
-          >
+          <p class="text-xl sm:text-3xl md:text-4xl lg:text-5xl text-white tracking-widest font-medium transform transition-all duration-1000 delay-300"
+            :class="{ 'translate-y-0 opacity-100': isSubtitleVisible, 'translate-y-8 opacity-0': !isSubtitleVisible }">
             <span class="text-[#1d46a8]">建立</span>
             <span>全球最佳铸模研发制造基地</span>
           </p>
@@ -157,18 +150,12 @@ onMounted(() => {
     <div class="bg-white border-b">
       <div class="max-w-7xl mx-auto">
         <div class="flex space-x-8">
-          <RouterLink 
-            to="/about/company"
-            class="px-6 py-4 text-lg font-medium transition-colors duration-200"
-            :class="$route.path === '/about/company' ? 'text-[#1d46a8] border-b-2 border-[#1d46a8]' : 'text-gray-600 hover:text-[#1d46a8]'"
-          >
+          <RouterLink to="/about/company" class="px-6 py-4 text-lg font-medium transition-colors duration-200"
+            :class="$route.path === '/about/company' ? 'text-[#1d46a8] border-b-2 border-[#1d46a8]' : 'text-gray-600 hover:text-[#1d46a8]'">
             {{ t('nav.about_company') }}
           </RouterLink>
-          <RouterLink 
-            to="/about/certificates"
-            class="px-6 py-4 text-lg font-medium transition-colors duration-200"
-            :class="$route.path === '/about/certificates' ? 'text-[#1d46a8] border-b-2 border-[#1d46a8]' : 'text-gray-600 hover:text-[#1d46a8]'"
-          >
+          <RouterLink to="/about/certificates" class="px-6 py-4 text-lg font-medium transition-colors duration-200"
+            :class="$route.path === '/about/certificates' ? 'text-[#1d46a8] border-b-2 border-[#1d46a8]' : 'text-gray-600 hover:text-[#1d46a8]'">
             {{ t('nav.about_certificates') }}
           </RouterLink>
         </div>
@@ -179,33 +166,15 @@ onMounted(() => {
     <RouterView />
 
     <!-- 图片预览模态框 -->
-    <el-dialog
-      v-model="showPreview"
-      :title="previewTitle"
-      width="80%"
-      :close-on-click-modal="true"
-      :show-close="true"
-      center
-      @close="handleDialogClose"
-    >
-      <div 
-        class="flex justify-center items-center overflow-hidden relative"
-        @wheel.prevent="handleWheel"
-        @mousedown="startDrag"
-        @mousemove="doDrag"
-        @mouseup="stopDrag"
-        @mouseleave="stopDrag"
-      >
-        <img 
-          :src="previewImage" 
-          :alt="previewTitle"
-          class="max-w-full max-h-[80vh] object-contain transition-all duration-75 ease-out"
-          :style="{
+    <el-dialog v-model="showPreview" :title="previewTitle" width="80%" :close-on-click-modal="true" :show-close="true"
+      center @close="handleDialogClose">
+      <div class="flex justify-center items-center overflow-hidden relative" @wheel.prevent="handleWheel"
+        @mousedown="startDrag" @mousemove="doDrag" @mouseup="stopDrag" @mouseleave="stopDrag">
+        <img :src="previewImage" :alt="previewTitle"
+          class="max-w-full max-h-[80vh] object-contain transition-all duration-75 ease-out" :style="{
             transform: `scale(${imageScale}) translate(${imagePosition.x}px, ${imagePosition.y}px)`,
             cursor: isDragging ? 'grabbing' : (imageScale > 1 ? 'grab' : 'default')
-          }"
-          @dragstart.prevent
-        />
+          }" @dragstart.prevent />
       </div>
     </el-dialog>
 
