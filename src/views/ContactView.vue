@@ -74,7 +74,7 @@ const contactInfo = [
   {
     icon: Location,
     title: '公司地址',
-    content: '山东省济南市方德利模具有限公司'
+    content: '山东省济南市高新区港源四路398号'
   },
   {
     icon: Phone,
