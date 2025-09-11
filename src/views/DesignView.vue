@@ -3,28 +3,6 @@ import NavBar from '@/components/NavBar.vue'
 import FooterBar from '@/components/AppFooter.vue'
 import { ref, onMounted } from 'vue'
 
-const designCapabilities = [
-  {
-    title: '工艺分析',
-    description: '采用先进的三维建模软件，为客户提供精确的模具设计方案，确保产品的精度和质量。',
-    image: 'modeling.jpg'
-  },
-  {
-    title: '模具设计',
-    description: '专业的工艺团队进行充分的可行性分析，优化生产工艺流程，提高生产效率。',
-    image: 'analysis.jpg'
-  },
-  {
-    title: '加工编程',
-    description: '根据客户需求，设计各类精密模具，包括压铸模具、注塑模具等。',
-    image: 'mold.jpg'
-  },
-  {
-    title: '技术创新',
-    description: '持续创新设计理念和工艺技术，为客户提供最优质的解决方案。',
-    image: 'innovation.jpg'
-  }
-]
 
 const isTitleVisible = ref(true)
 
@@ -382,24 +360,7 @@ onMounted(() => {
           </div>
         </div>
 
-        <!-- 能力展示网格 -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div 
-            v-for="item in designCapabilities" 
-            :key="item.title"
-            class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
-          >
-            <div class="aspect-w-16 aspect-h-9 mb-6">
-              <img 
-                :src="getImageUrl(item.image)"
-                :alt="item.title"
-                class="w-full h-full object-cover rounded-lg"
-              />
-            </div>
-            <h3 class="text-xl font-bold mb-4">{{ item.title }}</h3>
-            <p class="text-gray-600 leading-relaxed">{{ item.description }}</p>
-          </div>
-        </div>
+
 
         <!-- 软件支持 -->
         <div class="mt-20">
